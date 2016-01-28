@@ -1,0 +1,73 @@
+@font-face {
+  font-family: Merel;
+  src: url("/fonts/Merel/Merel-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/Merel/Merel-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/Merel/Merel-Light.otf") format("opentype"), url("/fonts/Merel/Merel-Light.woff") format("woff"), url("/fonts/Merel/Merel-Light.ttf") format("truetype"), url("/fonts/Merel/Merel-Light.svg#Merel-Light") format("svg");
+  /* Legacy iOS */
+  font-weight: 300;
+}
+@font-face {
+  font-family: Merel;
+  src: url("/fonts/Merel/Merel.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/Merel/Merel.eot?#iefix") format("embedded-opentype"), url("/fonts/Merel/Merel.otf") format("opentype"), url("/fonts/Merel/Merel.woff") format("woff"), url("/fonts/Merel/Merel.ttf") format("truetype"), url("/fonts/Merel/Merel.svg#Merel") format("svg");
+  /* Legacy iOS */
+  font-weight: 400;
+}
+@font-face {
+  font-family: Merel;
+  src: url("/fonts/Merel/Merel-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/Merel/Merel-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Merel/Merel-Bold.otf") format("opentype"), url("/fonts/Merel/Merel-Bold.woff") format("woff"), url("/fonts/Merel/Merel-Bold.ttf") format("truetype"), url("/fonts/Merel/Merel-Bold.svg#Merel-Bold") format("svg");
+  /* Legacy iOS */
+  font-weight: 700;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.logo {
+  overflow: auto;
+  margin-bottom: 18px;
+}
+.logo img {
+  display: block;
+  width: 170px;
+  margin: 40px auto;
+}
+
+nav {
+  font-family: Merel;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #353535;
+  text-transform: uppercase;
+}
+nav ul {
+  text-align: justify;
+  font-size: 4px;
+}
+nav ul:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+nav ul li {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 18px;
+}
+nav ul li:hover {
+  color: #3BBFA5;
+}
