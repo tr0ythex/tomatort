@@ -70,6 +70,10 @@
   -ms-flex:  $values; /* IE 10 */
   flex:  $values; /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
+@mixin flex-justify($justify-type) {
+  -webkit-justify-content: $justify-type; 
+  justify-content: $justify-type; 
+}
 
 $nav-text-color: #353535;
 $nav-text-color-hover: #3BBFA5;
@@ -81,13 +85,17 @@ $footer-bg: #333333;
 $footer-li-color: #808080;
 $footer-li-hover-color: #A8CCC8;
 
-ul, h1, h2, p {
+ul, h1, h2, p, body {
   margin: 0;
   padding: 0;
 }
 
 li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
@@ -132,7 +140,6 @@ nav {
   ul {
     text-align: justify;
     font-size: 4px; // justify last line fix
-    
     &:after { // justify last line fix
       content: "";
       display: inline-block;
@@ -143,6 +150,7 @@ nav {
       display: inline-block;
       cursor: pointer;
       font-size: 18px;
+      color: $nav-text-color;
       &:hover {
         color: $nav-text-color-hover;
       }
@@ -253,12 +261,45 @@ section {
 footer {
   height: 150px;
   background: $footer-bg;
+  overflow: auto;
   nav {
     width: 440px;
+    margin-top: 39px;
     li {
       color: $footer-li-color;
       &:hover {
         color: $footer-li-hover-color;
+      }
+    }
+  }
+  .socials {
+    width: 200px;
+    overflow: auto;
+    @include flexbox();
+    @include flex-justify(space-between);
+    margin: 20px auto 0;
+    .social {
+      width: 31px;
+      height: 31px;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .fb {
+      background: url(/images/socials.png) 0 0;
+      &:hover {
+        background-position: 0 -31px;
+      }
+    }
+    .inst {
+      background: url(/images/socials.png) -31px 0;
+      &:hover {
+        background-position: -31px -31px;
+      }
+    }
+    .vk {
+      background: url(/images/socials.png) -62px 0;
+      &:hover {
+        background-position: -62px -31px;
       }
     }
   }
