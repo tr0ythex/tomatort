@@ -56,34 +56,24 @@
     font-weight: 400; 
 }
 
-@mixin flexbox() {
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-}
-@mixin flex($values) {
-  -webkit-box-flex: $values; /* OLD - iOS 6-, Safari 3.1-6 */
-  -moz-box-flex:  $values; /* OLD - Firefox 19- */
-  -webkit-flex:  $values; /* Chrome */
-  -ms-flex:  $values; /* IE 10 */
-  flex:  $values; /* NEW, Spec - Opera 12.1, Firefox 20+ */
-}
-@mixin flex-justify($justify-type) {
-  -webkit-justify-content: $justify-type; 
-  justify-content: $justify-type; 
-}
+@import 'utilities/master';
+@import 'pages/menu';
 
-$nav-text-color: #353535;
-$nav-text-color-hover: #3BBFA5;
-$stroke-color: #686868;
-$button-text-color: #444444;
-$button-hover-text-color: #4D4D4D;
-$button-hover-bg-color: #B4EEDE;
-$footer-bg: #333333;
-$footer-li-color: #808080;
-$footer-li-hover-color: #A8CCC8;
+.fxbx_block {
+  @include flexbox();
+}
+.fxbx_item_1 {
+  @include flex(1 33%);
+}
+.fxbx_sp_between {
+  @include flex-justify(space-between);
+}
+.fxbx_sp_around {
+  @include flex-justify(space-around);
+}
+.fxbx_wrap {
+  @include flex-wrap(wrap);
+}
 
 ul, h1, h2, p, body {
   margin: 0;
@@ -204,17 +194,15 @@ section {
 .menu {
   height: 600px;
   .menu_block {
-    overflow: auto;
-    @include flexbox();
+    height: auto;
     .menu_item {
-      @include flex(1 33%);
       position: relative;
       height: 300px;
-      width: 300px;
+      width: 296px;
       background-image: url(/images/menu_item.jpg);
       background-size: contain;
-      margin-right: 4px;
       cursor: pointer;
+      margin-bottom: 4px;
       p {
         position: absolute;
         bottom: 0;
@@ -227,9 +215,6 @@ section {
         background: rgba(black, 0.61);
         line-height: 47px;
         border-top: 1px solid $stroke-color;
-      }
-      &:last-of-type {
-        margin-right: 0;
       }
     }
   }
@@ -275,8 +260,6 @@ footer {
   .socials {
     width: 200px;
     overflow: auto;
-    @include flexbox();
-    @include flex-justify(space-between);
     margin: 20px auto 0;
     .social {
       width: 31px;

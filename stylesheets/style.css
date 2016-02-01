@@ -46,6 +46,70 @@
   /* Legacy iOS */
   font-weight: 400;
 }
+#menu_page {
+  height: 900px;
+}
+#menu_page h2 {
+  margin-top: 20px;
+}
+#menu_page .sort_block {
+  width: 360px;
+  font-family: Merel;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0 auto 50px;
+}
+#menu_page .sort_block .sort_item {
+  margin-right: 0;
+}
+#menu_page .sort_block .sort_item:nth-of-type(2):hover, #menu_page .sort_block .sort_item:nth-of-type(3):hover {
+  color: #3BBFA5;
+  cursor: pointer;
+}
+
+.fxbx_block {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.fxbx_item_1 {
+  -webkit-box-flex: 1 33%;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1 33%;
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1 33%;
+  /* Chrome */
+  -ms-flex: 1 33%;
+  /* IE 10 */
+  flex: 1 33%;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.fxbx_sp_between {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.fxbx_sp_around {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+.fxbx_wrap {
+  -webkit-flex-wrap: wrap;
+  /* Safari 6.1+ */
+  flex-wrap: wrap;
+}
+
 ul, h1, h2, p, body {
   margin: 0;
   padding: 0;
@@ -165,36 +229,16 @@ section p {
   height: 600px;
 }
 .menu .menu_block {
-  overflow: auto;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  /* NEW - Chrome */
-  display: flex;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  height: auto;
 }
 .menu .menu_block .menu_item {
-  -webkit-box-flex: 1 33%;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  -moz-box-flex: 1 33%;
-  /* OLD - Firefox 19- */
-  -webkit-flex: 1 33%;
-  /* Chrome */
-  -ms-flex: 1 33%;
-  /* IE 10 */
-  flex: 1 33%;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
   position: relative;
   height: 300px;
-  width: 300px;
+  width: 296px;
   background-image: url(/images/menu_item.jpg);
   background-size: contain;
-  margin-right: 4px;
   cursor: pointer;
+  margin-bottom: 4px;
 }
 .menu .menu_block .menu_item p {
   position: absolute;
@@ -208,9 +252,6 @@ section p {
   background: rgba(0, 0, 0, 0.61);
   line-height: 47px;
   border-top: 1px solid #686868;
-}
-.menu .menu_block .menu_item:last-of-type {
-  margin-right: 0;
 }
 .menu .more {
   border: 1px solid #686868;
@@ -252,18 +293,6 @@ footer nav li:hover {
 footer .socials {
   width: 200px;
   overflow: auto;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  /* NEW - Chrome */
-  display: flex;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
   margin: 20px auto 0;
 }
 footer .socials .social {

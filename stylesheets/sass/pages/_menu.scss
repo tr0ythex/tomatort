@@ -1,0 +1,24 @@
+#menu_page {
+  height: 900px;
+  h2 {
+    margin-top: 20px;
+  }
+  .sort_block {
+    width: 360px;
+    font-family: Merel;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0 auto 50px;
+    .sort_item {
+      margin-right: 0;
+      &:nth-of-type(2):hover, &:nth-of-type(3):hover {
+        color: $nav-text-color-hover;
+        cursor: pointer;
+      }
+    }
+  }
+  .menu_block {
+    // height: 600px;
+  }
+}
