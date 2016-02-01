@@ -47,7 +47,7 @@
   font-weight: 400;
 }
 #menu_page {
-  height: 900px;
+  height: auto;
 }
 #menu_page h2 {
   margin-top: 20px;
@@ -66,6 +66,33 @@
 #menu_page .sort_block .sort_item:nth-of-type(2):hover, #menu_page .sort_block .sort_item:nth-of-type(3):hover {
   color: #3BBFA5;
   cursor: pointer;
+}
+
+#dream_dessert {
+  height: auto;
+}
+#dream_dessert h2 {
+  margin-bottom: 38px;
+}
+#dream_dessert .order_dream {
+  height: 150px;
+  margin: 50px auto 80px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url(/images/dream.png);
+  background-size: contain;
+}
+#dream_dessert .order_dream_btn {
+  font-size: 23px;
+  color: white;
+  width: 340px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 1px;
+  margin-top: 50px;
+}
+#dream_dessert .order_dream_btn:hover {
+  background: #B4EEDE;
+  border: none;
+  color: #4D4D4D;
 }
 
 .fxbx_block {
@@ -115,6 +142,13 @@ ul, h1, h2, p, body {
   padding: 0;
 }
 
+.title {
+  font-family: LeksaPro;
+  font-style: italic;
+  font-size: 20px;
+  margin-top: 38px;
+}
+
 li {
   list-style: none;
 }
@@ -126,9 +160,12 @@ a {
 button {
   background: none;
   border: none;
-  padding: 0;
+  padding: 0 0 4px 0;
   cursor: pointer;
   outline: none;
+  font-family: Merel;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .wrapper {
@@ -139,7 +176,7 @@ button {
 .logo {
   overflow: auto;
 }
-.logo img {
+.logo a {
   display: block;
   width: 170px;
   margin: 40px auto;
@@ -218,12 +255,6 @@ section p {
   vertical-align: middle;
   margin-top: 95px;
 }
-.promo p {
-  font-family: LeksaPro;
-  font-style: italic;
-  font-size: 20px;
-  margin-top: 38px;
-}
 
 .menu {
   height: 600px;
@@ -240,14 +271,12 @@ section p {
   cursor: pointer;
   margin-bottom: 4px;
 }
-.menu .menu_block .menu_item p {
+.menu .menu_block .menu_item .title {
+  margin-top: 0;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 47px;
-  font-family: LeksaPro;
-  font-style: italic;
-  font-size: 20px;
   color: white;
   background: rgba(0, 0, 0, 0.61);
   line-height: 47px;
@@ -258,10 +287,7 @@ section p {
   border-radius: 1px;
   width: 190px;
   height: 50px;
-  font-family: Merel;
-  font-weight: 400;
   font-size: 18px;
-  text-transform: uppercase;
   margin-top: 48px;
   color: #444444;
 }
