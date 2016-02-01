@@ -1,28 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 	<head>
 		<meta charset="utf-8">
 		<title>Tomatort | Меню</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 		<link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
 	</head>
 	
   <body>
   	<div class="wrapper">
-  		<header>
-  			<div class="logo">
-  				<img src="images/logo.png">
-  			</div>
-  				
-  			<nav class="top_menu">
-  				<ul>
-  					<a href="/"><li>Главная</li></a>
-  					<a href="/menu.html"><li>Меню</li></a>
-  					<a href="/gallery.html"><li>Галерея</li></a>
-  					<a href="/contacts.html"><li>Контакты</li></a>
-  					<a href="/bag.html"><li>Корзина</li></a>
-  				</ul>
-  			</nav>
-  		</header>
+  		
+  		<header ng-include="'header.html'"></header>
   		
   		<main>
   		  <section id="menu_page" class="menu">
@@ -32,29 +20,30 @@
   		      <div class="sort_item">По цене</div>
   		      <div class="sort_item">По названию</div>
   		    </div>
-			<ul class="menu_block fxbx_block fxbx_sp_around fxbx_wrap">
-				<li class="menu_item">
-					<p class="title">Наполеон</p>
-				</li>
-				<li class="menu_item">
-					<p class="title">Наполеон</p>
-				</li>
-				<li class="menu_item">
-					<p class="title">Наполеон</p>
-				</li>
-				<li class="menu_item">
-					<p class="title">Наполеон</p>
-				</li>
-				<li class="menu_item">
-					<p class="title">Наполеон</p>
-				</li>
-				<li class="menu_item">
-					<p class="title">Наполеон</p>
-				</li>
-			</ul>
+					<ul class="menu_block fxbx_block fxbx_sp_around fxbx_wrap">
+						<li class="menu_item">
+							<p class="title">Наполеон</p>
+						</li>
+						<li class="menu_item">
+							<p class="title">Наполеон</p>
+						</li>
+						<li class="menu_item">
+							<p class="title">Наполеон</p>
+						</li>
+						<li class="menu_item">
+							<p class="title">Наполеон</p>
+						</li>
+						<li class="menu_item">
+							<p class="title">Наполеон</p>
+						</li>
+						<li class="menu_item">
+							<p class="title">Наполеон</p>
+						</li>
+					</ul>
   		  </section>
   		</main>
-  		
-  	</div>
+  	</div> <!-- .wrapper end -->
+  	
+  	<footer ng-include="'footer.html'"></footer>
 	</body>
 </html>
