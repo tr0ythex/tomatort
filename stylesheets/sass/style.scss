@@ -57,7 +57,13 @@
 }
 
 @import 'utilities/master';
+@import 'utilities/range_style';
 @import 'pages/menu';
+@import 'pages/product_page';
+@import 'pages/dream_dessert';
+@import 'pages/gallery';
+@import 'pages/contacts';
+@import 'pages/customer_info';
 
 .fxbx_block {
   @include flexbox();
@@ -84,7 +90,6 @@ ul, h1, h2, p, body {
   font-family: LeksaPro;
   font-style: italic;
   font-size: 20px;
-  margin-top: 38px;
 }
 
 li {
@@ -93,17 +98,27 @@ li {
 
 a {
   text-decoration: none;
+  color: $button-text-color;
 }
 
 button {
   background: none;
   border: none;
-  padding: 0 0 4px 0;
+  // padding: 0 0 4px 0;
   cursor: pointer;
   outline: none;
   font-family: Merel;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+input[type=checkbox] {
+  display: none;
 }
 
 .wrapper {
@@ -192,6 +207,7 @@ section {
     text-transform: uppercase;
     vertical-align: middle;
     margin-top: 95px;
+    margin-bottom: 40px;
   }
 }
 
@@ -208,7 +224,7 @@ section {
       cursor: pointer;
       margin-bottom: 4px;
       .title {
-        margin-top: 0;
+        // margin-top: 0;
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -257,15 +273,6 @@ footer {
     }
   }
   .socials {
-    width: 200px;
-    overflow: auto;
-    margin: 20px auto 0;
-    .social {
-      width: 31px;
-      height: 31px;
-      display: inline-block;
-      cursor: pointer;
-    }
     .fb {
       background: url(/images/socials.png) 0 0;
       &:hover {
@@ -284,5 +291,42 @@ footer {
         background-position: -62px -31px;
       }
     }
+  }
+}
+
+.socials {
+  width: 200px;
+  overflow: auto;
+  margin: 20px auto 0;
+  .social {
+    width: 31px;
+    height: 31px;
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+.form_textarea {
+  border: 1px solid #C6F4E5;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 115px;
+  resize: vertical;
+  margin-bottom: 0;
+  outline: none;
+}
+
+.form_success {
+  p {
+    margin-top: 0;
+  }
+}
+
+.customer_info {
+  width: 600px;
+  margin: 0 auto;
+  h2 {
+    margin-top: 20px;
   }
 }

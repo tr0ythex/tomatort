@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<meta charset="utf-8">
+		<title>Tomatort | Меню</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
+		<link href="/stylesheets/lib/jquery.bxslider.css" rel="stylesheet" />
+	</head>
+	
+  <body>
+  	<div class="wrapper">
+  		
+  		<header ng-include="'header.html'"></header>
+  		
+  		<main>
+  		  <section id="gallery">
+  		    <h2>Галерея</h2>
+  		    
+		      <div class="gallery_slider">
+	          <div class="gs_item">
+              <img src="/images/dream.png">
+              <div class="title">Некий пояснительный текст 1</div>
+            </div>
+            <div class="gs_item">
+              <img src="/images/menu_item.jpg">
+              <div class="title">Некий пояснительный текст 2</div>
+            </div>
+            <div class="gs_item">
+              <img src="/images/promo.jpg">
+              <div class="title">Некий пояснительный текст 3</div>
+            </div>
+            <div class="gs_item">
+              <img src="/images/socials.png">
+              <div class="title">Некий пояснительный текст 4</div>
+            </div>
+          </div>
+          
+  		    <p>
+					  Некоторое количество текста про кондитерскую 
+					  Некоторое количество текста про кондитерскую
+					  Некоторое количество текста про кондитерскую 
+					  Некоторое количество текста про кондитерскую 
+					  Некоторое количество текста про кондитерскую 
+					  Некоторое количество текста про кондитерскую 
+					  Некоторое количество текста про кондитерскую
+					  Некоторое количество текста про кондитерскую
+					  Некоторое количество текста про кондитерскую
+					</p>
+  		  </section>
+  		  
+  		  <button class="back_to_menu"><a href="/menu.html">Перейти в меню</a></button>
+  		</main>
+  		
+  	</div> <!-- .wrapper end -->
+  	
+  	<footer ng-include="'footer.html'"></footer>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script src="/js/jquery.bxslider.min.js"></script>
+  	<script>
+  	  $(document).ready(function(){
+        $('.gallery_slider').bxSlider();
+      });
+  	</script>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<meta charset="utf-8">
+		<title>Tomatort | Контакты</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
+	</head>
+	
+  <body>
+  	<div class="wrapper">
+  		
+  		<header ng-include="'header.html'"></header>
+  		
+  		<main>
+  		  <section id="contacts">
+  		    <h2>Контакты</h2>
+  		    <div class="contact_block fxbx_block fxbx_sp_between fxbx_wrap">
+  		      <div class="contact_item title">Телефон</div>
+  		      <div class="contact_item title">Электронная почта</div>
+  		      <div class="contact_item value">+7 (999) 999-99-99</div>
+  		      <div class="contact_item value">e-mail@gmail.com</div>
+  		    </div>
+  		    <div class="socials_block">
+  		      <p class="title">Социальные сети</p>
+    		    <div class="socials fxbx_block fxbx_sp_between">
+            	<div class="social fb"></div>
+            	<div class="social inst"></div>
+            	<div class="social vk"></div>
+            </div>
+  		    </div>
+  		  </section>
+  		  <section class="callback">
+  		    <h2>Обратный звонок</h2>
+  		    <form id="cb_form">
+  		      <div class="ci_block fxbx_block fxbx_sp_between fxbx_wrap">
+  						<input type="text" id="ci_first_name" name="first_name" class="ci_item" placeholder="Имя">
+  						<input type="text" id="ci_last_name" name="last_name" class="ci_item" placeholder="Фамилия">
+  						<input type="email" id="ci_email" name="email" class="ci_item" placeholder="Электронная почта">
+  						<input type="tel" id="ci_tel" name="tel" class="ci_item" placeholder="Телефон">
+  					</div>
+					  <textarea class="form_textarea title" name="comment" form="cb_form" placeholder="Комментарий"></textarea>
+					  <input type="submit" class="submit_form" value="Связаться">
+  		    </form>
+  			</section>
+  			<section class="form_success"> 
+					<p class="title">
+						Ваш запрос успешно отправлен!<br>
+						Скоро мы с вами свяжемся.
+					</p>
+				</section>
+  				
+  		</main>
+  		
+  	</div> <!-- .wrapper end -->
+  	
+  	<footer ng-include="'footer.html'"></footer>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	</body>
+</html>

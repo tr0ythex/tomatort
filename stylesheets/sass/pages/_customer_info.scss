@@ -1,0 +1,21 @@
+.delivery_form {
+  width: 600px;
+  margin: 0 auto;
+  h2 {
+    margin-top: 20px;
+  }
+  .di_item {
+    width: 600px;
+    height: 50px;
+    border: 1px solid #B4EEDE;
+    margin: 0 auto 40px;
+    font-family: LeksaPro;
+    font-size: 20px;
+    font-style: italic;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+}
+.delivery_info {
+  height: auto;
+}

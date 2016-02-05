@@ -1,0 +1,43 @@
+#contacts {
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
+  h2 {
+    margin-top: 20px;
+  }
+  .contact_block {
+    .contact_item {
+      width: 298px;
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+  .value {
+    font-family: Merel;
+    font-weight: 400;
+    font-size: 21px;
+  }
+  .socials {
+    .fb {
+      background: url(/images/socials.png) 0 -31px;
+    }
+    .inst {
+      background: url(/images/socials.png) -31px -31px;
+    }
+    .vk {
+      background: url(/images/socials.png) -62px -31px;
+    }
+  }
+  .socials_block {
+    margin: 55px auto;
+  }
+}
+
+.callback {
+  width: 600px;
+  margin: 0 auto;
+  height: auto;
+  h2 {
+    margin-top: 20px;
+  }
+}

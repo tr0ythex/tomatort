@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<meta charset="utf-8">
+		<title>Tomatort | Информация о заказчике</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
+	</head>
+	
+  <body>
+  	<div class="wrapper">
+  		
+  		<header ng-include="'header.html'"></header>
+  		
+  		<main>
+  		  <form class="delivery_form">
+  		    <section class="customer_info">
+  					<h2>Информация о заказчике</h2>
+  					<div class="ci_block fxbx_block fxbx_sp_between fxbx_wrap">
+  						<input type="text" id="ci_first_name" name="first_name" class="ci_item" placeholder="Имя">
+  						<input type="text" id="ci_last_name" name="last_name" class="ci_item" placeholder="Фамилия">
+  						<input type="email" id="ci_email" name="email" class="ci_item" placeholder="Электронная почта">
+  						<input type="tel" id="ci_tel" name="tel" class="ci_item" placeholder="Телефон">
+  					</div>
+  				</section>
+  				<section class="delivery_info">
+  				  <h2>Информация о доставке</h2>
+  				  <input type="text" id="di_address" name="address" class="title di_item" placeholder="Адрес">
+  					<textarea class="form_textarea title" name="comment" form="delivery_form" placeholder="Комментарий"></textarea>
+  				</section>
+  				<input type="submit" class="submit_form" value="Связаться">
+  		  </form>
+  		  
+  		  <section class="form_success"> 
+					<p class="title">
+						Ваш заказ успешно отправлен!<br>
+						Скоро мы с вами свяжемся для уточнения заказа
+					</p>
+				</section>
+				
+  		</main>
+  		
+  	</div> <!-- .wrapper end -->
+  	
+  	<footer ng-include="'footer.html'"></footer>
+	</body>
+</html>

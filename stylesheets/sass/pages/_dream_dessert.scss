@@ -1,0 +1,138 @@
+#dream_dessert_sec {
+  h2 {
+    margin-top: 20px;
+  }
+}
+#param1, #param2, #param3, #cake_file, #customer_info {
+  height: auto;
+  width: 600px;
+  margin: 0 auto;
+}
+
+#param1 {
+  h2 {
+    margin-top: 40px;
+  }
+  border-top: 1px solid #B4EEDE;
+}
+#param2 {
+  h2 {
+    margin-top: 40px;
+  }
+}
+#param3 {
+  h2 {
+    margin-top: 40px;
+  }
+  position: relative;
+  overflow: visible;
+  padding-bottom: 80px;
+}
+
+.variat_block {
+  width: 500px;
+  margin: 0 auto 57px;
+  label {
+    cursor: pointer;
+    padding: 10px;
+  }
+  input:checked + label {
+    background: #C6F4E5;
+  }
+}
+
+.title_block {
+  position: absolute;
+  width: 106%;
+  margin-left: -3%;
+  margin-top: 26px;
+}
+
+.range_block {
+  width: 580px;
+  margin: -19px auto 0;
+  height: 16px;
+  border-left: 1px solid $button-hover-bg-color;
+  border-right: 1px solid $button-hover-bg-color;
+  .range_item {
+    width: 150px;
+    border-left: 1px solid $button-hover-bg-color;
+  }
+}
+
+#cake_file {
+  h2 {
+    margin-bottom: 21px;
+  }
+}
+
+input[type=file] {
+  display: none;
+  & + label {
+    margin-top: 45px;
+    border: 1px solid #B4EEDE;
+    font-family: Merel;
+    font-size: 16px;
+    font-weight: 400;
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 15px;
+    box-sizing: border-box;
+    &:hover {
+      background: $button-hover-bg-color;
+      color: $button-hover-text-color;
+    }
+  }
+}
+
+.chosenFile {
+  font-family: Merel;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 40px;
+}
+
+.ci_item {
+  width: 260px;
+  height: 50px;
+  border: 1px solid #B4EEDE;
+  font-family: LeksaPro;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+input[type=submit] {
+  background: none;
+  border: 1px solid #686868;
+  font-family: Merel;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 190px;
+  height: 50px;
+  padding: 4px 0 0 0;
+  cursor: pointer;
+  margin: 40px auto 40px;
+  display: block;
+}
+
+.form_success {
+  height: auto;
+  p {
+    font-size: 23px;
+    margin: 40px 0;
+    width: 100%;
+  }
+}
+
+#cake_params {
+  .customer_info {
+    h2 {
+      margin-top: 80px;
+    }
+  }
+}
