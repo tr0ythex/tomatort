@@ -64,6 +64,7 @@
 @import 'pages/gallery';
 @import 'pages/contacts';
 @import 'pages/customer_info';
+@import 'pages/checkout';
 
 .fxbx_block {
   @include flexbox();
@@ -224,7 +225,6 @@ section {
       cursor: pointer;
       margin-bottom: 4px;
       .title {
-        // margin-top: 0;
         position: absolute;
         bottom: 0;
         width: 100%;
