@@ -3,71 +3,64 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Tomatort</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<script src="angularjs/angular.min.js"></script>
 		<link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
 	</head>
 	
 	<body>
-		<div class="wrapper">
+		<header class="wrapper" ng-include="'header.html'"></header>
+		<main class="wrapper">
 			
-			<header ng-include="'header.html'"></header>
+			<section class="promo">
+				<h1>Tomatort</h1>
+				<p class="title">Кондитерская</p>
+			</section>
 			
-			<main>
-				
-				<section class="promo">
-					<h1>Tomatort</h1>
-					<p class="title">Кондитерская</p>
-				</section>
-				
-				<section class="index_page">
-					<h2>О нас</h2>
-					<p>
-					  Некоторое количество текста про кондитерскую 
-					  Некоторое количество текста про кондитерскую
-					  Некоторое количество текста про кондитерскую 
-					  Некоторое количество текста про кондитерскую 
-					  Некоторое количество текста про кондитерскую 
-					  Некоторое количество текста про кондитерскую 
-					  Некоторое количество текста про кондитерскую
-					</p>
-				</section>
-				
-				<section class="index_page menu">
-					<h2>Меню</h2>
-					<ul class="menu_block fxbx_block fxbx_sp_around fxbx_wrap">
-						<li class="menu_item">
-							<p class="title">Наполеон</p>
-						</li>
-						<li class="menu_item">
-							<p class="title">Наполеон</p>
-						</li>
-						<li class="menu_item">
-							<p class="title">Наполеон</p>
-						</li>
-					</ul>
-					<button class="more">Больше</button>
-				</section>
-				
-				<section class="index_page place_order">
-					<h2>Как сделать заказ?</h2>
-					<p>
-					  Некоторое количество текста про кондитерскую 
-					  Некоторое количество текста про кондитерскую
-					  Некоторое количество текста про кондитерскую 
-					  Некоторое количество текста про кондитерскую 
-					  Некоторое количество текста про кондитерскую 
-					  Некоторое количество текста про кондитерскую 
-					  Некоторое количество текста про кондитерскую
-					  Некоторое количество текста про кондитерскую
-					  Некоторое количество текста про кондитерскую
-					</p>
-				</section>
-				
-			</main>
-		
-		</div> <!-- .wrapper end -->
-		
+			<section class="index_page">
+				<h2>О нас</h2>
+				<p>
+				  Некоторое количество текста про кондитерскую 
+				  Некоторое количество текста про кондитерскую
+				  Некоторое количество текста про кондитерскую 
+				  Некоторое количество текста про кондитерскую 
+				  Некоторое количество текста про кондитерскую 
+				  Некоторое количество текста про кондитерскую 
+				  Некоторое количество текста про кондитерскую
+				</p>
+			</section>
+			
+			<section class="index_page menu">
+				<h2>Меню</h2>
+				<ul class="menu_block fxbx_block fxbx_sp_around fxbx_wrap">
+					<li class="menu_item">
+						<p class="title">Наполеон</p>
+					</li>
+					<li class="menu_item">
+						<p class="title">Наполеон</p>
+					</li>
+					<li class="menu_item">
+						<p class="title">Наполеон</p>
+					</li>
+				</ul>
+				<button class="more">Больше</button>
+			</section>
+			
+			<section class="index_page place_order">
+				<h2>Как сделать заказ?</h2>
+				<p>
+				  Некоторое количество текста про кондитерскую 
+				  Некоторое количество текста про кондитерскую
+				  Некоторое количество текста про кондитерскую 
+				  Некоторое количество текста про кондитерскую 
+				  Некоторое количество текста про кондитерскую 
+				  Некоторое количество текста про кондитерскую 
+				  Некоторое количество текста про кондитерскую
+				  Некоторое количество текста про кондитерскую
+				  Некоторое количество текста про кондитерскую
+				</p>
+			</section>
+			
+		</main>
 		<footer ng-include="'footer.html'"></footer>
-		
 	</body>
 </html>
