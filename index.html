@@ -1,66 +1,94 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="tomaTort">
 	<head>
 		<meta charset="utf-8">
 		<title>Tomatort</title>
-		<script src="angularjs/angular.min.js"></script>
+		
 		<link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
+		<link rel="stylesheet" href="stylesheets/lib/jquery.bxslider.css" type="text/css" />
+		
+		<script src="js/lib/jquery/jquery.min.js"></script>
+		<script src="js/lib/jquery/jquery.bxslider.min.js"></script>
+		<script>
+  	  jQuery(document).ready(function(){
+        jQuery('.gallery_slider').bxSlider();
+      });
+  	</script>
+		
+		<script src="js/lib/angularjs/angular.min.js"></script>
+		<script src="js/lib/angularjs/angular-route.min.js"></script>
+		<script>
+			/* global angular */
+			angular.module("tomaTort", ["ngRoute"])
+			.config(function ($routeProvider) {
+				
+				$routeProvider.when("/home", {
+					templateUrl: "/views/home.html"
+				});
+				
+				$routeProvider.when("/menu", {
+					templateUrl: "/views/menu.html"
+				});
+				
+				$routeProvider.when("/gallery", {
+					templateUrl: "/views/gallery.html"
+				});
+				
+				$routeProvider.when("/contacts", {
+					templateUrl: "/views/contacts.html"
+				});
+				
+				$routeProvider.when("/checkout", {
+					templateUrl: "/views/checkout.html"
+				});
+				
+				$routeProvider.otherwise({
+					templateUrl: "views/home.html"
+				});
+			});
+		</script>
 	</head>
 	
 	<body>
-		<header class="wrapper" ng-include="'header.html'"></header>
-		<main class="wrapper">
-			
-			<section class="promo">
-				<h1>Tomatort</h1>
-				<p class="title">Кондитерская</p>
-			</section>
-			
-			<section class="index_page">
-				<h2>О нас</h2>
-				<p>
-				  Некоторое количество текста про кондитерскую 
-				  Некоторое количество текста про кондитерскую
-				  Некоторое количество текста про кондитерскую 
-				  Некоторое количество текста про кондитерскую 
-				  Некоторое количество текста про кондитерскую 
-				  Некоторое количество текста про кондитерскую 
-				  Некоторое количество текста про кондитерскую
-				</p>
-			</section>
-			
-			<section class="index_page menu">
-				<h2>Меню</h2>
-				<ul class="menu_block fxbx_block fxbx_sp_around fxbx_wrap">
-					<li class="menu_item">
-						<p class="title">Наполеон</p>
-					</li>
-					<li class="menu_item">
-						<p class="title">Наполеон</p>
-					</li>
-					<li class="menu_item">
-						<p class="title">Наполеон</p>
-					</li>
+		<header class="wrapper">
+			<!--Logo-->
+			<div class="logo">
+				<a href="/"><img src="images/logo.png"></a>
+			</div>
+
+			<!--Top Navbar-->
+			<nav class="top_menu">
+				<ul>
+					<a href="#"><li>Главная</li></a>
+					<a href="#/menu"><li>Меню</li></a>
+					<a href="#/gallery"><li>Галерея</li></a>
+					<a href="#/contacts"><li>Контакты</li></a>
+					<a href="#/checkout"><li>Корзина</li></a>
 				</ul>
-				<button class="more">Больше</button>
-			</section>
-			
-			<section class="index_page place_order">
-				<h2>Как сделать заказ?</h2>
-				<p>
-				  Некоторое количество текста про кондитерскую 
-				  Некоторое количество текста про кондитерскую
-				  Некоторое количество текста про кондитерскую 
-				  Некоторое количество текста про кондитерскую 
-				  Некоторое количество текста про кондитерскую 
-				  Некоторое количество текста про кондитерскую 
-				  Некоторое количество текста про кондитерскую
-				  Некоторое количество текста про кондитерскую
-				  Некоторое количество текста про кондитерскую
-				</p>
-			</section>
-			
+			</nav>
+		</header>
+		
+		<main class="wrapper">
+			<ng-view/>
 		</main>
-		<footer ng-include="'footer.html'"></footer>
+		
+		<footer>
+			<!--Navbar-->
+			<nav class="bottom_menu">
+				<ul>
+					<a href="/"><li>Главная</li></a>
+					<a href="/menu.html"><li>Меню</li></a>
+					<a href="/gallery.html"><li>Галерея</li></a>
+					<a href="/contacts.html"><li>Контакты</li></a>
+				</ul>
+			</nav>
+
+			<!--Social networks-->
+			<div class="socials fxbx_block fxbx_sp_between">
+				<div class="social fb"></div>
+				<div class="social inst"></div>
+				<div class="social vk"></div>
+			</div>
+		</footer>
 	</body>
 </html>
