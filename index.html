@@ -9,11 +9,6 @@
 		
 		<script src="js/lib/jquery/jquery.min.js"></script>
 		<script src="js/lib/jquery/jquery.bxslider.min.js"></script>
-		<script>
-  	  jQuery(document).ready(function(){
-        jQuery('.gallery_slider').bxSlider();
-      });
-  	</script>
 		
 		<script src="js/lib/angularjs/angular.min.js"></script>
 		<script src="js/lib/angularjs/angular-route.min.js"></script>
@@ -45,6 +40,15 @@
 				$routeProvider.otherwise({
 					templateUrl: "views/home.html"
 				});
+			})
+			.directive("gallerySlider", function() {
+				return {
+					restrict: 'A',
+					templateUrl: '/views/partials/_gallerySlider.html',
+					link: function(scope, iElement, attrs) {
+		        $(iElement).bxSlider();
+       		}
+				};
 			});
 		</script>
 	</head>
