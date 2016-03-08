@@ -117,21 +117,16 @@ input[type=range]::-ms-thumb {
   font-weight: 400;
 }
 /* bxslider */
-.gallery_slider {
-  position: static !important;
-  height: 100%;
-}
 .gallery_slider .gs_item {
   display: inline-block;
   vertical-align: middle;
-  height: 100%;
   float: none !important;
   position: static !important;
 }
 .gallery_slider .gs_item .slider_title {
   position: absolute;
   bottom: 0;
-  width: 895px;
+  width: 891px;
   height: 65px;
   line-height: 65px;
   background: rgba(0, 0, 0, 0.5);
@@ -142,11 +137,6 @@ input[type=range]::-ms-thumb {
   margin: auto;
   max-height: 515px;
   width: auto;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .bx-wrapper .bx-viewport {
