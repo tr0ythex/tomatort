@@ -46,9 +46,16 @@
 					restrict: 'A',
 					templateUrl: '/views/partials/_gallerySlider.html',
 					link: function(scope, iElement, attrs) {
-		        $(iElement).bxSlider();
+		        $(iElement).bxSlider({useCSS: false, mode: 'fade'});
        		}
 				};
+			}) // only for development, remove in production
+			.run(function($rootScope, $templateCache) {
+    		$rootScope.$on('$routeChangeStart', function(event, next, current) {
+        	if (typeof(current) !== 'undefined'){
+            $templateCache.remove(current.templateUrl);
+        	}
+    		});
 			});
 		</script>
 	</head>

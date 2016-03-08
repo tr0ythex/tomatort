@@ -6,40 +6,6 @@
   p {
     margin: 80px auto 50px;
   }
-  
-  .title {
-    position: absolute;
-    bottom: 0;
-    width: 895px;
-    height: 65px;
-    line-height: 65px;
-    background: rgba(black, 0.5);
-    color: white;
-  }
-  
-  .gallery_slider {
-    .gs_item {
-      display: inline-block;
-      vertical-align: middle;
-      float: none !important;
-      position: static !important;
-      img {
-        margin: auto;
-        max-height: 515px;
-        width: auto;
-      }
-    }
-  }
-  
-  .bx-wrapper .bx-viewport {
-    width: 99% !important;
-    height: 515px !important;
-    left: 0;
-    margin: 0 auto;
-    border: none;
-    box-sizing: border-box;
-    position: relative;
-  }
 }
 
 .back_to_menu {
