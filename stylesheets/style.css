@@ -665,6 +665,35 @@ section p {
   background-size: contain;
   cursor: pointer;
   margin-bottom: 4px;
+  perspective: 1000;
+}
+.menu .menu_block .menu_item:hover .card {
+  transform: rotateY(180deg);
+}
+.menu .menu_block .menu_item .card {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.menu .menu_block .menu_item .card .front {
+  height: 300px;
+  width: 296px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+.menu .menu_block .menu_item .card .back {
+  height: 300px;
+  width: 296px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
 }
 .menu .menu_block .menu_item .title {
   position: absolute;

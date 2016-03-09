@@ -184,6 +184,56 @@ section {
       background-size: contain;
       cursor: pointer;
       margin-bottom: 4px;
+      
+      perspective: 1000;
+      &:hover {
+        .card {
+          transform: rotateY(180deg);
+        }
+      }
+      .card {
+        transition: 0.6s;
+	      transform-style: preserve-3d;
+
+	      position: relative;
+        .front {
+          height: 300px;
+          width: 296px;
+          backface-visibility: hidden;
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        z-index: 2;
+	        /* for firefox 31 */
+	        transform: rotateY(0deg);
+        }
+        .back {
+          height: 300px;
+          width: 296px;
+          backface-visibility: hidden;
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        transform: rotateY(180deg);
+        }
+      }
+      // .card {
+      //   height: 100%;
+      // }
+      // .front {
+      //   height: 100%;
+      //   width: 100%;
+      //   position: absolute;
+      //   background-image: url(/images/menu_item.jpg);
+      //   background-size: contain;
+      // }
+      // .back {
+      //   height: 100%;
+      //   width: 100%;
+      //   position: absolute;
+      //   background-image: url(/images/menu_item.jpg);
+      //   background-size: contain;
+      // }
       .title {
         position: absolute;
         bottom: 0;
