@@ -605,6 +605,9 @@ nav ul li {
 nav ul li:hover {
   color: #3BBFA5;
 }
+nav ul .menu-active {
+  color: #3BBFA5;
+}
 
 section {
   height: 300px;

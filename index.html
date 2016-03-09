@@ -12,6 +12,7 @@
 		
 		<script src="js/lib/angularjs/angular.min.js"></script>
 		<script src="js/lib/angularjs/angular-route.min.js"></script>
+		<script src="js/lib/angularjs/angular-resource.min.js"></script>
 		<script>
 			/* global angular */
 			angular.module("tomaTort", ["ngRoute"])
@@ -41,15 +42,7 @@
 					templateUrl: "views/home.html"
 				});
 			})
-			.directive("gallerySlider", function() {
-				return {
-					restrict: 'A',
-					templateUrl: '/views/partials/_gallerySlider.html',
-					link: function(scope, iElement, attrs) {
-		        $(iElement).bxSlider({useCSS: false});
-       		}
-				};
-			}) // only for development, remove in production
+			// only for development, remove in production
 			.run(function($rootScope, $templateCache) {
     		$rootScope.$on('$routeChangeStart', function(event, next, current) {
         	if (typeof(current) !== 'undefined'){
@@ -58,6 +51,7 @@
     		});
 			});
 		</script>
+		<script src="js/angularjs/controllers/genericControllers.js"></script>
 	</head>
 	
 	<body>
@@ -68,29 +62,44 @@
 			</div>
 
 			<!--Top Navbar-->
-			<nav class="top_menu">
+			<nav class="top_menu" ng-controller="menuCtrl">
 				<ul>
-					<a href="#"><li>Главная</li></a>
-					<a href="#/menu"><li>Меню</li></a>
-					<a href="#/gallery"><li>Галерея</li></a>
-					<a href="#/contacts"><li>Контакты</li></a>
-					<a href="#/checkout"><li>Корзина</li></a>
+					<a href="#">
+						<li ng-click="selectMenuItem('')" 
+								ng-class="getMenuClass('')">Главная</li>
+					</a>
+					<a href="#/menu">
+						<li id="m_menu" ng-click="selectMenuItem('/menu')" 
+								ng-class="getMenuClass('/menu')">Меню</li>
+					</a>
+					<a href="#/gallery">
+						<li ng-click="selectMenuItem('/gallery')" 
+								ng-class="getMenuClass('/gallery')">Галерея</li>
+					</a>
+					<a href="#/contacts">
+						<li ng-click="selectMenuItem('/contacts')" 
+								ng-class="getMenuClass('/contacts')">Контакты</li>
+					</a>
+					<a href="#/checkout">
+						<li ng-click="selectMenuItem('/checkout')" 
+								ng-class="getMenuClass('/checkout')">Корзина</li>
+					</a>
 				</ul>
 			</nav>
 		</header>
 		
 		<main class="wrapper">
-			<ng-view/>
+			<ng-view />
 		</main>
 		
 		<footer>
 			<!--Navbar-->
-			<nav class="bottom_menu">
+			<nav class="bottom_menu" ng-controller="menuCtrl">
 				<ul>
-					<a href="/"><li>Главная</li></a>
-					<a href="/menu.html"><li>Меню</li></a>
-					<a href="/gallery.html"><li>Галерея</li></a>
-					<a href="/contacts.html"><li>Контакты</li></a>
+					<a href="#"><li ng-click="refreshPage()">Главная</li></a>
+					<a href="#/menu"><li ng-click="refreshPage()">Меню</li></a>
+					<a href="#/gallery"><li ng-click="refreshPage()">Галерея</li></a>
+					<a href="#/contacts"><li ng-click="refreshPage()">Контакты</li></a>
 				</ul>
 			</nav>
 
