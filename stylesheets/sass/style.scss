@@ -17,12 +17,26 @@
 .fxbx_sp_between {
   @include flex-justify(space-between);
 }
+.fxbx_flex_start {
+  @include flex-justify(flex-start);
+  .fxbx_item:nth-child(3n-1) {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+}
 .fxbx_sp_around {
   @include flex-justify(space-around);
 }
 .fxbx_wrap {
   @include flex-wrap(wrap);
 }
+/*
+fxbx
+fx_jstf_sp_between
+fx_jstf_sp_around
+fx_jstf_fx_start
+fx_wrp_wrap
+*/
 
 ul, h1, h2, p, body {
   margin: 0;

@@ -4,7 +4,7 @@ angular.module("tomaTort")
   var cartData = [];
   
   return {
-    addProduct: function (id, name, price) {
+    addProduct: function (id, name, price, weight) {
       var addedToExistingItem = false;
       for (var i = 0; i < cartData.length; i++) {
         if (cartData[i].id == id) {
@@ -15,7 +15,7 @@ angular.module("tomaTort")
       }
       if (!addedToExistingItem) {
         cartData.push({
-          count: 1, id: id, price: price, name: name
+          count: 1, id: id, price: price, name: name, weight: weight
         });
       }
     },
@@ -36,8 +36,8 @@ angular.module("tomaTort")
 })
 .directive("cartSummary", function (cart) {
   return {
-    restrict: "E",
-    templateUrl: "components/cart/cartSummary.html",
+    restrict: "A",
+    template: "<span>{{itemCount()}}</span>",
     controller: function ($scope) {
       var cartData = cart.getProducts();
       

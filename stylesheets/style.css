@@ -492,6 +492,15 @@ input[type=submit] {
   justify-content: space-between;
 }
 
+.fxbx_flex_start {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.fxbx_flex_start .fxbx_item:nth-child(3n-1) {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
 .fxbx_sp_around {
   -webkit-justify-content: space-around;
   justify-content: space-around;
@@ -503,6 +512,13 @@ input[type=submit] {
   flex-wrap: wrap;
 }
 
+/*
+fxbx
+fx_jstf_sp_between
+fx_jstf_sp_around
+fx_jstf_fx_start
+fx_wrp_wrap
+*/
 ul, h1, h2, p, body {
   margin: 0;
   padding: 0;

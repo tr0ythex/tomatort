@@ -52,7 +52,8 @@
 			});
 		</script>
 		<script src="js/angularjs/controllers/genericControllers.js"></script>
-		<script src="js/angularjs/controllers/cartController.js"></script>
+		<script src="js/angularjs/components/cart.js"></script>
+		<script src="js/menuHover.js"></script>
 	</head>
 	
 	<body ng-controller="tomaTortCtrl">
@@ -83,7 +84,7 @@
 					</a>
 					<a href="#/checkout">
 						<li ng-click="selectMenuItem('/checkout')" 
-								ng-class="getMenuClass('/checkout')">Корзина</li>
+								ng-class="getMenuClass('/checkout')">Корзина (<cart-summary />)</li>
 					</a>
 				</ul>
 			</nav>
