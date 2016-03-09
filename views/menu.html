@@ -8,23 +8,8 @@
   </div>
   
 	<ul class="menu_block fxbx_block fxbx_sp_around fxbx_wrap">
-		<li class="menu_item">
-			<p class="title">Наполеон</p>
-		</li>
-		<li class="menu_item">
-			<p class="title">Наполеон</p>
-		</li>
-		<li class="menu_item">
-			<p class="title">Наполеон</p>
-		</li>
-		<li class="menu_item">
-			<p class="title">Наполеон</p>
-		</li>
-		<li class="menu_item">
-			<p class="title">Наполеон</p>
-		</li>
-		<li class="menu_item">
-			<p class="title">Наполеон</p>
+		<li class="menu_item" ng-repeat="product in data.products">
+			<p class="title">{{product.name}}</p>
 		</li>
 	</ul>
 </section>

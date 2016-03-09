@@ -1,4 +1,5 @@
-@import 'utilities/master';
+@import 'utilities/variables';
+@import 'utilities/mixins';
 @import 'utilities/range_style';
 @import 'utilities/fonts';
 @import 'utilities/slider';
@@ -12,9 +13,6 @@
 
 .fxbx_block {
   @include flexbox();
-}
-.fxbx_item_1 {
-  @include flex(1 33%);
 }
 .fxbx_sp_between {
   @include flex-justify(space-between);
@@ -163,6 +161,7 @@ section {
   height: 600px;
   .menu_block {
     height: auto;
+    justify-content: flex-start;
     .menu_item {
       position: relative;
       height: 300px;

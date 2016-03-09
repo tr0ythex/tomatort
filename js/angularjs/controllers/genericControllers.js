@@ -17,7 +17,7 @@ angular.module("tomaTort")
     $window.location.reload();
   };
 })
-.controller("tomaTortCtrl", function ($scope, $http) {
+.controller("tomaTortCtrl", function ($scope) {
   $scope.data = {
     products: [
       {"name": "Торт Наполеон", "price": "1500", "weight": "500"},

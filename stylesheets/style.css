@@ -487,19 +487,6 @@ input[type=submit] {
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 
-.fxbx_item_1 {
-  -webkit-box-flex: 1 33%;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  -moz-box-flex: 1 33%;
-  /* OLD - Firefox 19- */
-  -webkit-flex: 1 33%;
-  /* Chrome */
-  -ms-flex: 1 33%;
-  /* IE 10 */
-  flex: 1 33%;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
-}
-
 .fxbx_sp_between {
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -652,6 +639,7 @@ section p {
 }
 .menu .menu_block {
   height: auto;
+  justify-content: flex-start;
 }
 .menu .menu_block .menu_item {
   position: relative;
