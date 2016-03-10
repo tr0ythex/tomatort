@@ -90,17 +90,17 @@
 		</header>
 		
 		<main class="wrapper">
-			<ng-view />
+			<ng-view autoscroll="true"/>
 		</main>
 		
 		<footer>
 			<!--Navbar-->
 			<nav class="bottom_menu" ng-controller="menuCtrl">
 				<ul>
-					<a href="#"><li ng-click="refreshPage()">Главная</li></a>
-					<a href="#/menu"><li ng-click="refreshPage()">Меню</li></a>
-					<a href="#/gallery"><li ng-click="refreshPage()">Галерея</li></a>
-					<a href="#/contacts"><li ng-click="refreshPage()">Контакты</li></a>
+					<a href="#"><li ng-click="selectMenuItem('')">Главная</li></a>
+					<a href="#/menu"><li ng-click="selectMenuItem('/menu')">Меню</li></a>
+					<a href="#/gallery"><li ng-click="selectMenuItem('/gallery')">Галерея</li></a>
+					<a href="#/contacts"><li ng-click="selectMenuItem('/contacts')">Контакты</li></a>
 				</ul>
 			</nav>
 

@@ -2,22 +2,11 @@
 angular.module("tomaTort")
 .constant("menuActiveClass", "menu-active")
 .controller("menuCtrl", function ($scope, $location, $window, menuActiveClass) {
+
   
-  var selectedMenuItem = $location.path();
-  
-  $scope.selectMenuItem = function (menuItem) {
-    selectedMenuItem = menuItem;
-  };
-  
-  $scope.getMenuClass = function (menuItem) {
-    return selectedMenuItem == menuItem ? menuActiveClass : "";
-  };
-  
-  $scope.refreshPage = function () {
-    $window.location.reload();
-  };
 })
-.controller("tomaTortCtrl", function ($scope) {
+.controller("tomaTortCtrl", function ($scope, $location, menuActiveClass) {
+  /* generic data */
   $scope.data = {
     products: [
       {"id": 1, "name": "Торт Наполеон", "price": 1500, "weight": 500},
@@ -31,6 +20,24 @@ angular.module("tomaTort")
       {"id": 9, "name": "Мармелад Домашний", "price": 1199, "weight": 700},
       {"id": 10, "name": "Халва", "price": 1199, "weight": 600}
     ]
+  };
+  $scope.setOrdered = function (product_id) {
+    for (var i = 0; i < $scope.data.products.length; i++) {
+      if ($scope.data.products[i].id === product_id) {
+        $scope.data.products[i].ordered = true;
+      }
+    }
+  };
+  
+  /* menu controller */
+  var selectedMenuItem = $location.path();
+  
+  $scope.selectMenuItem = function (menuItem) {
+    selectedMenuItem = menuItem;
+  };
+  
+  $scope.getMenuClass = function (menuItem) {
+    return selectedMenuItem == menuItem ? menuActiveClass : "";
   };
 })
 .directive("gallerySlider", function() {

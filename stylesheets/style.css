@@ -730,18 +730,29 @@ section p {
   font-family: LeksaPro;
   font-style: italic;
   font-size: 20px;
+  margin-top: 50px;
 }
 .menu .menu_block .menu_item .content_back p.p_price {
   font-family: Merel;
   font-weight: 300;
   font-size: 30px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 .menu .menu_block .menu_item .content_back button {
   border: 1px solid white;
   position: absolute;
-  bottom: 0;
-  width: 50%;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 190px;
+  height: 50px;
+  color: white;
+}
+.menu .menu_block .menu_item .content_back button:hover {
+  background-color: #B0EADA;
+  border: none;
+  color: #4D4D4D;
 }
 .menu .menu_block .menu_item .title {
   position: absolute;
