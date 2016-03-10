@@ -710,18 +710,6 @@ section p {
   cursor: pointer;
   margin-bottom: 4px;
 }
-.menu .menu_block .menu_item .content_front {
-  background-image: url(/images/menu_item.jpg);
-  background-size: contain;
-}
-.menu .menu_block .menu_item .content_back {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/images/menu_item.jpg);
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/menu_item.jpg);
-  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/menu_item.jpg);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/menu_item.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/menu_item.jpg);
-  background-size: contain;
-}
 .menu .menu_block .menu_item .content_back p {
   width: 100%;
   color: white;

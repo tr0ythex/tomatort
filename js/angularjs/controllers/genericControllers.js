@@ -26,7 +26,7 @@ angular.module("tomaTort")
     return menu.getMenuClass(menuItem);
   };
 })
-.controller("tomaTortCtrl", function ($scope, $location, menuActiveClass) {
+.controller("tomaTortCtrl", function ($scope, $location, menuActiveClass, cart) {
   $scope.data = {
     products: [
       {"id": 1, "name": "Торт Наполеон", "price": 1500, "weight": 500},
@@ -48,7 +48,22 @@ angular.module("tomaTort")
       }
     }
   };
-  
+  $scope.addToCart = function (product) {
+    cart.addProduct(product.id, product.name, product.price, product.weight);
+  };
+})
+.controller("checkoutCtrl", function ($scope, cart) {
+  $scope.cartData = cart.getProducts();
+  $scope.total = function () {
+    var total = 0;
+    for (var i = 0; i < $scope.cartData.length; i++) {
+      total += ($scope.cartData[i].price * $scope.cartData[i].count);
+    }
+    return total;
+  };
+  $scope.remove = function (id) {
+    cart.removeProduct(id);
+  };
 })
 .directive("gallerySlider", function() {
 	return {

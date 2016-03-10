@@ -18,10 +18,12 @@
 			    <p class="p_name">{{product.name}}</p>
 			    <p class="p_price">{{product.price}} Р</p>
 			    <button class="btn_order" ng-hide="product.ordered"
-			    	ng-click="setOrdered(product.id)">Заказать</button>
+			    	ng-click="setOrdered(product.id); addToCart(product)">Заказать
+			    </button>
 			    <a href="#/checkout">
 			    	<button class="btn_checkout" ng-show="product.ordered"
-			    		ng-click="selectMenuItem('/checkout')">Перейти в корзину</button>
+			    		ng-click="selectMenuItem('/checkout')">Перейти в корзину
+			    	</button>
 			    </a>
 			  </div> 
 			</div>

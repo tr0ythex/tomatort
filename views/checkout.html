@@ -1,1 +1,29 @@
-<h1>To Do</h1>
+<section id="checkout" ng-controller="checkoutCtrl">
+  <table class="table" border="1">
+    <thead>
+      <tr>
+        <th colspan="3">Товар</th>
+        <th>Цена</th>
+        <th>Количество</th>
+        <th>Сумма</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in cartData">
+        <td>{{item.count}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.price | currency}}</td>
+        <td>{{ (item.price * item.count) | currency}}</td>
+        <td>
+          
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3" class="text-right">Total:</td>
+        <td class="text-right">{{total() | currency}}</td>
+      </tr>
+    </tfoot>
+  </table>
+</section>

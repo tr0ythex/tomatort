@@ -36,8 +36,8 @@ angular.module("tomaTort")
 })
 .directive("cartSummary", function (cart) {
   return {
-    restrict: "A",
-    template: "<span>{{itemCount()}}</span>",
+    restrict: "E",
+    template: "( {{ 0 || itemCount() }} )",
     controller: function ($scope) {
       var cartData = cart.getProducts();
       

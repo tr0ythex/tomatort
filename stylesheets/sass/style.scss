@@ -182,13 +182,13 @@ section {
       cursor: pointer;
       margin-bottom: 4px;
       .content_front {
-        background-image: url(/images/menu_item.jpg);
-        background-size: contain;
+        // background-image: url(/images/menu_item.jpg);
+        // background-size: contain;
       }
       .content_back {
-        @include gradient-bg(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), 
-          url(/images/menu_item.jpg));
-        background-size: contain;
+        // @include gradient-bg(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), 
+          // url(/images/menu_item.jpg));
+        // background-size: contain;
         p {
           width: 100%;
           color: white;
