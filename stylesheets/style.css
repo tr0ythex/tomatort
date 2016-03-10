@@ -148,6 +148,32 @@ input[type=range]::-ms-thumb {
   box-sizing: border-box;
 }
 
+.flip_animated {
+  perspective: 1000;
+}
+.flip_animated:hover .flipper {
+  transform: rotateY(180deg);
+}
+.flip_animated .flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.flip_animated .flipper .flip_front, .flip_animated .flipper .flip_back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.flip_animated .flipper .flip_front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  /* for firefox 31 */
+}
+.flip_animated .flipper .flip_back {
+  transform: rotateY(180deg);
+}
+
 #menu_page {
   height: auto;
 }
@@ -655,45 +681,25 @@ section p {
 }
 .menu .menu_block {
   height: auto;
-  justify-content: flex-start;
 }
 .menu .menu_block .menu_item {
   position: relative;
   height: 300px;
   width: 296px;
-  background-image: url(/images/menu_item.jpg);
-  background-size: contain;
   cursor: pointer;
   margin-bottom: 4px;
-  perspective: 1000;
 }
-.menu .menu_block .menu_item:hover .card {
-  transform: rotateY(180deg);
+.menu .menu_block .menu_item .flip_front {
+  background-image: url(/images/menu_item.jpg);
+  background-size: contain;
 }
-.menu .menu_block .menu_item .card {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-}
-.menu .menu_block .menu_item .card .front {
-  height: 300px;
-  width: 296px;
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-}
-.menu .menu_block .menu_item .card .back {
-  height: 300px;
-  width: 296px;
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotateY(180deg);
+.menu .menu_block .menu_item .flip_back {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/images/menu_item.jpg);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/menu_item.jpg);
+  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/menu_item.jpg);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/menu_item.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/menu_item.jpg);
+  background-size: contain;
 }
 .menu .menu_block .menu_item .title {
   position: absolute;

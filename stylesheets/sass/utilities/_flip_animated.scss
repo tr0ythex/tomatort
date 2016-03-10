@@ -1,0 +1,26 @@
+.flip_animated {
+  perspective: 1000;
+  &:hover {
+    .flipper {
+      transform: rotateY(180deg);
+    }
+  }
+  .flipper {
+    transition: 0.6s;
+	  transform-style: preserve-3d;
+	  position: relative;
+	  .flip_front, .flip_back {
+	    backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+	  }
+    .flip_front {
+      z-index: 2;
+      transform: rotateY(0deg); /* for firefox 31 */
+    }
+    .flip_back {
+      transform: rotateY(180deg);
+    }
+  }
+}

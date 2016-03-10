@@ -20,3 +20,10 @@
   -webkit-flex-wrap: $wrap_type; /* Safari 6.1+ */
   flex-wrap: $wrap_type;
 }
+@mixin gradient_bg($from_color, $to_color, $url) {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($from_color), to($to_color)), $url;
+  background-image: -webkit-linear-gradient($from_color, $to_color), $url;
+  background-image: -moz-linear-gradient($from_color, $to_color), $url;
+  background-image: -o-linear-gradient($from_color, $to_color), $url;
+  background-image: linear-gradient($from_color, $to_color), $url,
+}
