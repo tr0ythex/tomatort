@@ -7,7 +7,8 @@
     <div class="sort_item">По названию</div>
   </div>
   
-	<ul class="menu_block fxbx_block fxbx_flex_start fxbx_wrap">
+	<ul class="menu_block fxbx_block fxbx_flex_start fxbx_wrap"
+		ng-controller="menuCtrl">
 		<li class="menu_item fxbx_item flip_animated" ng-repeat="product in data.products">
 			<div class="flipper"> 
 			  <div class="flip_front content_front">
@@ -20,7 +21,7 @@
 			    	ng-click="setOrdered(product.id)">Заказать</button>
 			    <a href="#/checkout">
 			    	<button class="btn_checkout" ng-show="product.ordered"
-			    		ng-click="setActiveMenu()">Перейти в корзину</button>
+			    		ng-click="selectMenuItem('/checkout')">Перейти в корзину</button>
 			    </a>
 			  </div> 
 			</div>
