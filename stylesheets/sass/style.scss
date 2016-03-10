@@ -175,25 +175,41 @@ section {
   height: 600px;
   .menu_block {
     height: auto;
-    // justify-content: flex-start;
     .menu_item {
       position: relative;
       height: 300px;
       width: 296px;
       cursor: pointer;
       margin-bottom: 4px;
-      .flip_front {
+      .content_front {
         background-image: url(/images/menu_item.jpg);
         background-size: contain;
-        // height: 300px;
-        // width: 296px;
       }
-      .flip_back {
-        @include gradient_bg(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), 
+      .content_back {
+        @include gradient-bg(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), 
           url(/images/menu_item.jpg));
         background-size: contain;
-        // height: 300px;
-        // width: 296px;
+        p {
+          width: 100%;
+          color: white;
+          &.p_name {
+            font-family: LeksaPro;
+            font-style: italic;
+            font-size: 20px;
+          }
+          &.p_price {
+            font-family: Merel;
+            font-weight: 300;
+            font-size: 30px;
+            margin-top: 40px;
+          }
+        }
+        button {
+          border: 1px solid white;
+          position: absolute;
+          bottom: 0;
+          width: 50%;
+        }
       }
       .title {
         position: absolute;

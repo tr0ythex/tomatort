@@ -10,11 +10,14 @@
 	<ul class="menu_block fxbx_block fxbx_flex_start fxbx_wrap">
 		<li class="menu_item fxbx_item flip_animated" ng-repeat="product in data.products">
 			<div class="flipper"> 
-			  <div class="flip_front"> 
-			    Front content
+			  <div class="flip_front content_front"> 
+			    <p class="title">{{product.name}}</p>
 			  </div> 
-			  <div class="flip_back">
-			    Back content
+			  <div class="flip_back content_back">
+			    <p class="p_name">{{product.name}}</p>
+			    <p class="p_price">{{product.price}} Р</p>
+			    <button>Заказать</button>
+			    <button>Перейти в корзину</button>
 			  </div> 
 			</div>
 		</li>

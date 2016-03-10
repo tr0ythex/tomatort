@@ -20,10 +20,45 @@
   -webkit-flex-wrap: $wrap_type; /* Safari 6.1+ */
   flex-wrap: $wrap_type;
 }
-@mixin gradient_bg($from_color, $to_color, $url) {
+@mixin gradient-bg($from_color, $to_color, $url) {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from($from_color), to($to_color)), $url;
   background-image: -webkit-linear-gradient($from_color, $to_color), $url;
   background-image: -moz-linear-gradient($from_color, $to_color), $url;
   background-image: -o-linear-gradient($from_color, $to_color), $url;
   background-image: linear-gradient($from_color, $to_color), $url,
+}
+@mixin transform-style($style) {
+  -webkit-transform-style: $style;
+  -moz-transform-style: $style;
+  transform-style: $style;
+}
+@mixin transition($params) {
+  -webkit-transition: $params;
+  -moz-transition: $params;
+  -o-transition: $params;
+  transition: $params;
+}
+@mixin backface-visibility($type) {
+  -webkit-backface-visibility: $type;
+  -moz-backface-visibility: $type;
+  backface-visibility: $type;
+}
+@mixin perspective($value) {
+  -webkit-perspective: $value;
+  -moz-perspective: $value;
+  perspective: $value;
+}
+@mixin transform($params) {
+  -webkit-transform: $params;
+  -moz-transform: $params;
+  -o-transform: $params;
+  -ms-transform: $params;
+  transform: $params;
+}
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
