@@ -1,7 +1,7 @@
 /* global angular */
 angular.module("tomaTort")
 .constant("menuActiveClass", "menu-active")
-.factory("SelectedMenuItem", function (menuActiveClass) {
+.factory("menu", function (menuActiveClass) {
   
   var selectedMenuItem = '';
   
@@ -14,20 +14,19 @@ angular.module("tomaTort")
     }
   };
 })
-.controller("menuCtrl", function ($scope, $location, SelectedMenuItem) {
+.controller("menuCtrl", function ($scope, $location, menu) {
   
-  SelectedMenuItem.selectMenuItem($location.path());
+  menu.selectMenuItem($location.path());
   
   $scope.selectMenuItem = function (menuItem) {
-    SelectedMenuItem.selectMenuItem(menuItem);
+    menu.selectMenuItem(menuItem);
   };
   
   $scope.getMenuClass = function (menuItem) {
-    return SelectedMenuItem.getMenuClass(menuItem);
+    return menu.getMenuClass(menuItem);
   };
 })
 .controller("tomaTortCtrl", function ($scope, $location, menuActiveClass) {
-  /* generic data */
   $scope.data = {
     products: [
       {"id": 1, "name": "Торт Наполеон", "price": 1500, "weight": 500},
