@@ -1,9 +1,30 @@
 /* global angular */
 angular.module("tomaTort")
 .constant("menuActiveClass", "menu-active")
-.controller("menuCtrl", function ($scope, $location, $window, menuActiveClass) {
-
+.factory("SelectedMenuItem", function (menuActiveClass) {
   
+  var selectedMenuItem = '';
+  
+  return {
+    selectMenuItem: function (menuItem) {
+      selectedMenuItem = menuItem;
+    },
+    getMenuClass: function (menuItem) {
+      return selectedMenuItem == menuItem ? menuActiveClass : "";
+    }
+  };
+})
+.controller("menuCtrl", function ($scope, $location, SelectedMenuItem) {
+  
+  SelectedMenuItem.selectMenuItem($location.path());
+  
+  $scope.selectMenuItem = function (menuItem) {
+    SelectedMenuItem.selectMenuItem(menuItem);
+  };
+  
+  $scope.getMenuClass = function (menuItem) {
+    return SelectedMenuItem.getMenuClass(menuItem);
+  };
 })
 .controller("tomaTortCtrl", function ($scope, $location, menuActiveClass) {
   /* generic data */
@@ -29,16 +50,6 @@ angular.module("tomaTort")
     }
   };
   
-  /* menu controller */
-  var selectedMenuItem = $location.path();
-  
-  $scope.selectMenuItem = function (menuItem) {
-    selectedMenuItem = menuItem;
-  };
-  
-  $scope.getMenuClass = function (menuItem) {
-    return selectedMenuItem == menuItem ? menuActiveClass : "";
-  };
 })
 .directive("gallerySlider", function() {
 	return {
