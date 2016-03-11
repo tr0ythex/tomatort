@@ -16,7 +16,7 @@
           <p class="weight">{{item.weight}}</p>
         </td>
         <td>{{item.price}} Р</td>
-        <td>{{item.count}}</td>
+        <td><input type="number" name="p_count" id="p_count" ng-model="cartData[item].count" value="{{item.count}}"></td>
         <td>{{(item.price * item.count)}} Р</td>
       </tr>
     </tbody>

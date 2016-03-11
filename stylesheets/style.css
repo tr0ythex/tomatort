@@ -521,6 +521,10 @@ input[type=submit] {
   height: auto;
 }
 
+#checkout #p_count {
+  width: 50px;
+}
+
 #home_menu .menu_item {
   cursor: default;
 }
