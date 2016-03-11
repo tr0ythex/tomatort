@@ -38,24 +38,12 @@ angular.module("tomaTort")
 .directive("cartSummary", function (cart) {
   return {
     restrict: "E",
-    template: "( {{ 0 || itemCount() }} )",
+    template: "( {{ 0 || productCount() }} )",
     controller: function ($scope) {
       var cartData = cart.getProducts();
       
-      $scope.total = function () {
-        var total = 0;
-        for (var i = 0; i < cartData.length; i++) {
-          total += (cartData[i].price * cartData[i].count);
-        }
-        return total;
-      };
-      
-      $scope.itemCount = function () {
-        var total = 0;
-        for (var i = 0; i < cartData.length; i++) {
-          total += cartData[i].count;
-        }
-        return total;
+      $scope.productCount = function () {
+        return cartData.length;
       };
     }
   };
