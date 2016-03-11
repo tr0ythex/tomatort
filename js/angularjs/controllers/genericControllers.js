@@ -59,7 +59,8 @@ angular.module("tomaTort")
     }
   };
   $scope.addToCart = function (product) {
-    cart.addProduct(product.id, product.name, product.price, product.weight);
+    cart.addProduct(product.id, product.name, product.price, 
+                    product.weight, product.imageUrl);
   };
 })
 .controller("checkoutCtrl", function ($scope, cart) {

@@ -16,17 +16,12 @@
 	</p>
 </section>
 
-<section class="index_page menu">
+<section id="home_menu" class="index_page menu">
 	<h2>Меню</h2>
 	<ul class="menu_block fxbx_block fxbx_sp_around fxbx_wrap">
-		<li class="menu_item">
-			<p class="title">Наполеон</p>
-		</li>
-		<li class="menu_item">
-			<p class="title">Наполеон</p>
-		</li>
-		<li class="menu_item">
-			<p class="title">Наполеон</p>
+		<li class="menu_item fxbx_item" ng-repeat="product in data.products | limitTo:3">
+			<img ng-src="{{product.imageUrl}}">
+			<p class="title">{{product.name}}</p>
 		</li>
 	</ul>
 	<button class="more">Больше</button>

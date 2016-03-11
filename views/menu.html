@@ -12,7 +12,7 @@
 		<li class="menu_item fxbx_item flip_animated" ng-repeat="product in data.products">
 			<div class="flipper"> 
 			  <div class="flip_front content_front">
-			  	<img src="{{product.imageUrl}}">
+			  	<img ng-src="{{product.imageUrl}}">
 			    <p class="title">{{product.name}}</p>
 			  </div> 
 			  <div class="flip_back content_back">

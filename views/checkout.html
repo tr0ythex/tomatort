@@ -10,19 +10,27 @@
     </thead>
     <tbody>
       <tr ng-repeat="item in cartData">
-        <td>{{item.count}}</td>
-        <td>{{item.name}}</td>
-        <td>{{item.price | currency}}</td>
-        <td>{{ (item.price * item.count) | currency}}</td>
-        <td>
-          
+        <td><img ng-src="{{item.imageUrl}}" style="width: 50px; height: 50px;"></td>
+        <td colspan="2">
+          <p class="name">{{item.name}}</p>
+          <p class="weight">{{item.weight}}</p>
         </td>
+        <td>{{item.price}} Р</td>
+        <td>{{item.count}}</td>
+        <td>{{(item.price * item.count)}} Р</td>
       </tr>
     </tbody>
     <tfoot>
       <tr>
-        <td colspan="3" class="text-right">Total:</td>
-        <td class="text-right">{{total() | currency}}</td>
+        <td colspan="2">
+          <input type="radio" name="deliveryType" value="delivery" id="delivery" checked>
+          <label for="delivery">Доставка</label>
+          <input type="radio" name="deliveryType" value="selfPickup" id="selfPickup">
+          <label for="selfPickup">Самовывоз</label>
+        </td>
+        <td colspan="3">Итого:</td>
+        
+        <td>{{total()}} Р</td>
       </tr>
     </tfoot>
   </table>

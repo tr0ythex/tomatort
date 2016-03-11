@@ -521,6 +521,10 @@ input[type=submit] {
   height: auto;
 }
 
+#home_menu .menu_item {
+  cursor: default;
+}
+
 .fxbx_block {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
