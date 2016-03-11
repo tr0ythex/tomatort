@@ -521,9 +521,6 @@ input[type=submit] {
   height: auto;
 }
 
-#checkout #p_count {
-  width: 50px;
-}
 #checkout .toma_table {
   width: 100%;
   border-collapse: collapse;
@@ -549,29 +546,79 @@ input[type=submit] {
 #checkout .toma_table td {
   height: 150px;
 }
-#checkout .toma_table td.img {
+#checkout .toma_table td.td_img {
   padding: 10px;
+}
+#checkout .toma_table td.td_count input {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  border: 2px solid #B0EADA;
+}
+#checkout .toma_table td.td_price, #checkout .toma_table td.td_count input, #checkout .toma_table td.td_subtotal, #checkout .toma_table td.td_total_txt, #checkout .toma_table td.td_total {
+  font-family: Merel;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#checkout .toma_table td.td_del_type {
+  font-family: LeksaPro;
+  font-size: 20px;
+  font-style: italic;
+  text-align: left;
+}
+#checkout .toma_table td.td_total_txt {
+  text-align: right;
 }
 #checkout .toma_table td img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#checkout .toma_table td .name {
+#checkout .toma_table td p {
+  text-align: left;
+  margin: 15px 0 15px 10px;
+}
+#checkout .toma_table td p.name {
   font-family: Merel;
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
-  text-align: left;
 }
-#checkout .toma_table td .weight {
+#checkout .toma_table td p.weight {
   font-family: LeksaPro;
   font-size: 20px;
   font-style: italic;
-  text-align: left;
 }
 #checkout .toma_table tr {
   border-top: 2px solid #B0EADA;
+}
+#checkout .toma_table input[type=radio] {
+  display: none;
+}
+#checkout .toma_table input[type=radio] + label {
+  cursor: pointer;
+  padding: 8px 16px;
+  margin-right: 10px;
+}
+#checkout .toma_table input[type=radio]:checked + label {
+  background-color: #C2F0E1;
+}
+#checkout #place_order {
+  border: 1px solid #686868;
+  color: #444444;
+  width: 300px;
+  height: 60px;
+  font-family: Merel;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 20px 0 80px;
+}
+#checkout #place_order:hover {
+  border: none;
+  color: #4D4D4D;
+  background-color: #B4EEDE;
 }
 
 #home_menu .menu_item {
@@ -664,6 +711,11 @@ input {
 
 input[type=checkbox] {
   display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
 }
 
 .wrapper {

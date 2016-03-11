@@ -9,7 +9,7 @@
 @import 'pages/dream_dessert';
 @import 'pages/gallery';
 @import 'pages/contacts';
-@import 'pages/customer_info';
+@import 'pages/placeOrder';
 @import 'pages/checkout';
 @import 'pages/home';
 
@@ -77,6 +77,11 @@ input {
 
 input[type=checkbox] {
   display: none;
+}
+// always show spinner on type number input
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  opacity: 1;
 }
 
 .wrapper {
