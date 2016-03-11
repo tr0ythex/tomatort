@@ -526,23 +526,60 @@ input[type=submit] {
 }
 #checkout .toma_table {
   width: 100%;
+  border-collapse: collapse;
 }
 #checkout .toma_table th, #checkout .toma_table td {
   width: 150px;
   min-width: 150px;
-  border: 1px solid black;
 }
 #checkout .toma_table th[colspan='2'], #checkout .toma_table td[colspan='2'] {
   width: 300px;
-  min-width: 300px;
+  max-width: 300px;
 }
 #checkout .toma_table th[colspan='3'], #checkout .toma_table td[colspan='3'] {
   width: 450px;
-  min-width: 450px;
+  max-width: 450px;
+}
+#checkout .toma_table th {
+  font-family: LeksaPro;
+  font-size: 16px;
+  font-style: italic;
+  height: 40px;
+}
+#checkout .toma_table td {
+  height: 150px;
+}
+#checkout .toma_table td.img {
+  padding: 10px;
+}
+#checkout .toma_table td img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#checkout .toma_table td .name {
+  font-family: Merel;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: left;
+}
+#checkout .toma_table td .weight {
+  font-family: LeksaPro;
+  font-size: 20px;
+  font-style: italic;
+  text-align: left;
+}
+#checkout .toma_table tr {
+  border-top: 2px solid #B0EADA;
 }
 
 #home_menu .menu_item {
   cursor: default;
+}
+
+.promo, .place_order {
+  height: 300px;
 }
 
 .fxbx_block {
@@ -684,7 +721,6 @@ nav ul .menu-active {
 }
 
 section {
-  height: 300px;
   text-align: center;
   overflow: hidden;
 }

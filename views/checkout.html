@@ -10,10 +10,10 @@
     </thead>
     <tbody>
       <tr ng-repeat="item in cartData">
-        <td><img ng-src="{{item.imageUrl}}" style="width: 50px; height: 50px;"></td>
+        <td class="img"><img ng-src="{{item.imageUrl}}"></td>
         <td colspan="2">
           <p class="name">{{item.name}}</p>
-          <p class="weight">{{item.weight}}</p>
+          <p class="weight">Масса: {{item.weight}} г</p>
         </td>
         <td>{{item.price}} Р</td>
         <td><input type="number" name="p_count" id="p_count" ng-model="cartData[$index].count" value="{{item.count}}"></td>
