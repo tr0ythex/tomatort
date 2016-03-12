@@ -80,6 +80,7 @@ angular.module("tomaTort")
 			fileName = e.target.value.split('\\').pop();
 			if (fileName) {
 				document.querySelector('.chosenFile').innerHTML = fileName;
+				// fileUpload.filename = fileName;
 			}
 		});
   });
@@ -101,7 +102,8 @@ angular.module("tomaTort")
   $scope.dreamDessert = {
     param1: [],
     param2: '',
-    param3: 1
+    param3: 1,
+    file: null
   };
   $scope.shouldBeRequired = function () {
     if ($scope.dreamDessert.param1.indexOf(true) > -1) {
@@ -117,9 +119,9 @@ angular.module("tomaTort")
       $scope.showValidation = true;
     }
   };
-  // $scope.showDream = function () {
-  //   alert($scope.dreamDessert.param3);
-  // };
+  $scope.showDream = function () {
+    alert($scope.dreamDessert.file);
+  };
 })
 .directive("gallerySlider", function() {
 	return {
