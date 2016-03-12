@@ -23,10 +23,12 @@
     <tfoot>
       <tr>
         <td colspan="2" class="td_del_type">
-          <input type="radio" name="deliveryType" value="delivery" id="delivery" checked>
-          <label for="delivery">Доставка</label>
-          <input type="radio" name="deliveryType" value="selfPickup" id="selfPickup">
+          <input type="radio" name="deliveryType" value="selfPickup" 
+            ng-model="data.shipping.deliveryType" id="selfPickup">
           <label for="selfPickup">Самовывоз</label>
+          <input type="radio" name="deliveryType" value="delivery" 
+            ng-model="data.shipping.deliveryType" id="delivery">
+          <label for="delivery">Доставка</label>
         </td>
         <td class="td_total_txt" colspan="3">Итого:</td>
         <td class="td_total">{{total()}} Р</td>

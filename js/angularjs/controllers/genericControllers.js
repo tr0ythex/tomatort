@@ -49,7 +49,10 @@ angular.module("tomaTort")
        "imageUrl": "/images/products/marmelad.jpg"},
       {"id": 10, "name": "Халва", "price": 1199, "weight": 600, 
        "imageUrl": "/images/products/halva.jpg"}
-    ]
+    ],
+    shipping: {
+      deliveryType: 'selfPickup'
+    }
   };
   $scope.setOrdered = function (product_id) {
     for (var i = 0; i < $scope.data.products.length; i++) {
