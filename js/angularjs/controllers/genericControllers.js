@@ -51,7 +51,8 @@ angular.module("tomaTort")
        "imageUrl": "/images/products/halva.jpg"}
     ],
     shipping: {
-      deliveryType: 'selfPickup'
+      deliveryType: 'selfPickup',
+      sent: false
     }
   };
   $scope.setOrdered = function (product_id) {
@@ -59,6 +60,12 @@ angular.module("tomaTort")
       if ($scope.data.products[i].id === product_id) {
         $scope.data.products[i].ordered = true;
       }
+    }
+  };
+  $scope.sentShip = function (deliveryForm) {
+    if (deliveryForm.$valid) {
+    } else {
+      $scope.showValidation = true;
     }
   };
   $scope.addToCart = function (product) {
