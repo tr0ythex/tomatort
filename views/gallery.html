@@ -1,7 +1,12 @@
 <section id="gallery">
   <h2>Галерея</h2>
-  
-  <div class="gallery_slider" gallery-slider></div>
+
+	<div gallery-slider class="gallery_slider">
+    <div class="gs_item" ng-repeat="product in data.products" gallery-slider-item>
+      <img ng-src="{{product.imageUrl}}">
+      <div class="title slider_title">{{product.name}}</div>
+    </div>
+  </div>
   
   <p>
 	  Некоторое количество текста про кондитерскую 

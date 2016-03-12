@@ -73,17 +73,7 @@ angular.module("tomaTort")
     cart.addProduct(product.id, product.name, product.price, 
                     product.weight, product.imageUrl);
   };
-  $scope.$on('$viewContentLoaded', function () {
-    var fileUpload = document.querySelector( '#fileUpload' );
-		fileUpload.addEventListener('change', function(e) {
-			var fileName = '';
-			fileName = e.target.value.split('\\').pop();
-			if (fileName) {
-				document.querySelector('.chosenFile').innerHTML = fileName;
-				// fileUpload.filename = fileName;
-			}
-		});
-  });
+  
 })
 .controller("checkoutCtrl", function ($scope, cart) {
   $scope.cartData = cart.getProducts();
@@ -99,6 +89,17 @@ angular.module("tomaTort")
   };
 })
 .controller("dreamDessertCtrl", function ($scope) {
+  $scope.$on('$viewContentLoaded', function () {
+    var fileUpload = document.querySelector( '#fileUpload' );
+		fileUpload.addEventListener('change', function(e) {
+			var fileName = '';
+			fileName = e.target.value.split('\\').pop();
+			if (fileName) {
+				document.querySelector('.chosenFile').innerHTML = fileName;
+				// fileUpload.filename = fileName;
+			}
+		});
+  });
   $scope.dreamDessert = {
     param1: [],
     param2: '',
@@ -124,9 +125,35 @@ angular.module("tomaTort")
 .directive("gallerySlider", function() {
 	return {
 		restrict: 'A',
-		templateUrl: '/views/partials/_gallerySlider.html',
-		link: function(scope, iElement, attrs) {
-      $(iElement).bxSlider({useCSS: false});
+		controller: function() {},
+		link: function(scope, element, attrs, ctrl) {
+	    var slider;
+      ctrl.update = function() {
+        slider && slider.destroySlider();
+        slider = element.bxSlider({useCSS: false});
+      };
  		}
 	};
 })
+.directive("gallerySliderItem", function() {
+	return {
+      require: '^gallerySlider',
+      link: function(scope, elm, attr, gallerySliderCtrl) {
+          if (scope.$last) {
+              gallerySliderCtrl.update();
+          }
+      }
+  };
+})
+.directive('onFinishRender', function ($timeout) {
+return {
+    restrict: 'A',
+    link: function (scope, element, attr) {
+        if (scope.$last === true) {
+            $timeout(function () {
+                scope.$emit('ngRepeatFinished');
+            });
+        }
+    }
+    };
+});
