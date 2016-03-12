@@ -67,18 +67,19 @@
 	<section class="customer_info">
 		<h2>Информация о заказчике</h2>
 		<div class="ci_block fxbx_block fxbx_sp_between fxbx_wrap">
-			<input type="text" id="ci_first_name" name="first_name" class="ci_item" placeholder="Имя">
-			<input type="text" id="ci_last_name" name="last_name" class="ci_item" placeholder="Фамилия">
-			<input type="email" id="ci_email" name="email" class="ci_item" placeholder="Электронная почта">
-			<input type="tel" id="ci_tel" name="tel" class="ci_item" placeholder="Телефон">
+			<input type="text" id="ci_first_name" name="firstName" class="ci_item" 
+				placeholder="Имя" ng-model="data.shipping.firstName" required>
+			<input type="text" id="ci_last_name" name="lastName" class="ci_item" 
+				placeholder="Фамилия" ng-model="data.shipping.lastName" required>
+			<input type="email" id="ci_email" name="email" class="ci_item" 
+				placeholder="Электронная почта" ng-model="data.shipping.email" required>
+			<input type="tel" id="ci_tel" name="tel" class="ci_item" 
+				placeholder="Телефон" ng-model="data.shipping.tel" required>
 		</div>
 	</section>
-	<input type="submit" id="submit_form" value="Отправить" ng-click="showDream()">
-</form>
-
-<section class="form_success"> 
-	<p class="title">
+	<input type="submit" id="submit_form" value="Отправить" ng-hide="dreamDessert.sent">
+	<p class="title sent" ng-show="dreamDessert.sent">
 		Ваш заказ успешно отправлен!<br>
 		Скоро мы с вами свяжемся для уточнения заказа
 	</p>
-</section>
+</form>

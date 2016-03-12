@@ -103,7 +103,8 @@ angular.module("tomaTort")
     param1: [],
     param2: '',
     param3: 1,
-    file: null
+    file: null,
+    sent: false
   };
   $scope.shouldBeRequired = function () {
     if ($scope.dreamDessert.param1.indexOf(true) > -1) {
@@ -114,13 +115,10 @@ angular.module("tomaTort")
   };
   $scope.sendDreamDessert = function (dreamDessertForm) {
     if (dreamDessertForm.$valid) {
-      
+      $scope.dreamDessert.sent = true;
     } else {
       $scope.showValidation = true;
     }
-  };
-  $scope.showDream = function () {
-    alert($scope.dreamDessert.file);
   };
 })
 .directive("gallerySlider", function() {
