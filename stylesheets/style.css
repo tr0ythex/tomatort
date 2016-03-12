@@ -304,6 +304,9 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 
+#dream_dessert_sec {
+  height: 300px;
+}
 #dream_dessert_sec h2 {
   margin-top: 20px;
 }

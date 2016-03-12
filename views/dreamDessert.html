@@ -1,0 +1,68 @@
+<section id="dream_dessert_sec">
+  <h2>Десерт мечты</h2>
+  <p>
+    Некоторое количество текста про кондитерскую 
+	  Некоторое количество текста про кондитерскую
+	  Некоторое количество текста про кондитерскую 
+	  Некоторое количество текста про кондитерскую 
+	  Некоторое количество текста про кондитерскую 
+	  Некоторое количество текста про кондитерскую 
+	  Некоторое количество текста про кондитерскую
+  </p>
+</section>
+<form id="cake_params">
+  <section id="param1">
+	  <h2>Важный параметр 1</h2>
+	  <div class="variat_block fxbx_block fxbx_sp_between">
+	  	<input type="checkbox" name="cb_group" value="var1" id="var1"><label class="title variat_item" for="var1">Вариант</label>
+    	<input type="checkbox" name="cb_group" value="var2" id="var2"><label class="title variat_item" for="var2">Вариант</label>
+    	<input type="checkbox" name="cb_group" value="var3" id="var3"><label class="title variat_item" for="var3">Вариант</label>
+    	<input type="checkbox" name="cb_group" value="var4" id="var4"><label class="title variat_item" for="var4">Вариант</label>
+	  </div>
+	</section>
+	<section id="param2">
+	  <h2>Важный параметр 2</h2>
+	  <textarea class="title form_textarea" name="comment" form="cake_params" placeholder="Место под текст"></textarea>
+	</section>
+	<section id="param3">
+	  <h2>Важный параметр 3</h2>
+  	<input type="range" min="1" max="5" step="1" value="1">
+  	<div class="range_block fxbx_block fxbx_sp_between">
+  		<div class="range_item"></div>
+  		<div class="range_item"></div>
+  		<div class="range_item"></div>
+  		<div class="range_item"></div>
+	  </div>
+	  <div class="title_block fxbx_block fxbx_sp_between">
+	  	<div class="title title_item">Пояснение</div>
+	  	<div class="title title_item">Пояснение</div>
+	  	<div class="title title_item">Пояснение</div>
+	  	<div class="title title_item">Пояснение</div>
+	  	<div class="title title_item">Пояснение</div>
+	  </div>
+	</section>
+	<section id="cake_file">
+		<h2>Прикрепление файла</h2>
+		<p class="title">Если Вам очень понравился какой-то торт, прикрепите фото</p>
+		<input type="file" name="file" id="fileUpload" class="inputfile">
+		<label for="fileUpload">Выберите файл</label>
+		<span class="chosenFile">Файл не выбран</span>
+	</section>
+	<section class="customer_info">
+		<h2>Информация о заказчике</h2>
+		<div class="ci_block fxbx_block fxbx_sp_between fxbx_wrap">
+			<input type="text" id="ci_first_name" name="first_name" class="ci_item" placeholder="Имя">
+			<input type="text" id="ci_last_name" name="last_name" class="ci_item" placeholder="Фамилия">
+			<input type="email" id="ci_email" name="email" class="ci_item" placeholder="Электронная почта">
+			<input type="tel" id="ci_tel" name="tel" class="ci_item" placeholder="Телефон">
+		</div>
+	</section>
+	<input type="submit" id="submit_form" value="Отправить">
+</form>
+
+<section class="form_success"> 
+	<p class="title">
+		Ваш заказ успешно отправлен!<br>
+		Скоро мы с вами свяжемся для уточнения заказа
+	</p>
+</section>

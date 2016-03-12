@@ -42,6 +42,10 @@
 					templateUrl: "/views/placeOrder.html"
 				});
 				
+				$routeProvider.when("/dreamdessert", {
+					templateUrl: "/views/dreamDessert.html"
+				});
+				
 				$routeProvider.otherwise({
 					templateUrl: "views/home.html"
 				});
@@ -115,5 +119,17 @@
 				<div class="social vk"></div>
 			</div>
 		</footer>
+		
+		<script type="text/javascript">
+			// File Uploading script
+			var fileUpload = document.querySelector( '#fileUpload' );
+			fileUpload.addEventListener('change', function(e) {
+				var fileName = '';
+				fileName = e.target.value.split('\\').pop();
+				if (fileName) {
+					document.querySelector('.chosenFile').innerHTML = fileName;
+				}
+			});
+		</script>
 	</body>
 </html>
