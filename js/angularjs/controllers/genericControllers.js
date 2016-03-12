@@ -100,7 +100,8 @@ angular.module("tomaTort")
 .controller("dreamDessertCtrl", function ($scope) {
   $scope.dreamDessert = {
     param1: [],
-    param2: ''
+    param2: '',
+    param3: 1
   };
   $scope.shouldBeRequired = function () {
     if ($scope.dreamDessert.param1.indexOf(true) > -1) {
@@ -117,7 +118,7 @@ angular.module("tomaTort")
     }
   };
   // $scope.showDream = function () {
-  //   alert($scope.checkForTrue());
+  //   alert($scope.dreamDessert.param3);
   // };
 })
 .directive("gallerySlider", function() {
