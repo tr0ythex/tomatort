@@ -727,6 +727,10 @@ form.validate .ng-invalid {
   background-color: #ffe6e6;
 }
 
+form.validate .ng-invalid + label {
+  background-color: #ffe6e6;
+}
+
 .wrapper {
   width: 900px;
   margin: 0 auto;

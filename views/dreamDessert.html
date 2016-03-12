@@ -11,21 +11,23 @@
   </p>
 </section>
 <form name="dreamDessertForm" class="dreamDessert" novalidate
-	ng-controller="dreamDessertCtrl">
+	ng-controller="dreamDessertCtrl" 
+	ng-submit="sendDreamDessert(dreamDessertForm)" 
+	ng-class="showValidation ? 'validate' : ''">
   <section id="param1">
 	  <h2>Важный параметр 1</h2>
 	  <div class="variat_block fxbx_block fxbx_sp_between">
 	  	<input type="checkbox" name="param1" id="var1"
-	  		ng-model="dreamDessert.param1.var1">
+	  		ng-model="dreamDessert.param1[0]" ng-required="shouldBeRequired()">
 	  	<label class="title variat_item" for="var1">Вариант</label>
     	<input type="checkbox" name="param1" id="var2"
-    	 	ng-model="dreamDessert.param1.var2">
+    	 	ng-model="dreamDessert.param1[1]" ng-required="shouldBeRequired()">
     	<label class="title variat_item" for="var2">Вариант</label>
     	<input type="checkbox" name="param1" id="var3"
-    		ng-model="dreamDessert.param1.var3">
+    		ng-model="dreamDessert.param1[2]" ng-required="shouldBeRequired()">
     	<label class="title variat_item" for="var3">Вариант</label>
     	<input type="checkbox" name="param1" id="var4"
-    		ng-model="dreamDessert.param1.var4">
+    		ng-model="dreamDessert.param1[3]" ng-required="shouldBeRequired()">
     	<label class="title variat_item" for="var4">Вариант</label>
 	  </div>
 	</section>
@@ -66,7 +68,7 @@
 			<input type="tel" id="ci_tel" name="tel" class="ci_item" placeholder="Телефон">
 		</div>
 	</section>
-	<input type="submit" id="submit_form" value="Отправить">
+	<input type="submit" id="submit_form" value="Отправить" ng-click="showDream()">
 </form>
 
 <section class="form_success"> 

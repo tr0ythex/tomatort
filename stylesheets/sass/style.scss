@@ -106,6 +106,7 @@ input[type=submit] {
 
 // angular form error classes
 form.validate .ng-invalid { background-color: #ffe6e6; }
+form.validate .ng-invalid + label { background-color: #ffe6e6; }
 // form .ng-valid.ng-dirty { background-color: lightgreen; }
 
 .wrapper {

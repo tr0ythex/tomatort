@@ -62,7 +62,7 @@ angular.module("tomaTort")
       }
     }
   };
-  $scope.sentShip = function (deliveryForm) {
+  $scope.sendShip = function (deliveryForm) {
     if (deliveryForm.$valid) {
       $scope.data.shipping.sent = true;
     } else {
@@ -99,13 +99,25 @@ angular.module("tomaTort")
 })
 .controller("dreamDessertCtrl", function ($scope) {
   $scope.dreamDessert = {
-    param1: {
-      var1: false,
-      var2: false,
-      var3: false,
-      var4: false
+    param1: []
+  };
+  $scope.shouldBeRequired = function () {
+    if ($scope.dreamDessert.param1.indexOf(true) > -1) {
+      return false;
+    } else {
+      return true;
     }
   };
+  $scope.sendDreamDessert = function (dreamDessertForm) {
+    if (dreamDessertForm.$valid) {
+      
+    } else {
+      $scope.showValidation = true;
+    }
+  };
+  // $scope.showDream = function () {
+  //   alert($scope.checkForTrue());
+  // };
 })
 .directive("gallerySlider", function() {
 	return {
