@@ -64,6 +64,7 @@ angular.module("tomaTort")
   };
   $scope.sentShip = function (deliveryForm) {
     if (deliveryForm.$valid) {
+      $scope.data.shipping.sent = true;
     } else {
       $scope.showValidation = true;
     }
