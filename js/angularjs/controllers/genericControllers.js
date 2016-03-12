@@ -99,7 +99,8 @@ angular.module("tomaTort")
 })
 .controller("dreamDessertCtrl", function ($scope) {
   $scope.dreamDessert = {
-    param1: []
+    param1: [],
+    param2: ''
   };
   $scope.shouldBeRequired = function () {
     if ($scope.dreamDessert.param1.indexOf(true) > -1) {
