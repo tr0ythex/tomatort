@@ -50,13 +50,24 @@
 					templateUrl: "views/home.html"
 				});
 			})
-			// only for development, remove in production
+			// only for development, remove in production (view cache)
 			.run(function($rootScope, $templateCache) {
     		$rootScope.$on('$routeChangeStart', function(event, next, current) {
         	if (typeof(current) !== 'undefined'){
             $templateCache.remove(current.templateUrl);
         	}
     		});
+    // 		$rootScope.$on('$viewContentLoaded', function () {
+    // 			var fileUpload = document.querySelector( '#fileUpload' );
+				// 	fileUpload.addEventListener('change', function(e) {
+				// 		var fileName = '';
+				// 		fileName = e.target.value.split('\\').pop();
+				// 		if (fileName) {
+				// 			document.querySelector('.chosenFile').innerHTML = fileName;
+				// 		}
+				// 	});
+				// }); 
+				
 			});
 		</script>
 		<script src="js/angularjs/controllers/genericControllers.js"></script>
@@ -119,17 +130,8 @@
 				<div class="social vk"></div>
 			</div>
 		</footer>
-		
-		<script type="text/javascript">
-			// File Uploading script
-			var fileUpload = document.querySelector( '#fileUpload' );
-			fileUpload.addEventListener('change', function(e) {
-				var fileName = '';
-				fileName = e.target.value.split('\\').pop();
-				if (fileName) {
-					document.querySelector('.chosenFile').innerHTML = fileName;
-				}
-			});
-		</script>
+
+			
+			
 	</body>
 </html>

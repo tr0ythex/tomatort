@@ -73,6 +73,16 @@ angular.module("tomaTort")
     cart.addProduct(product.id, product.name, product.price, 
                     product.weight, product.imageUrl);
   };
+  $scope.$on('$viewContentLoaded', function () {
+    var fileUpload = document.querySelector( '#fileUpload' );
+		fileUpload.addEventListener('change', function(e) {
+			var fileName = '';
+			fileName = e.target.value.split('\\').pop();
+			if (fileName) {
+				document.querySelector('.chosenFile').innerHTML = fileName;
+			}
+		});
+  });
 })
 .controller("checkoutCtrl", function ($scope, cart) {
   $scope.cartData = cart.getProducts();
@@ -85,6 +95,16 @@ angular.module("tomaTort")
   };
   $scope.remove = function (id) {
     cart.removeProduct(id);
+  };
+})
+.controller("dreamDessertCtrl", function ($scope) {
+  $scope.dreamDessert = {
+    param1: {
+      var1: false,
+      var2: false,
+      var3: false,
+      var4: false
+    }
   };
 })
 .directive("gallerySlider", function() {

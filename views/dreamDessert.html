@@ -10,19 +10,28 @@
 	  Некоторое количество текста про кондитерскую
   </p>
 </section>
-<form id="cake_params">
+<form name="dreamDessertForm" class="dreamDessert" novalidate
+	ng-controller="dreamDessertCtrl">
   <section id="param1">
 	  <h2>Важный параметр 1</h2>
 	  <div class="variat_block fxbx_block fxbx_sp_between">
-	  	<input type="checkbox" name="cb_group" value="var1" id="var1"><label class="title variat_item" for="var1">Вариант</label>
-    	<input type="checkbox" name="cb_group" value="var2" id="var2"><label class="title variat_item" for="var2">Вариант</label>
-    	<input type="checkbox" name="cb_group" value="var3" id="var3"><label class="title variat_item" for="var3">Вариант</label>
-    	<input type="checkbox" name="cb_group" value="var4" id="var4"><label class="title variat_item" for="var4">Вариант</label>
+	  	<input type="checkbox" name="param1" id="var1"
+	  		ng-model="dreamDessert.param1.var1">
+	  	<label class="title variat_item" for="var1">Вариант</label>
+    	<input type="checkbox" name="param1" id="var2"
+    	 	ng-model="dreamDessert.param1.var2">
+    	<label class="title variat_item" for="var2">Вариант</label>
+    	<input type="checkbox" name="param1" id="var3"
+    		ng-model="dreamDessert.param1.var3">
+    	<label class="title variat_item" for="var3">Вариант</label>
+    	<input type="checkbox" name="param1" id="var4"
+    		ng-model="dreamDessert.param1.var4">
+    	<label class="title variat_item" for="var4">Вариант</label>
 	  </div>
 	</section>
 	<section id="param2">
 	  <h2>Важный параметр 2</h2>
-	  <textarea class="title form_textarea" name="comment" form="cake_params" placeholder="Место под текст"></textarea>
+	  <textarea class="title form_textarea" name="comment" form="dreamDessertForm" placeholder="Место под текст"></textarea>
 	</section>
 	<section id="param3">
 	  <h2>Важный параметр 3</h2>
