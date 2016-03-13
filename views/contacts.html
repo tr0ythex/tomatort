@@ -17,20 +17,25 @@
 </section>
 <section class="callback">
   <h2>Обратный звонок</h2>
-  <form id="cb_form">
+  <form name="callbackForm" class="callbackForm" novalidate
+	  ng-controller="callbackCtrl" 
+	  ng-submit="sendCallback(callbackForm)" 
+	  ng-class="showValidation ? 'validate' : ''">
     <div class="ci_block fxbx_block fxbx_sp_between fxbx_wrap">
-			<input type="text" id="ci_first_name" name="first_name" class="ci_item" placeholder="Имя">
-			<input type="text" id="ci_last_name" name="last_name" class="ci_item" placeholder="Фамилия">
-			<input type="email" id="ci_email" name="email" class="ci_item" placeholder="Электронная почта">
-			<input type="tel" id="ci_tel" name="tel" class="ci_item" placeholder="Телефон">
+			<input type="text" id="ci_first_name" name="firstName" class="ci_item" 
+			  placeholder="Имя" ng-model="data.shipping.firstName" required>
+			<input type="text" id="ci_last_name" name="lastName" class="ci_item" 
+			  placeholder="Фамилия" ng-model="data.shipping.lastName" required>
+			<input type="email" id="ci_email" name="email" class="ci_item" 
+			  placeholder="Электронная почта" ng-model="data.shipping.email" required>
+			<input type="tel" id="ci_tel" name="tel" class="ci_item" 
+			  placeholder="Телефон" ng-model="data.shipping.tel" required>
 		</div>
-	  <textarea class="form_textarea title" name="comment" form="cb_form" placeholder="Комментарий"></textarea>
-	  <input type="submit" class="submit_form" value="Связаться">
+	  <textarea class="form_textarea title" name="comment" form="callbackForm" placeholder="Комментарий"></textarea>
+	  <input type="submit" class="submit_form" value="Связаться" ng-hide="callback.sent">
+	  <p class="title sent" ng-show="callback.sent">
+		  Ваш запрос успешно отправлен!<br>
+		  Скоро мы с вами свяжемся.
+	  </p>
   </form>
-</section>
-<section class="form_success"> 
-	<p class="title">
-		Ваш запрос успешно отправлен!<br>
-		Скоро мы с вами свяжемся.
-	</p>
 </section>

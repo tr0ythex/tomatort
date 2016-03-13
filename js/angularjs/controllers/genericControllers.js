@@ -137,6 +137,18 @@ angular.module("tomaTort")
     }
   };
 })
+.controller("callbackCtrl", function ($scope) {
+  $scope.callback = {
+    sent: false
+  };
+  $scope.sendCallback = function (callbackForm) {
+    if (callbackForm.$valid) {
+      $scope.callback.sent = true;
+    } else {
+      $scope.showValidation = true;
+    }
+  };
+})
 .directive("gallerySlider", function() {
 	return {
 		restrict: 'A',
