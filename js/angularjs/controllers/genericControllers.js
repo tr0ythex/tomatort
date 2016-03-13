@@ -27,11 +27,9 @@ angular.module("tomaTort")
   };
 })
 .controller("productCtrl", function ($scope, $location) {
-  
-  $scope.pId = $location.path().split("/")[2];
-  // $scope.showPid = function () {
-  //   alert($scope.pId);
-  // };
+  // if page is refreshed
+  var pId = $location.path().split("/")[2];
+  $scope.selectedProduct = $scope.getProduct(pId);
 })
 .controller("tomaTortCtrl", function ($scope, $location, menuActiveClass, cart) {
   $scope.data = {
@@ -60,6 +58,13 @@ angular.module("tomaTort")
     shipping: {
       deliveryType: 'selfPickup',
       sent: false
+    }
+  };
+  $scope.getProduct = function (pId) {
+    for (var i = 0; i < $scope.data.products.length; i++) {
+      if ($scope.data.products[i].id == pId) {
+        return $scope.data.products[i];
+      }
     }
   };
   $scope.setOrdered = function (product_id) {
