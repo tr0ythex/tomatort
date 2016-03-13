@@ -25,8 +25,10 @@ angular.module("tomaTort")
   $scope.getMenuClass = function (menuItem) {
     return menu.getMenuClass(menuItem);
   };
-  
+})
+.controller("productCtrl", function ($scope, $location) {
   $scope.openProductItemPage = function (product_id) {
+    // $scope.product_id = product_id;
     $location.path("/menu/" + product_id);
   };
 })
@@ -77,7 +79,6 @@ angular.module("tomaTort")
     cart.addProduct(product.id, product.name, product.price, 
                     product.weight, product.imageUrl);
   };
-  
 })
 .controller("checkoutCtrl", function ($scope, cart) {
   $scope.cartData = cart.getProducts();

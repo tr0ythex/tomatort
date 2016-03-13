@@ -1,4 +1,4 @@
-<section id="product_info">
+<section id="product_info" ng-controller="productCtrl">
   <h2>Торт "Наполеон"</h2>
   <img src="images/menu_item.jpg" alt="" class="product_pic">
   <div class="info">
@@ -6,7 +6,7 @@
 	    1500 Р
 	  </div>
 	  <div class="desc">
-	    Описание Описание Описание
+	    {{product_id}} Описание Описание
 	    Описание Описание Описание
 	    Описание Описание Описание
 	    Описание Описание Описание
@@ -14,7 +14,15 @@
 	  <div class="title composition">
 	    Состав: <br>
 	  </div>
-	  <button class="order_btn">Заказать</button>
+	  <button class="order_btn" ng-hide="product.ordered"
+	  	ng-click="showProductId()">
+	  		Заказать
+	  </button>
+	  <a href="#/checkout">
+    	<button class="order_btn" ng-show="product.ordered"
+    		ng-click="selectMenuItem('/checkout')">Перейти в корзину
+    	</button>
+    </a>
   </div>
   
   <div class="back"><a href="#/menu">&lt;&nbsp;&nbsp;Вернуться в меню</a></div>

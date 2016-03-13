@@ -8,7 +8,7 @@
   </div>
   
 	<ul class="menu_block fxbx_block fxbx_flex_start fxbx_wrap"
-		ng-controller="menuCtrl">
+		ng-controller="productCtrl">
 		<li class="menu_item fxbx_item flip_animated" 
 			ng-repeat="product in data.products">
 			<div class="flipper"> 
@@ -28,7 +28,7 @@
 			    						$event.stopPropagation()">
 			    	Заказать
 			    </button>
-			    <a href="#/checkout">
+			    <a href="#/checkout" ng-controller="menuCtrl">
 			    	<button class="btn_checkout" ng-show="product.ordered"
 			    		ng-click="selectMenuItem('/checkout')">Перейти в корзину
 			    	</button>
