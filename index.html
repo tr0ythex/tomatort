@@ -26,6 +26,10 @@
 					templateUrl: "/views/menu.html"
 				});
 				
+				$routeProvider.when("/menu/:id", {
+					templateUrl: "/views/productItem.html"
+				});
+				
 				$routeProvider.when("/gallery", {
 					templateUrl: "/views/gallery.html"
 				});
