@@ -27,10 +27,11 @@ angular.module("tomaTort")
   };
 })
 .controller("productCtrl", function ($scope, $location) {
-  $scope.openProductItemPage = function (product_id) {
-    // $scope.product_id = product_id;
-    $location.path("/menu/" + product_id);
-  };
+  
+  $scope.pId = $location.path().split("/")[2];
+  // $scope.showPid = function () {
+  //   alert($scope.pId);
+  // };
 })
 .controller("tomaTortCtrl", function ($scope, $location, menuActiveClass, cart) {
   $scope.data = {
@@ -78,6 +79,10 @@ angular.module("tomaTort")
   $scope.addToCart = function (product) {
     cart.addProduct(product.id, product.name, product.price, 
                     product.weight, product.imageUrl);
+  };
+  $scope.openProductItemPage = function (product) {
+    $scope.selectedProduct = product;
+    $location.path("/menu/" + product.id);
   };
 })
 .controller("checkoutCtrl", function ($scope, cart) {

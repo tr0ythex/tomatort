@@ -17,15 +17,15 @@
 			    <p class="title">{{product.name}}</p>
 			  </div> 
 			  <div class="flip_back content_back" 
-			  	ng-click="openProductItemPage(product.id)">
+			  	ng-click="openProductItemPage(product)">
 			  	<img ng-src="{{product.imageUrl}}">
 			  	<div class="fading"></div>
 			    <p class="p_name">{{product.name}}</p>
 			    <p class="p_price">{{product.price}} Р</p>
 			    <button class="btn_order" ng-hide="product.ordered"
 			    	ng-click="setOrdered(product.id); 
-			    						addToCart(product); 
-			    						$event.stopPropagation()">
+			    			  addToCart(product); 
+			    			  $event.stopPropagation()">
 			    	Заказать
 			    </button>
 			    <a href="#/checkout" ng-controller="menuCtrl">
