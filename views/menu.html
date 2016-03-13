@@ -9,19 +9,24 @@
   
 	<ul class="menu_block fxbx_block fxbx_flex_start fxbx_wrap"
 		ng-controller="menuCtrl">
-		<li class="menu_item fxbx_item flip_animated" ng-repeat="product in data.products">
+		<li class="menu_item fxbx_item flip_animated" 
+			ng-repeat="product in data.products">
 			<div class="flipper"> 
 			  <div class="flip_front content_front">
 			  	<img ng-src="{{product.imageUrl}}">
 			    <p class="title">{{product.name}}</p>
 			  </div> 
-			  <div class="flip_back content_back">
+			  <div class="flip_back content_back" 
+			  	ng-click="openProductItemPage(product.id)">
 			  	<img ng-src="{{product.imageUrl}}">
 			  	<div class="fading"></div>
 			    <p class="p_name">{{product.name}}</p>
 			    <p class="p_price">{{product.price}} Р</p>
 			    <button class="btn_order" ng-hide="product.ordered"
-			    	ng-click="setOrdered(product.id); addToCart(product)">Заказать
+			    	ng-click="setOrdered(product.id); 
+			    						addToCart(product); 
+			    						$event.stopPropagation()">
+			    	Заказать
 			    </button>
 			    <a href="#/checkout">
 			    	<button class="btn_checkout" ng-show="product.ordered"
