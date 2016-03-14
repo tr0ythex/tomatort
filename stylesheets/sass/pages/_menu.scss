@@ -28,21 +28,12 @@
   .order_dream {
     height: 150px;
     margin: 50px auto 80px;
+    overflow: auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url(/images/dream.png);
     background-size: contain;
   }
-  .order_dream_btn {
-    font-size: 23px;
-    color: white;
-    width: 340px;
-    height: 50px;
-    border: 1px solid white;
-    border-radius: 1px;
+  .btn {
+    width: 250px;
     margin-top: 50px;
-    &:hover {
-      background: $button-hover-bg-color;
-      border: none;
-      color: $button-hover-text-color;
-    }
   }
 }

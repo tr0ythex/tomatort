@@ -14,15 +14,14 @@
 	  <div class="title composition">
 	    Масса: {{selectedProduct.weight}} г<br>
 	  </div>
-	  <button class="order_btn" ng-hide="selectedProduct.ordered"
+	  <button class="btn btn-dark" ng-hide="selectedProduct.ordered"
 	  	ng-click="setOrdered(selectedProduct.id); 
 			    			addToCart(selectedProduct);">
-	  		Заказать
+	  	Заказать
 	  </button>
-	  <a href="#/checkout">
-    	<button class="order_btn" ng-show="selectedProduct.ordered"
-    		ng-click="selectMenuItem('/checkout')">Перейти в корзину
-    	</button>
+	  <a href="#/checkout" class="btn btn-dark" ng-show="selectedProduct.ordered"
+    	ng-click="selectMenuItem('/checkout')">
+    	Перейти в корзину
     </a>
   </div>
   

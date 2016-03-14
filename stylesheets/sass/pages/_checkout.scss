@@ -31,7 +31,7 @@
           height: 40px;
           padding: 0;
           text-align: center;
-          border: 2px solid $button-menu-hover-bg-color;
+          border: 2px solid $cruise;
         }
       }
       &.td_price, &.td_count input, &.td_subtotal, &.td_total_txt, &.td_total {
@@ -72,7 +72,7 @@
       
     }
     tr {
-      border-top: 2px solid $button-menu-hover-bg-color;
+      border-top: 2px solid $cruise;
     }
     input[type=radio] {
       display: none;
@@ -86,20 +86,7 @@
       }
     }
   }
-  
-  #place_order {
-    border: 1px solid $stroke-color;
-    color: $button-text-color;
-    width: 300px;
-    height: 60px;
-    font-family: Merel;
-    font-size: 20px;
-    font-weight: 400;
-    margin: 20px 0 80px;
-    &:hover {
-      border: none;
-      color: $button-hover-text-color;
-      background-color: $button-hover-bg-color;
-    }
+  .btn {
+    margin-bottom: 40px;
   }
 }

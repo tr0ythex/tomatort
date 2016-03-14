@@ -1,3 +1,4 @@
+/* Merel Light */
 @font-face { 
     font-family: Merel;
     src: url('/fonts/Merel/Merel-Light.eot'); /* IE9 Compat Modes */
@@ -8,6 +9,7 @@
         url('/fonts/Merel/Merel-Light.svg#Merel-Light') format('svg'); /* Legacy iOS */
     font-weight: 300; 
 }
+/* Merel Regular */
 @font-face { 
     font-family: Merel;
     src: url('/fonts/Merel/Merel.eot'); /* IE9 Compat Modes */
@@ -18,6 +20,7 @@
         url('/fonts/Merel/Merel.svg#Merel') format('svg'); /* Legacy iOS */
     font-weight: 400; 
 }
+/* Merel Bold */
 @font-face { 
     font-family: Merel;
     src: url('/fonts/Merel/Merel-Bold.eot'); /* IE9 Compat Modes */
@@ -28,6 +31,7 @@
         url('/fonts/Merel/Merel-Bold.svg#Merel-Bold') format('svg'); /* Legacy iOS */
     font-weight: 700; 
 }
+/* LeksaPro Bold */
 @font-face { 
     font-family: LeksaPro;
     src: url('/fonts/LeksaPro/LeksaPro-Light.eot'); /* IE9 Compat Modes */
@@ -37,6 +41,7 @@
         url('/fonts/LeksaPro/LeksaPro-Light.svg#LeksaPro-Light') format('svg'); /* Legacy iOS */
     font-weight: 700; 
 }
+/* LeksaPro Italic */
 @font-face { 
     font-family: LeksaPro;
     src: url('/fonts/LeksaPro/LeksaPro-Italic.eot'); /* IE9 Compat Modes */
@@ -46,6 +51,7 @@
         url('/fonts/LeksaPro/LeksaPro-Italic.svg#LeksaPro-Italic') format('svg'); /* Legacy iOS */
     font-style: italic; 
 }
+/* PremianSerif Regular*/
 @font-face { 
     font-family: PermianSerifTypeface;
     src: url('/fonts/PermianSerifTypeface/PermianSerifTypeface.eot'); /* IE9 Compat Modes */
@@ -54,4 +60,30 @@
         url('/fonts/PermianSerifTypeface/PermianSerifTypeface.ttf') format('truetype'), /* Safari, Android, iOS */
         url('/fonts/PermianSerifTypeface/PermianSerifTypeface.svg#PermianSerifTypeface') format('svg'); /* Legacy iOS */
     font-weight: 400; 
+}
+
+// fonts classes
+.merel-light {
+    font-family: Merel;
+    font-weight: 300;
+}
+.merel-regular {
+    font-family: Merel;
+    font-weight: 400;
+}
+.merel-bold {
+    font-family: Merel;
+    font-weight: 700;
+}
+.leksapro-bold {
+    font-family: LeksaPro;
+    font-weight: 700;
+}
+.leksapro-italic {
+    font-family: Merel;
+    font-style: italic;
+}
+.permianserif-regular {
+    font-family: PermianSerifTypeface;
+    font-weight: 400;
 }

@@ -63,17 +63,42 @@ li {
 
 a {
   text-decoration: none;
-  color: $button-text-color;
 }
 
-button {
+// btn classes
+.btn {
+  @extend .merel-regular;
+  display: block;
+  box-sizing: border-box;
   background: none;
-  border: none;
   cursor: pointer;
   outline: none;
-  font-family: Merel;
-  font-weight: 400;
+  font-size: 15px;
   text-transform: uppercase;
+  text-align: center;
+  width: 190px;
+  height: 50px;
+  line-height: 48px;
+  margin: 0 auto;
+  &:hover {
+    color: lighten($tundora, 3.5);
+    background: $cruise;
+    border: none;
+  }
+}
+.btn-dark {
+  border: 1px solid $dove-grey;
+  color: $tundora;
+}
+.btn-light {
+  border: 1px solid white;
+  color: white;
+}
+form {
+  .btn {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }
 
 input {
@@ -90,25 +115,25 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: 1;
 }
 
-input[type=submit] {
-  background: none;
-  border: 1px solid #686868;
-  font-family: Merel;
-  font-weight: 400;
-  font-size: 16px;
-  text-transform: uppercase;
-  width: 190px;
-  height: 50px;
-  padding: 4px 0 0 0;
-  cursor: pointer;
-  margin: 40px auto 40px;
-  display: block;
-  &:hover {
-    border: none;
-    color: $button-hover-text-color;
-    background-color: $button-hover-bg-color;
-  }
-}
+// input[type=submit] {
+//   background: none;
+//   border: 1px solid #686868;
+//   font-family: Merel;
+//   font-weight: 400;
+//   font-size: 16px;
+//   text-transform: uppercase;
+//   width: 190px;
+//   height: 50px;
+//   padding: 4px 0 0 0;
+//   cursor: pointer;
+//   margin: 40px auto 40px;
+//   display: block;
+//   &:hover {
+//     border: none;
+//     color: lighten($tundora, 5%);
+//     background-color: $button-hover-bg-color;
+//   }
+// }
 
 // angular form error classes
 form.validate .ng-invalid { background-color: #ffe6e6; }
@@ -218,6 +243,14 @@ section {
       width: 296px;
       cursor: pointer;
       margin-bottom: 4px;
+      .btn {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 2;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -252,23 +285,6 @@ section {
             top: 100px;
           }
         }
-        button {
-          border: 1px solid white;
-          position: absolute;
-          bottom: 20px;
-          left: 0;
-          right: 0;
-          margin: 0 auto;
-          width: 190px;
-          height: 50px;
-          color: white;
-          z-index: 2;
-          &:hover {
-            background-color: $button-menu-hover-bg-color;
-            border: none;
-            color: $button-hover-text-color;
-          }
-        }
       }
       .title {
         position: absolute;
@@ -278,22 +294,8 @@ section {
         color: white;
         background: rgba(black, 0.61);
         line-height: 47px;
-        border-top: 1px solid $stroke-color;
+        border-top: 1px solid $dove-grey;
       }
-    }
-  }
-  .more {
-    border: 1px solid $stroke-color;
-    border-radius: 1px;
-    width: 190px;
-    height: 50px;
-    font-size: 18px;
-    margin-top: 48px;
-    color: $button-text-color;
-    &:hover {
-      background: $button-hover-bg-color;
-      border: none;
-      color: $button-hover-text-color;
     }
   }
 }

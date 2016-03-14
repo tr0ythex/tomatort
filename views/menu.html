@@ -22,16 +22,16 @@
 			  	<div class="fading"></div>
 			    <p class="p_name">{{product.name}}</p>
 			    <p class="p_price">{{product.price}} Р</p>
-			    <button class="btn_order" ng-hide="product.ordered"
+			    <button class="btn btn-light" ng-hide="product.ordered"
 			    	ng-click="setOrdered(product.id); 
-			    			  addToCart(product); 
-			    			  $event.stopPropagation()">
+			    	addToCart(product); 
+			    	$event.stopPropagation()">
 			    	Заказать
 			    </button>
-			    <a href="#/checkout" ng-controller="menuCtrl">
-			    	<button class="btn_checkout" ng-show="product.ordered"
-			    		ng-click="selectMenuItem('/checkout')">Перейти в корзину
-			    	</button>
+			    <a href="#/checkout" ng-controller="menuCtrl" class="btn btn-light"
+			    	ng-show="product.ordered"
+			    	ng-click="selectMenuItem('/checkout')">
+						Перейти в корзину
 			    </a>
 			  </div> 
 			</div>
@@ -43,10 +43,8 @@
 	<h2>Ищите что-то особенное?</h2>
 	<p class="title">Опишите идеальный десерт</p>
 	<div class="order_dream">
-		<a href="#/dreamdessert">
-			<button class="order_dream_btn">
-				Заказать десерт мечты
-			</button>
+		<a href="#/dreamdessert" class="btn btn-light">
+			Заказать десерт мечты
 		</a>
 	</div>
 </section>

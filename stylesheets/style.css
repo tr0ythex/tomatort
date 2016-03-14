@@ -68,6 +68,7 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 
+/* Merel Light */
 @font-face {
   font-family: Merel;
   src: url("/fonts/Merel/Merel-Light.eot");
@@ -76,6 +77,7 @@ input[type=range]::-ms-thumb {
   /* Legacy iOS */
   font-weight: 300;
 }
+/* Merel Regular */
 @font-face {
   font-family: Merel;
   src: url("/fonts/Merel/Merel.eot");
@@ -84,6 +86,7 @@ input[type=range]::-ms-thumb {
   /* Legacy iOS */
   font-weight: 400;
 }
+/* Merel Bold */
 @font-face {
   font-family: Merel;
   src: url("/fonts/Merel/Merel-Bold.eot");
@@ -92,6 +95,7 @@ input[type=range]::-ms-thumb {
   /* Legacy iOS */
   font-weight: 700;
 }
+/* LeksaPro Bold */
 @font-face {
   font-family: LeksaPro;
   src: url("/fonts/LeksaPro/LeksaPro-Light.eot");
@@ -100,6 +104,7 @@ input[type=range]::-ms-thumb {
   /* Legacy iOS */
   font-weight: 700;
 }
+/* LeksaPro Italic */
 @font-face {
   font-family: LeksaPro;
   src: url("/fonts/LeksaPro/LeksaPro-Italic.eot");
@@ -108,6 +113,7 @@ input[type=range]::-ms-thumb {
   /* Legacy iOS */
   font-style: italic;
 }
+/* PremianSerif Regular*/
 @font-face {
   font-family: PermianSerifTypeface;
   src: url("/fonts/PermianSerifTypeface/PermianSerifTypeface.eot");
@@ -116,6 +122,36 @@ input[type=range]::-ms-thumb {
   /* Legacy iOS */
   font-weight: 400;
 }
+.merel-light {
+  font-family: Merel;
+  font-weight: 300;
+}
+
+.merel-regular, .btn {
+  font-family: Merel;
+  font-weight: 400;
+}
+
+.merel-bold {
+  font-family: Merel;
+  font-weight: 700;
+}
+
+.leksapro-bold {
+  font-family: LeksaPro;
+  font-weight: 700;
+}
+
+.leksapro-italic {
+  font-family: Merel;
+  font-style: italic;
+}
+
+.permianserif-regular {
+  font-family: PermianSerifTypeface;
+  font-weight: 400;
+}
+
 /* bxslider */
 .gallery_slider .gs_item {
   display: inline-block;
@@ -226,22 +262,13 @@ input[type=range]::-ms-thumb {
 #dream_dessert .order_dream {
   height: 150px;
   margin: 50px auto 80px;
+  overflow: auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url(/images/dream.png);
   background-size: contain;
 }
-#dream_dessert .order_dream_btn {
-  font-size: 23px;
-  color: white;
-  width: 340px;
-  height: 50px;
-  border: 1px solid white;
-  border-radius: 1px;
+#dream_dessert .btn {
+  width: 250px;
   margin-top: 50px;
-}
-#dream_dessert .order_dream_btn:hover {
-  background: #B4EEDE;
-  border: none;
-  color: #4D4D4D;
 }
 
 #product_info {
@@ -280,19 +307,9 @@ input[type=range]::-ms-thumb {
   text-align: left;
   margin-top: 78px;
 }
-#product_info .info .order_btn {
-  font-size: 16px;
-  border: 1px solid #686868;
-  border-radius: 1px;
-  width: 190px;
-  height: 50px;
+#product_info .info .btn {
   position: absolute;
   bottom: 0;
-}
-#product_info .info .order_btn:hover {
-  background: #B4EEDE;
-  border: none;
-  color: #4D4D4D;
 }
 #product_info .back {
   text-transform: uppercase;
@@ -390,7 +407,7 @@ input[type=file] + label {
 }
 input[type=file] + label:hover {
   background: #B4EEDE;
-  color: #4D4D4D;
+  color: #515151;
 }
 
 .chosenFile {
@@ -424,17 +441,8 @@ input[type=file] + label:hover {
 #gallery p {
   margin: 80px auto 50px;
 }
-
-.back_to_menu {
-  display: block;
-  border: 1px solid #686868;
-  width: 300px;
-  height: 60px;
-  font-family: Merel;
-  font-weight: 400;
-  font-size: 23px;
-  padding-top: 4px;
-  margin: 0 auto 80px;
+#gallery .btn {
+  margin-bottom: 40px;
 }
 
 #contacts {
@@ -584,24 +592,15 @@ input[type=file] + label:hover {
 #checkout .toma_table input[type=radio]:checked + label {
   background-color: #C2F0E1;
 }
-#checkout #place_order {
-  border: 1px solid #686868;
-  color: #444444;
-  width: 300px;
-  height: 60px;
-  font-family: Merel;
-  font-size: 20px;
-  font-weight: 400;
-  margin: 20px 0 80px;
-}
-#checkout #place_order:hover {
-  border: none;
-  color: #4D4D4D;
-  background-color: #B4EEDE;
+#checkout .btn {
+  margin-bottom: 40px;
 }
 
 #home_menu .menu_item {
   cursor: default;
+}
+#home_menu .btn {
+  margin-top: 48px;
 }
 
 .promo, .place_order {
@@ -677,17 +676,41 @@ li {
 
 a {
   text-decoration: none;
+}
+
+.btn {
+  display: block;
+  box-sizing: border-box;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 190px;
+  height: 50px;
+  line-height: 48px;
+  margin: 0 auto;
+}
+.btn:hover {
+  color: #4d4d4d;
+  background: #B0EADA;
+  border: none;
+}
+
+.btn-dark {
+  border: 1px solid #686868;
   color: #444444;
 }
 
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  font-family: Merel;
-  font-weight: 400;
-  text-transform: uppercase;
+.btn-light {
+  border: 1px solid white;
+  color: white;
+}
+
+form .btn {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 input {
@@ -702,26 +725,6 @@ input[type=checkbox] {
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   opacity: 1;
-}
-
-input[type=submit] {
-  background: none;
-  border: 1px solid #686868;
-  font-family: Merel;
-  font-weight: 400;
-  font-size: 16px;
-  text-transform: uppercase;
-  width: 190px;
-  height: 50px;
-  padding: 4px 0 0 0;
-  cursor: pointer;
-  margin: 40px auto 40px;
-  display: block;
-}
-input[type=submit]:hover {
-  border: none;
-  color: #4D4D4D;
-  background-color: #B4EEDE;
 }
 
 form.validate .ng-invalid {
@@ -836,6 +839,14 @@ section p {
   cursor: pointer;
   margin-bottom: 4px;
 }
+.menu .menu_block .menu_item .btn {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+}
 .menu .menu_block .menu_item img {
   width: 100%;
   height: 100%;
@@ -868,23 +879,6 @@ section p {
   font-size: 30px;
   top: 100px;
 }
-.menu .menu_block .menu_item .content_back button {
-  border: 1px solid white;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 190px;
-  height: 50px;
-  color: white;
-  z-index: 2;
-}
-.menu .menu_block .menu_item .content_back button:hover {
-  background-color: #B0EADA;
-  border: none;
-  color: #4D4D4D;
-}
 .menu .menu_block .menu_item .title {
   position: absolute;
   bottom: 0;
@@ -894,20 +888,6 @@ section p {
   background: rgba(0, 0, 0, 0.61);
   line-height: 47px;
   border-top: 1px solid #686868;
-}
-.menu .more {
-  border: 1px solid #686868;
-  border-radius: 1px;
-  width: 190px;
-  height: 50px;
-  font-size: 18px;
-  margin-top: 48px;
-  color: #444444;
-}
-.menu .more:hover {
-  background: #B4EEDE;
-  border: none;
-  color: #4D4D4D;
 }
 
 .place_order h2 {
