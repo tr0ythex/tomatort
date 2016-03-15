@@ -21,13 +21,7 @@
 form.validate .ng-invalid { background-color: #ffe6e6; }
 form.validate .ng-invalid + label { background-color: #ffe6e6; }
 
-h2 {
-    @extend .merel-regular;
-    font-size: 23px;
-    line-height: 23px;
-    margin: 80px 0 47px;
-    text-transform: uppercase;
-  }
+
   p {
     font-family: PermianSerifTypeface;
     font-weight: 400;
