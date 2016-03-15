@@ -70,8 +70,8 @@
 	
 	<body ng-controller="tomaTortCtrl">
 		<header class="wrapper">
-			<div class="logo">
-				<a href="#"><img src="/images/logo.png"></a>
+			<div class="overflown-auto">
+				<a href="#" class="logo"><img src="/images/logo.png"></a>
 			</div>
 
 			<nav id="nav-top" ng-controller="menuCtrl">
@@ -104,7 +104,7 @@
 			<ng-view autoscroll="true"/>
 		</main>
 		
-		<footer>
+		<footer class="overflown-auto">
 			<nav id="nav-bottom" ng-controller="menuCtrl">
 				<ul class="fxbx fx-js-sp-between fx-wr-wrap">
 					<li ng-click="selectMenuItem('/about')">

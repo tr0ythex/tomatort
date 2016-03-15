@@ -1,6 +1,8 @@
+/* COMMON ELEMENTS */
 ul, li, h1, h2, p, body {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 li {
@@ -21,6 +23,27 @@ input[type=checkbox] {
 }
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
   opacity: 1;
+}
+
+footer {
+  height: 100px;
+  background: #353535;
+}
+
+/* COMMON CLASSES */
+.overflown-auto, section {
+  overflow: auto;
+}
+
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  width: 170px;
+  margin: 40px auto;
 }
 
 input[type=range] {
@@ -757,35 +780,7 @@ form.validate .ng-invalid + label {
   background-color: #ffe6e6;
 }
 
-.wrapper {
-  width: 900px;
-  margin: 0 auto;
-}
-
-.logo {
-  overflow: auto;
-}
-.logo a {
-  display: block;
-  width: 170px;
-  margin: 40px auto;
-}
-
-header {
-  overflow: auto;
-}
-
-footer {
-  height: 100px;
-  background: #353535;
-  overflow: auto;
-}
-
-section {
-  text-align: center;
-  overflow: hidden;
-}
-section h2 {
+h2 {
   font-family: Merel;
   font-weight: 400;
   font-size: 23px;
@@ -793,7 +788,8 @@ section h2 {
   margin: 80px 0 47px;
   text-transform: uppercase;
 }
-section p {
+
+p {
   font-family: PermianSerifTypeface;
   font-weight: 400;
   font-size: 15px;

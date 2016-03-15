@@ -1,10 +1,13 @@
+/* COMMON ELEMENTS */
+
 // lists, headers, paragraphs and body without standard margin and padding
 ul, li, h1, h2, p, body {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
-// style lists without circles
+// lists without circles
 li {
   list-style: none;
 }
@@ -29,4 +32,36 @@ input {
   &[type=number]::-webkit-outer-spin-button { 
     opacity: 1;
   }
+}
+
+// footer
+footer {
+  height: 100px;
+  background: $mine-shaft;
+}
+
+// any section
+section {
+  @extend .overflown-auto;
+}
+
+
+/* COMMON CLASSES */
+
+// overflow auto box
+.overflown-auto {
+  overflow: auto;
+}
+
+// wrapper centering the content
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+// site logo
+.logo {
+  display: block;
+  width: 170px;
+  margin: 40px auto;
 }

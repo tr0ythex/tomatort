@@ -1,5 +1,5 @@
-@import 'utilities/common-styles';
 @import 'utilities/variables';
+@import 'utilities/common-styles';
 @import 'utilities/mixins';
 @import 'utilities/range_style';
 @import 'utilities/fonts';
@@ -16,8 +16,6 @@
 @import 'pages/home';
 @import 'partials/nav';
 @import 'partials/btn';
-
-
 
 .title {
   font-family: LeksaPro;
@@ -37,36 +35,10 @@ p.sent {
 form.validate .ng-invalid { background-color: #ffe6e6; }
 form.validate .ng-invalid + label { background-color: #ffe6e6; }
 
-.wrapper {
-  width: 900px;
-  margin: 0 auto;
-}
-
-.logo {
-  overflow: auto;
-  a {
-    display: block;
-    width: 170px;
-    margin: 40px auto;
-  }
-}
-
-header {
-  overflow: auto;
-}
-footer {
-  height: 100px;
-  background: $mine-shaft;
-  overflow: auto;
-}
-
-
-
 section {
-  // height: 300px;
-  text-align: center;
-  overflow: hidden;
-  h2 {
+  @extend .overflown-auto;
+}
+h2 {
     font-family: Merel;
     font-weight: 400;
     font-size: 23px;
@@ -82,7 +54,6 @@ section {
     width: 600px;
     margin: 0 auto;
   }
-}
 
 .promo {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
