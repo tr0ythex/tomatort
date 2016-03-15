@@ -13,6 +13,7 @@
 @import 'pages/checkout';
 @import 'pages/home';
 @import 'partials/nav';
+@import 'partials/btn';
 
 .fxbx_block {
   @include flexbox();
@@ -67,42 +68,6 @@ a {
   color: inherit;
 }
 
-// btn classes
-.btn {
-  @extend .merel-regular;
-  display: block;
-  box-sizing: border-box;
-  background: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 15px;
-  text-transform: uppercase;
-  text-align: center;
-  width: 190px;
-  height: 50px;
-  line-height: 48px;
-  margin: 0 auto;
-  &:hover {
-    color: lighten($tundora, 3.5);
-    background: $cruise;
-    border: none;
-  }
-}
-.btn-dark {
-  border: 1px solid $dove-grey;
-  color: $tundora;
-}
-.btn-light {
-  border: 1px solid white;
-  color: white;
-}
-form {
-  .btn {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-}
-
 input {
   border: none;
   outline: none;
@@ -117,30 +82,9 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: 1;
 }
 
-// input[type=submit] {
-//   background: none;
-//   border: 1px solid #686868;
-//   font-family: Merel;
-//   font-weight: 400;
-//   font-size: 16px;
-//   text-transform: uppercase;
-//   width: 190px;
-//   height: 50px;
-//   padding: 4px 0 0 0;
-//   cursor: pointer;
-//   margin: 40px auto 40px;
-//   display: block;
-//   &:hover {
-//     border: none;
-//     color: lighten($tundora, 5%);
-//     background-color: $button-hover-bg-color;
-//   }
-// }
-
 // angular form error classes
 form.validate .ng-invalid { background-color: #ffe6e6; }
 form.validate .ng-invalid + label { background-color: #ffe6e6; }
-// form .ng-valid.ng-dirty { background-color: lightgreen; }
 
 .wrapper {
   width: 900px;
@@ -158,10 +102,11 @@ form.validate .ng-invalid + label { background-color: #ffe6e6; }
 
 header {
   overflow: auto;
-  nav {
-    margin-top: 3px;
-    margin-bottom: 50px;
-  }
+}
+footer {
+  height: 100px;
+  background: $mine-shaft;
+  overflow: auto;
 }
 
 
@@ -276,25 +221,6 @@ section {
     margin-top: 30px;
   }
 }
-
-footer {
-  height: 100px;
-  background: $mine-shaft;
-  overflow: auto;
-  
-}
-
-// .socials {
-//   width: 200px;
-//   overflow: auto;
-//   margin: 20px auto 0;
-//   .social {
-//     width: 31px;
-//     height: 31px;
-//     display: inline-block;
-//     cursor: pointer;
-//   }
-// }
 
 .form_textarea {
   border: 1px solid #C6F4E5;

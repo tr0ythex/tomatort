@@ -1,33 +1,31 @@
 nav {
   @extend .merel-regular;
-  font-size: 18px;
-  color: $mine-shaft;
   text-transform: uppercase;
   width: 660px;
   margin: 0 auto;
-  li {
-    display: inline-block;
-    cursor: pointer;
-    font-size: 18px;
+  &#nav-top {
+    font-size: $font-big;
+    width: 660px;
     color: $mine-shaft;
-    &:hover {
+    margin-bottom: 40px;
+    li:hover {
       color: $puerto-rico;
     }
   }
-  .menu-active {
-    color: $puerto-rico;
-  }
-}
-
-nav {
-  width: 500px;
-  margin-top: 39px;
-  
-  li {
+  &#nav-bottom {
+    font-size: $font-small;
+    width: 500px;
     color: $grey;
-    font-size: 15px;
-    &:hover {
+    margin-top: 40px;
+    li:hover {
       color: $jet-stream;
+    }
+  }
+  li {
+    display: inline-block;
+    cursor: pointer;
+    &.li-active {
+      color: $puerto-rico;
     }
   }
 }

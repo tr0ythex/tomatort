@@ -608,35 +608,69 @@ input[type=file] + label:hover {
 }
 
 nav {
-  font-size: 18px;
-  color: #353535;
   text-transform: uppercase;
   width: 660px;
   margin: 0 auto;
 }
+nav#nav-top {
+  font-size: 18px;
+  width: 660px;
+  color: #353535;
+  margin-bottom: 40px;
+}
+nav#nav-top li:hover {
+  color: #3BBFA5;
+}
+nav#nav-bottom {
+  font-size: 15px;
+  width: 500px;
+  color: #808080;
+  margin-top: 40px;
+}
+nav#nav-bottom li:hover {
+  color: #A8CCC8;
+}
 nav li {
   display: inline-block;
   cursor: pointer;
-  font-size: 18px;
-  color: #353535;
 }
-nav li:hover {
-  color: #3BBFA5;
-}
-nav .menu-active {
+nav li.li-active {
   color: #3BBFA5;
 }
 
-nav {
-  width: 500px;
-  margin-top: 39px;
-}
-nav li {
-  color: #808080;
+.btn {
+  display: block;
+  box-sizing: border-box;
+  background: none;
+  cursor: pointer;
+  outline: none;
   font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 190px;
+  height: 50px;
+  line-height: 48px;
+  margin: 0 auto;
 }
-nav li:hover {
-  color: #A8CCC8;
+.btn:hover {
+  color: #4d4d4d;
+  background: #B0EADA;
+  border: none;
+}
+
+.btn-dark {
+  border: 1px solid #686868;
+  color: #444444;
+}
+
+.btn-light {
+  border: 1px solid white;
+  color: white;
+}
+
+form .btn {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .fxbx_block {
@@ -711,41 +745,6 @@ a {
   color: inherit;
 }
 
-.btn {
-  display: block;
-  box-sizing: border-box;
-  background: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 15px;
-  text-transform: uppercase;
-  text-align: center;
-  width: 190px;
-  height: 50px;
-  line-height: 48px;
-  margin: 0 auto;
-}
-.btn:hover {
-  color: #4d4d4d;
-  background: #B0EADA;
-  border: none;
-}
-
-.btn-dark {
-  border: 1px solid #686868;
-  color: #444444;
-}
-
-.btn-light {
-  border: 1px solid white;
-  color: white;
-}
-
-form .btn {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
 input {
   border: none;
   outline: none;
@@ -785,9 +784,11 @@ form.validate .ng-invalid + label {
 header {
   overflow: auto;
 }
-header nav {
-  margin-top: 3px;
-  margin-bottom: 50px;
+
+footer {
+  height: 100px;
+  background: #353535;
+  overflow: auto;
 }
 
 section {
@@ -893,12 +894,6 @@ section p {
 
 .place_order h2 {
   margin-top: 30px;
-}
-
-footer {
-  height: 100px;
-  background: #353535;
-  overflow: auto;
 }
 
 .form_textarea {

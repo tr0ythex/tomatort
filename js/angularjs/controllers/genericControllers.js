@@ -1,6 +1,6 @@
 /* global angular */
 angular.module("tomaTort")
-.constant("menuActiveClass", "menu-active")
+.constant("menuActiveClass", "li-active")
 .factory("menu", function (menuActiveClass) {
   
   var selectedMenuItem = '';
