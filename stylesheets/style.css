@@ -127,7 +127,7 @@ input[type=range]::-ms-thumb {
   font-weight: 300;
 }
 
-.merel-regular, .btn {
+.merel-regular, .btn, nav {
   font-family: Merel;
   font-weight: 400;
 }
@@ -758,13 +758,11 @@ header nav {
 }
 
 nav {
-  font-family: Merel;
   font-size: 18px;
-  font-weight: 400;
   letter-spacing: 0.5px;
   color: #353535;
   text-transform: uppercase;
-  width: 600px;
+  width: 700px;
   margin: 0 auto;
 }
 nav ul {
@@ -905,6 +903,7 @@ footer nav {
 }
 footer nav li {
   color: #808080;
+  font-size: 15px;
 }
 footer nav li:hover {
   color: #A8CCC8;

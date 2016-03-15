@@ -163,13 +163,12 @@ header {
 }
 
 nav {
-  font-family: Merel;
+  @extend .merel-regular;
   font-size: 18px;
-  font-weight: 400;
   letter-spacing: 0.5px;
   color: $nav-text-color;
   text-transform: uppercase;
-  width: 600px;
+  width: 700px;
   margin: 0 auto;
   ul {
     text-align: justify;
@@ -313,8 +312,10 @@ footer {
   nav {
     width: 440px;
     margin-top: 39px;
+    
     li {
       color: $footer-li-color;
+      font-size: 15px;
       &:hover {
         color: $footer-li-hover-color;
       }
