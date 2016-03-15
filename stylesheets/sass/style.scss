@@ -1,9 +1,11 @@
+@import 'utilities/common-styles';
 @import 'utilities/variables';
 @import 'utilities/mixins';
 @import 'utilities/range_style';
 @import 'utilities/fonts';
 @import 'utilities/slider';
 @import 'utilities/flip_animated';
+@import 'utilities/flexbox';
 @import 'pages/menu';
 @import 'pages/productItem';
 @import 'pages/dreamDessert';
@@ -15,37 +17,7 @@
 @import 'partials/nav';
 @import 'partials/btn';
 
-.fxbx_block {
-  @include flexbox();
-}
-.fxbx_sp_between {
-  @include flex-justify(space-between);
-}
-.fxbx_flex_start {
-  @include flex-justify(flex-start);
-  .fxbx_item:nth-child(3n-1) {
-    margin-left: 6px;
-    margin-right: 6px;
-  }
-}
-.fxbx_sp_around {
-  @include flex-justify(space-around);
-}
-.fxbx_wrap {
-  @include flex-wrap(wrap);
-}
-/*
-fxbx
-fx_jstf_sp_between
-fx_jstf_sp_around
-fx_jstf_fx_start
-fx_wrp_wrap
-*/
 
-ul, h1, h2, p, body {
-  margin: 0;
-  padding: 0;
-}
 
 .title {
   font-family: LeksaPro;

@@ -1,0 +1,29 @@
+// flexbox container
+.fxbx {
+  @include flexbox();
+}
+
+// flexbox item justified with spaces between elements
+.fx-js-sp-between {
+  @include flex-justify(space-between);
+}
+
+// flexbox justified and aligned with flex-start
+// three items in a line
+.fx-js-start-3 {
+  @include flex-justify(flex-start);
+  .fx-item:nth-child(3n-1) {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+}
+
+// flexbox justified with spaces around elements
+.fx-js-sp-around {
+  @include flex-justify(space-around);
+}
+
+// allow multilines
+.fx-wr-wrap {
+  @include flex-wrap(wrap);
+}

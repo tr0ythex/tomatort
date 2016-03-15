@@ -16,7 +16,7 @@
 	ng-class="showValidation ? 'validate' : ''">
   <section id="param1">
 	  <h2>Важный параметр 1</h2>
-	  <div class="variat_block fxbx_block fxbx_sp_between">
+	  <div class="variat_block fxbx fx-js-sp-between">
 	  	<input type="checkbox" name="param1" id="var1"
 	  		ng-model="dreamDessert.param1[0]" ng-required="shouldBeRequired()">
 	  	<label class="title variat_item" for="var1">Вариант</label>
@@ -42,13 +42,13 @@
 	  <h2>Важный параметр 3</h2>
   	<input type="range" min="1" max="5" step="1" value="1" 
   		ng-model="dreamDessert.param3" required>
-  	<div class="range_block fxbx_block fxbx_sp_between">
+  	<div class="range_block fxbx fx-js-sp-between">
   		<div class="range_item"></div>
   		<div class="range_item"></div>
   		<div class="range_item"></div>
   		<div class="range_item"></div>
 	  </div>
-	  <div class="title_block fxbx_block fxbx_sp_between">
+	  <div class="title_block fxbx fx-js-sp-between">
 	  	<div class="title title_item">Пояснение</div>
 	  	<div class="title title_item">Пояснение</div>
 	  	<div class="title title_item">Пояснение</div>
@@ -66,7 +66,7 @@
 	</section>
 	<section class="customer_info">
 		<h2>Информация о заказчике</h2>
-		<div class="ci_block fxbx_block fxbx_sp_between fxbx_wrap">
+		<div class="ci_block fxbx fx-js-sp-between fx-wr-wrap">
 			<input type="text" id="ci_first_name" name="firstName" class="ci_item" 
 				placeholder="Имя" ng-model="data.shipping.firstName" required>
 			<input type="text" id="ci_last_name" name="lastName" class="ci_item" 
