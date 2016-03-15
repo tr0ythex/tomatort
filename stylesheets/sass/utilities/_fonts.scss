@@ -80,8 +80,12 @@
     font-weight: 700;
 }
 .leksapro-italic {
-    font-family: Merel;
+    font-family: LeksaPro;
     font-style: italic;
+}
+.leksapro-italic-large {
+    @extend .leksapro-italic;
+    font-size: $fs-large;
 }
 .permianserif-regular {
     font-family: PermianSerifTypeface;

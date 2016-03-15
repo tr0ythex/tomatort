@@ -15,14 +15,14 @@
 	</section>
 	<section class="delivery_info">
 	  <h2>Информация о доставке</h2>
-	  <input type="text" id="di_address" name="address" class="title di_item" 
+	  <input type="text" id="di_address" name="address" class="leksapro-italic-large di_item" 
 	  	placeholder="Адрес" ng-model="data.shipping.address" required>
-		<textarea class="form_textarea title" name="comment" form="delivery_form" 
+		<textarea class="form_textarea leksapro-italic-large" name="comment" form="delivery_form" 
 			placeholder="Комментарий" ng-model="data.shipping.comment"></textarea>
 	</section>
 	<input type="submit" value="Заказать" class="btn btn-dark"
 		ng-hide="data.shipping.sent">
-	<p class="title sent" ng-show="data.shipping.sent">
+	<p class="leksapro-italic-large sent" ng-show="data.shipping.sent">
 		Ваш заказ успешно отправлен!<br>
 		Скоро мы с вами свяжемся для уточнения заказа
 	</p>

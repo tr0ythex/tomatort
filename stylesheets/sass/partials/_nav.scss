@@ -4,7 +4,7 @@ nav {
   width: 660px;
   margin: 0 auto;
   &#nav-top {
-    font-size: $font-big;
+    font-size: $fs-medium;
     width: 660px;
     color: $mine-shaft;
     margin-bottom: 40px;
@@ -13,7 +13,7 @@ nav {
     }
   }
   &#nav-bottom {
-    font-size: $font-small;
+    font-size: $fs-small;
     width: 500px;
     color: $grey;
     margin-top: 40px;

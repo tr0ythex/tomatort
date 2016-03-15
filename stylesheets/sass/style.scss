@@ -17,30 +17,12 @@
 @import 'partials/nav';
 @import 'partials/btn';
 
-.title {
-  font-family: LeksaPro;
-  font-style: italic;
-  font-size: 20px;
-}
-p.sent {
-  font-size: 23px;
-  margin: 40px 0;
-  width: 100%;
-  text-align: center;
-}
-
-
-
 // angular form error classes
 form.validate .ng-invalid { background-color: #ffe6e6; }
 form.validate .ng-invalid + label { background-color: #ffe6e6; }
 
-section {
-  @extend .overflown-auto;
-}
 h2 {
-    font-family: Merel;
-    font-weight: 400;
+    @extend .merel-regular;
     font-size: 23px;
     line-height: 23px;
     margin: 80px 0 47px;
@@ -124,7 +106,7 @@ h2 {
           }
         }
       }
-      .title {
+      .leksapro-italic-large {
         position: absolute;
         bottom: 0;
         width: 100%;

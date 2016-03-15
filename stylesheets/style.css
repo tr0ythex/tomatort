@@ -46,6 +46,11 @@ footer {
   margin: 40px auto;
 }
 
+.sent {
+  font-size: 23px;
+  margin: 40px 0;
+}
+
 input[type=range] {
   -webkit-appearance: none;
   margin: 10px 0;
@@ -175,7 +180,7 @@ input[type=range]::-ms-thumb {
   font-weight: 300;
 }
 
-.merel-regular, nav, .btn {
+.merel-regular, nav, .btn, h2 {
   font-family: Merel;
   font-weight: 400;
 }
@@ -190,9 +195,13 @@ input[type=range]::-ms-thumb {
   font-weight: 700;
 }
 
-.leksapro-italic {
-  font-family: Merel;
+.leksapro-italic, .leksapro-italic-large {
+  font-family: LeksaPro;
   font-style: italic;
+}
+
+.leksapro-italic-large {
+  font-size: 20px;
 }
 
 .permianserif-regular {
@@ -759,19 +768,6 @@ form .btn {
   margin-bottom: 40px;
 }
 
-.title {
-  font-family: LeksaPro;
-  font-style: italic;
-  font-size: 20px;
-}
-
-p.sent {
-  font-size: 23px;
-  margin: 40px 0;
-  width: 100%;
-  text-align: center;
-}
-
 form.validate .ng-invalid {
   background-color: #ffe6e6;
 }
@@ -781,8 +777,6 @@ form.validate .ng-invalid + label {
 }
 
 h2 {
-  font-family: Merel;
-  font-weight: 400;
   font-size: 23px;
   line-height: 23px;
   margin: 80px 0 47px;
@@ -867,7 +861,7 @@ p {
   font-size: 30px;
   top: 100px;
 }
-.menu .menu_block .menu_item .title {
+.menu .menu_block .menu_item .leksapro-italic-large {
   position: absolute;
   bottom: 0;
   width: 100%;
