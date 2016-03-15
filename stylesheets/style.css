@@ -893,12 +893,12 @@ section p {
 }
 
 footer {
-  height: 150px;
+  height: 100px;
   background: #333333;
   overflow: auto;
 }
 footer nav {
-  width: 440px;
+  width: 500px;
   margin-top: 39px;
 }
 footer nav li {
