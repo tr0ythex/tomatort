@@ -676,6 +676,7 @@ li {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .btn {
@@ -759,20 +760,10 @@ header nav {
 
 nav {
   font-size: 18px;
-  letter-spacing: 0.5px;
   color: #353535;
   text-transform: uppercase;
-  width: 700px;
+  width: 660px;
   margin: 0 auto;
-}
-nav ul {
-  text-align: justify;
-  font-size: 4px;
-}
-nav ul:after {
-  content: "";
-  display: inline-block;
-  width: 100%;
 }
 nav ul li {
   display: inline-block;

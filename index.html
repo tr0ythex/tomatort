@@ -70,38 +70,32 @@
 	
 	<body ng-controller="tomaTortCtrl">
 		<header class="wrapper">
-			<!--Logo-->
 			<div class="logo">
-				<a href="/"><img src="images/logo.png"></a>
+				<a href="#"><img src="/images/logo.png"></a>
 			</div>
 
-			<!--Top Navbar-->
 			<nav class="top_menu" ng-controller="menuCtrl">
-				<ul>
-					<!--<a href="#">-->
-					<!--	<li ng-click="selectMenuItem('')" -->
-					<!--			ng-class="getMenuClass('')">Главная</li>-->
-					<!--</a>-->
-					<a href="#/contacts">
-						<li ng-click="selectMenuItem('/contacts')" 
-								ng-class="getMenuClass('/contacts')">О нас</li>
-					</a>	
-					<a href="#/menu">
-						<li id="m_menu" ng-click="selectMenuItem('/menu')" 
-								ng-class="getMenuClass('/menu')">Меню</li>
-					</a>
-					<a href="#/gallery">
-						<li ng-click="selectMenuItem('/gallery')" 
-								ng-class="getMenuClass('/gallery')">Галерея</li>
-					</a>
-					<a href="#/contacts">
-						<li ng-click="selectMenuItem('/contacts')" 
-								ng-class="getMenuClass('/contacts')">Доставка и оплата</li>
-					</a>
-					<a href="#/checkout">
-						<li ng-click="selectMenuItem('/checkout')" 
-								ng-class="getMenuClass('/checkout')">Корзина <cart-summary /></li>
-					</a>
+				<ul class="fxbx_block fxbx_sp_between fxbx_wrap">
+					<li ng-click="selectMenuItem('/contacts')" 
+							ng-class="getMenuClass('/contacts')">
+						<a href="#/contacts">О нас</a>
+					</li>
+					<li ng-click="selectMenuItem('/menu')" 
+							ng-class="getMenuClass('/menu')">
+						<a href="#/menu">Меню</a>
+					</li>
+					<li ng-click="selectMenuItem('/gallery')" 
+							ng-class="getMenuClass('/gallery')">
+						<a href="#/gallery">Галерея</a>
+					</li>
+					<li ng-click="selectMenuItem('/contacts')" 
+							ng-class="getMenuClass('/contacts')">
+						<a href="#/contacts">Доставка и оплата</a>
+					</li>
+					<li ng-click="selectMenuItem('/checkout')" 
+							ng-class="getMenuClass('/checkout')">
+						<a href="#/checkout">Корзина <cart-summary /></a>
+					</li>
 				</ul>
 			</nav>
 		</header>
@@ -111,26 +105,25 @@
 		</main>
 		
 		<footer>
-			<!--Navbar-->
 			<nav class="bottom_menu" ng-controller="menuCtrl">
-				<ul>
-					<a href="#"><li ng-click="selectMenuItem('')">О нас</li></a>
-					<a href="#/menu"><li ng-click="selectMenuItem('/menu')">Меню</li></a>
-					<a href="#/gallery"><li ng-click="selectMenuItem('/gallery')">Галерея</li></a>
-					<a href="#/contacts"><li ng-click="selectMenuItem('/contacts')">Доставка и оплата</li></a>
-					<a href="#/contacts"><li ng-click="selectMenuItem('/contacts')">Instagram</li></a>
+				<ul class="fxbx_block fxbx_sp_between fxbx_wrap">
+					<li ng-click="selectMenuItem('/about')">
+						<a href="#/about">О нас</a>
+					</li>
+					<li ng-click="selectMenuItem('/menu')">
+						<a href="#/menu">Меню</a>
+					</li>
+					<li ng-click="selectMenuItem('/gallery')">
+						<a href="#/gallery">Галерея</a>
+					</li>
+					<li ng-click="selectMenuItem('/contacts')">
+						<a href="#/contacts">Доставка и оплата</a>
+					</li>
+					<li ng-click="selectMenuItem('/contacts')">
+						<a href="#/contacts">Instagram</a>
+					</li>
 				</ul>
 			</nav>
-
-			<!--Social networks-->
-			<!--<div class="socials fxbx_block fxbx_sp_between">-->
-			<!--	<div class="social fb"></div>-->
-			<!--	<div class="social inst"></div>-->
-			<!--	<div class="social vk"></div>-->
-			<!--</div>-->
 		</footer>
-
-			
-			
 	</body>
 </html>

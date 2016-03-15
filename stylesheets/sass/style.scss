@@ -12,6 +12,7 @@
 @import 'pages/placeOrder';
 @import 'pages/checkout';
 @import 'pages/home';
+@import 'partials/nav';
 
 .fxbx_block {
   @include flexbox();
@@ -63,6 +64,7 @@ li {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 // btn classes
@@ -165,31 +167,24 @@ header {
 nav {
   @extend .merel-regular;
   font-size: 18px;
-  letter-spacing: 0.5px;
-  color: $nav-text-color;
+  color: $mine-shaft;
   text-transform: uppercase;
-  width: 700px;
+  width: 660px;
   margin: 0 auto;
   ul {
-    text-align: justify;
-    font-size: 4px; // justify last line fix
-    &:after { // justify last line fix
-      content: "";
-      display: inline-block;
-      width: 100%;
-    }
+
     
     li {
       display: inline-block;
       cursor: pointer;
       font-size: 18px;
-      color: $nav-text-color;
+      color: $mine-shaft;
       &:hover {
-        color: $nav-text-color-hover;
+        color: $puerto-rico;
       }
     }
     .menu-active {
-      color: $nav-text-color-hover;
+      color: $puerto-rico;
     }
   }
 }
