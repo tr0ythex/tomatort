@@ -1,0 +1,33 @@
+nav {
+  @extend .merel-regular;
+  font-size: 18px;
+  color: $mine-shaft;
+  text-transform: uppercase;
+  width: 660px;
+  margin: 0 auto;
+  li {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+    color: $mine-shaft;
+    &:hover {
+      color: $puerto-rico;
+    }
+  }
+  .menu-active {
+    color: $puerto-rico;
+  }
+}
+
+nav {
+  width: 500px;
+  margin-top: 39px;
+  
+  li {
+    color: $grey;
+    font-size: 15px;
+    &:hover {
+      color: $jet-stream;
+    }
+  }
+}

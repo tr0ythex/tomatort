@@ -127,7 +127,7 @@ input[type=range]::-ms-thumb {
   font-weight: 300;
 }
 
-.merel-regular, .btn, nav {
+.merel-regular, nav, .btn {
   font-family: Merel;
   font-weight: 400;
 }
@@ -607,6 +607,38 @@ input[type=file] + label:hover {
   height: 300px;
 }
 
+nav {
+  font-size: 18px;
+  color: #353535;
+  text-transform: uppercase;
+  width: 660px;
+  margin: 0 auto;
+}
+nav li {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 18px;
+  color: #353535;
+}
+nav li:hover {
+  color: #3BBFA5;
+}
+nav .menu-active {
+  color: #3BBFA5;
+}
+
+nav {
+  width: 500px;
+  margin-top: 39px;
+}
+nav li {
+  color: #808080;
+  font-size: 15px;
+}
+nav li:hover {
+  color: #A8CCC8;
+}
+
 .fxbx_block {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
@@ -758,26 +790,6 @@ header nav {
   margin-bottom: 50px;
 }
 
-nav {
-  font-size: 18px;
-  color: #353535;
-  text-transform: uppercase;
-  width: 660px;
-  margin: 0 auto;
-}
-nav ul li {
-  display: inline-block;
-  cursor: pointer;
-  font-size: 18px;
-  color: #353535;
-}
-nav ul li:hover {
-  color: #3BBFA5;
-}
-nav ul .menu-active {
-  color: #3BBFA5;
-}
-
 section {
   text-align: center;
   overflow: hidden;
@@ -885,49 +897,8 @@ section p {
 
 footer {
   height: 100px;
-  background: #333333;
+  background: #353535;
   overflow: auto;
-}
-footer nav {
-  width: 500px;
-  margin-top: 39px;
-}
-footer nav li {
-  color: #808080;
-  font-size: 15px;
-}
-footer nav li:hover {
-  color: #A8CCC8;
-}
-footer .socials .fb {
-  background: url(/images/socials.png) 0 0;
-}
-footer .socials .fb:hover {
-  background-position: 0 -31px;
-}
-footer .socials .inst {
-  background: url(/images/socials.png) -31px 0;
-}
-footer .socials .inst:hover {
-  background-position: -31px -31px;
-}
-footer .socials .vk {
-  background: url(/images/socials.png) -62px 0;
-}
-footer .socials .vk:hover {
-  background-position: -62px -31px;
-}
-
-.socials {
-  width: 200px;
-  overflow: auto;
-  margin: 20px auto 0;
-}
-.socials .social {
-  width: 31px;
-  height: 31px;
-  display: inline-block;
-  cursor: pointer;
 }
 
 .form_textarea {

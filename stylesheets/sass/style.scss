@@ -164,30 +164,7 @@ header {
   }
 }
 
-nav {
-  @extend .merel-regular;
-  font-size: 18px;
-  color: $mine-shaft;
-  text-transform: uppercase;
-  width: 660px;
-  margin: 0 auto;
-  ul {
 
-    
-    li {
-      display: inline-block;
-      cursor: pointer;
-      font-size: 18px;
-      color: $mine-shaft;
-      &:hover {
-        color: $puerto-rico;
-      }
-    }
-    .menu-active {
-      color: $puerto-rico;
-    }
-  }
-}
 
 section {
   // height: 300px;
@@ -302,53 +279,22 @@ section {
 
 footer {
   height: 100px;
-  background: $footer-bg;
+  background: $mine-shaft;
   overflow: auto;
-  nav {
-    width: 500px;
-    margin-top: 39px;
-    
-    li {
-      color: $footer-li-color;
-      font-size: 15px;
-      &:hover {
-        color: $footer-li-hover-color;
-      }
-    }
-  }
-  .socials {
-    .fb {
-      background: url(/images/socials.png) 0 0;
-      &:hover {
-        background-position: 0 -31px;
-      }
-    }
-    .inst {
-      background: url(/images/socials.png) -31px 0;
-      &:hover {
-        background-position: -31px -31px;
-      }
-    }
-    .vk {
-      background: url(/images/socials.png) -62px 0;
-      &:hover {
-        background-position: -62px -31px;
-      }
-    }
-  }
+  
 }
 
-.socials {
-  width: 200px;
-  overflow: auto;
-  margin: 20px auto 0;
-  .social {
-    width: 31px;
-    height: 31px;
-    display: inline-block;
-    cursor: pointer;
-  }
-}
+// .socials {
+//   width: 200px;
+//   overflow: auto;
+//   margin: 20px auto 0;
+//   .social {
+//     width: 31px;
+//     height: 31px;
+//     display: inline-block;
+//     cursor: pointer;
+//   }
+// }
 
 .form_textarea {
   border: 1px solid #C6F4E5;
