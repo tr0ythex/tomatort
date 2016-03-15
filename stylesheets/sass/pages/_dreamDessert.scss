@@ -53,11 +53,11 @@
   width: 580px;
   margin: -19px auto 0;
   height: 16px;
-  border-left: 1px solid $button-hover-bg-color;
-  border-right: 1px solid $button-hover-bg-color;
+  border-left: 1px solid $cruise;
+  border-right: 1px solid $cruise;
   .range_item {
     width: 150px;
-    border-left: 1px solid $button-hover-bg-color;
+    border-left: 1px solid $cruise;
   }
 }
 
@@ -82,7 +82,7 @@ input[type=file] {
     padding: 15px;
     box-sizing: border-box;
     &:hover {
-      background: $button-hover-bg-color;
+      background: $cruise;
       color: lighten($tundora, 5%);
     }
   }

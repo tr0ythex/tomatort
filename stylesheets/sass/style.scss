@@ -31,28 +31,7 @@ p.sent {
   text-align: center;
 }
 
-li {
-  list-style: none;
-}
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-input {
-  border: none;
-  outline: none;
-}
-
-input[type=checkbox] {
-  display: none;
-}
-// always show spinner on type number input
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  opacity: 1;
-}
 
 // angular form error classes
 form.validate .ng-invalid { background-color: #ffe6e6; }

@@ -38,14 +38,14 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 1px;
   cursor: pointer;
   animate: 0.2s;
-  background: #B4EEDE;
+  background: #B0EADA;
 }
 
 input[type=range]::-webkit-slider-thumb {
   height: 20px;
   width: 20px;
   border-radius: 10px;
-  background: #B4EEDE;
+  background: #B0EADA;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -10px;
@@ -56,14 +56,14 @@ input[type=range]::-moz-range-track {
   height: 1px;
   cursor: pointer;
   animate: 0.2s;
-  background: #B4EEDE;
+  background: #B0EADA;
 }
 
 input[type=range]::-moz-range-thumb {
   height: 20px;
   width: 20px;
   border-radius: 10px;
-  background: #B4EEDE;
+  background: #B0EADA;
   cursor: pointer;
 }
 
@@ -78,18 +78,18 @@ input[type=range]::-ms-track {
 }
 
 input[type=range]::-ms-fill-lower {
-  background: #B4EEDE;
+  background: #B0EADA;
 }
 
 input[type=range]::-ms-fill-upper {
-  background: #B4EEDE;
+  background: #B0EADA;
 }
 
 input[type=range]::-ms-thumb {
   height: 20px;
   width: 20px;
   border-radius: 10px;
-  background: #B4EEDE;
+  background: #B0EADA;
   cursor: pointer;
 }
 
@@ -440,12 +440,12 @@ input[type=range]::-ms-thumb {
   width: 580px;
   margin: -19px auto 0;
   height: 16px;
-  border-left: 1px solid #B4EEDE;
-  border-right: 1px solid #B4EEDE;
+  border-left: 1px solid #B0EADA;
+  border-right: 1px solid #B0EADA;
 }
 .range_block .range_item {
   width: 150px;
-  border-left: 1px solid #B4EEDE;
+  border-left: 1px solid #B0EADA;
 }
 
 #cake_file h2 {
@@ -469,7 +469,7 @@ input[type=file] + label {
   box-sizing: border-box;
 }
 input[type=file] + label:hover {
-  background: #B4EEDE;
+  background: #B0EADA;
   color: #515151;
 }
 
@@ -653,7 +653,7 @@ input[type=file] + label:hover {
   margin-right: 10px;
 }
 #checkout .toma_table input[type=radio]:checked + label {
-  background-color: #C2F0E1;
+  background-color: #B0EADA;
 }
 #checkout .btn {
   margin-bottom: 40px;
@@ -747,29 +747,6 @@ p.sent {
   margin: 40px 0;
   width: 100%;
   text-align: center;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-input {
-  border: none;
-  outline: none;
-}
-
-input[type=checkbox] {
-  display: none;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  opacity: 1;
 }
 
 form.validate .ng-invalid {
