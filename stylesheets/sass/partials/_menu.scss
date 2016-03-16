@@ -1,0 +1,41 @@
+.menu-item {
+  position: relative;
+  height: 300px;
+  width: 296px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  p {
+    width: 100%;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    .menu-item-title {
+      @extend .leksapro-italic-large;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 47px;
+      color: white;
+      background: rgba(black, 0.6);
+      line-height: 47px;
+      border-top: 1px solid $dove-grey;
+    }
+    &.menu-item-name {
+      @extend .leksapro-italic-large;
+      top: 50px;
+    }
+    &.menu-item-price {
+      @extend .merel-light;
+      font-size: $fs-xxlarge;
+      top: 100px;
+    }
+  }
+  .btn {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+  }
+}

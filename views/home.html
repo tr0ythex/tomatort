@@ -20,11 +20,11 @@
 	<h2>Меню</h2>
 	<ul class="menu-block fxbx fx-js-sp-around fx-wr-wrap">
 		<li class="menu-item fx-item" ng-repeat="product in data.products | limitTo:3">
-			<img ng-src="{{product.imageUrl}}">
-			<p class="leksapro-italic-large">{{product.name}}</p>
+			<img class="img-cover" ng-src="{{product.imageUrl}}">
+			<p class="menu-item-title">{{product.name}}</p>
 		</li>
 	</ul>
-	<a href="#/menu" class="btn btn-dark">Больше</a>
+	<a href="#/menu" class="btn btn-dark top-bottom-margined">Больше</a>
 </section>
 
 <section class="place_order">

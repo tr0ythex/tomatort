@@ -13,15 +13,15 @@
 			ng-repeat="product in data.products">
 			<div class="flipper"> 
 			  <div class="flip_front content_front">
-			  	<img ng-src="{{product.imageUrl}}">
-			    <p class="leksapro-italic-large">{{product.name}}</p>
+			  	<img class="img-cover" ng-src="{{product.imageUrl}}">
+			    <p class="menu-item-title">{{product.name}}</p>
 			  </div> 
 			  <div class="flip_back content_back" 
 			  	ng-click="openProductItemPage(product)">
-			  	<img ng-src="{{product.imageUrl}}">
-			  	<div class="fading"></div>
-			    <p class="p_name">{{product.name}}</p>
-			    <p class="p_price">{{product.price}} Р</p>
+			  	<img class="img-cover" ng-src="{{product.imageUrl}}">
+			  	<div class="blackout"></div>
+			    <p class="menu-item-name">{{product.name}}</p>
+			    <p class="menu-item-price">{{product.price}} Р</p>
 			    <button class="btn btn-light" ng-hide="product.ordered"
 			    	ng-click="setOrdered(product.id); 
 			    	addToCart(product); 

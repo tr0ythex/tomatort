@@ -73,9 +73,32 @@ p {
   margin: 40px auto;
 }
 
-.sent {
-  font-size: 23px;
+.top-bottom-margined {
   margin: 40px 0;
+}
+
+.blackout {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+form.validate .ng-invalid {
+  background-color: #ffe6e6;
+}
+
+form.validate .ng-invalid + label {
+  background-color: #ffe6e6;
 }
 
 input[type=range] {
@@ -202,7 +225,7 @@ input[type=range]::-ms-thumb {
   /* Legacy iOS */
   font-weight: 400;
 }
-.merel-light {
+.merel-light, .menu-item p.menu-item-price {
   font-family: Merel;
   font-weight: 300;
 }
@@ -222,12 +245,12 @@ input[type=range]::-ms-thumb {
   font-weight: 700;
 }
 
-.leksapro-italic, .leksapro-italic-large {
+.leksapro-italic, .leksapro-italic-large, .menu-item p .menu-item-title, .menu-item p.menu-item-name {
   font-family: LeksaPro;
   font-style: italic;
 }
 
-.leksapro-italic-large {
+.leksapro-italic-large, .menu-item p .menu-item-title, .menu-item p.menu-item-name {
   font-size: 20px;
 }
 
@@ -778,7 +801,7 @@ nav li.li-active {
   width: 190px;
   height: 50px;
   line-height: 48px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 .btn:hover {
   color: #4d4d4d;
@@ -801,70 +824,43 @@ form .btn {
   margin-bottom: 40px;
 }
 
-form.validate .ng-invalid {
-  background-color: #ffe6e6;
-}
-
-form.validate .ng-invalid + label {
-  background-color: #ffe6e6;
-}
-
-.menu-block .menu-item {
+.menu-item {
   position: relative;
   height: 300px;
   width: 296px;
   cursor: pointer;
   margin-bottom: 4px;
 }
-.menu-block .menu-item .btn {
+.menu-item p {
+  width: 100%;
+  color: white;
+  position: absolute;
+  z-index: 2;
+}
+.menu-item p .menu-item-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 47px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  line-height: 47px;
+  border-top: 1px solid #686868;
+}
+.menu-item p.menu-item-name {
+  top: 50px;
+}
+.menu-item p.menu-item-price {
+  font-size: 30px;
+  top: 100px;
+}
+.menu-item .btn {
   position: absolute;
   bottom: 20px;
   left: 0;
   right: 0;
   margin: 0 auto;
   z-index: 2;
-}
-.menu-block .menu-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.menu-block .menu-item .fading {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-.menu-block .menu-item .content_back p {
-  width: 100%;
-  color: white;
-  position: absolute;
-  z-index: 2;
-}
-.menu-block .menu-item .content_back p.p_name {
-  font-family: LeksaPro;
-  font-style: italic;
-  font-size: 20px;
-  top: 50px;
-}
-.menu-block .menu-item .content_back p.p_price {
-  font-family: Merel;
-  font-weight: 300;
-  font-size: 30px;
-  top: 100px;
-}
-.menu-block .menu-item .leksapro-italic-large {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 47px;
-  color: white;
-  background: rgba(0, 0, 0, 0.61);
-  line-height: 47px;
-  border-top: 1px solid #686868;
 }
 
 .place_order h2 {
