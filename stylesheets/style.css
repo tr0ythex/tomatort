@@ -1,4 +1,38 @@
-/* COMMON ELEMENTS */
+.overflown-auto, section {
+  overflow: auto;
+}
+
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  width: 170px;
+  margin: 40px auto;
+}
+
+.top-bottom-margined {
+  margin: 40px 0;
+}
+
+.blackout {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 ul, li, h1, h2, p, body {
   margin: 0;
   padding: 0;
@@ -57,46 +91,23 @@ p {
   margin: 0 auto;
 }
 
-/* COMMON CLASSES */
-.overflown-auto, section {
-  overflow: auto;
-}
-
-.wrapper {
-  width: 900px;
+form {
+  width: 600px;
   margin: 0 auto;
 }
-
-.logo {
-  display: block;
-  width: 170px;
-  margin: 40px auto;
-}
-
-.top-bottom-margined {
-  margin: 40px 0;
-}
-
-.blackout {
-  position: absolute;
-  left: 0;
-  top: 0;
+form textarea {
+  border: 1px solid #C6F4E5;
+  padding: 10px 15px;
+  box-sizing: border-box;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
+  height: 115px;
+  resize: vertical;
+  margin-bottom: 0;
+  outline: none;
 }
-
-.img-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 form.validate .ng-invalid {
   background-color: #ffe6e6;
 }
-
 form.validate .ng-invalid + label {
   background-color: #ffe6e6;
 }
@@ -245,12 +256,12 @@ input[type=range]::-ms-thumb {
   font-weight: 700;
 }
 
-.leksapro-italic, .leksapro-italic-large, .menu-item p .menu-item-title, .menu-item p.menu-item-name {
+.leksapro-italic, .leksapro-italic-large, .menu-item p.menu-item-title, .menu-item p.menu-item-name {
   font-family: LeksaPro;
   font-style: italic;
 }
 
-.leksapro-italic-large, .menu-item p .menu-item-title, .menu-item p.menu-item-name {
+.leksapro-italic-large, .menu-item p.menu-item-title, .menu-item p.menu-item-name {
   font-size: 20px;
 }
 
@@ -837,13 +848,10 @@ form .btn {
   position: absolute;
   z-index: 2;
 }
-.menu-item p .menu-item-title {
-  position: absolute;
+.menu-item p.menu-item-title {
   bottom: 0;
-  width: 100%;
-  height: 47px;
-  color: white;
   background: rgba(0, 0, 0, 0.6);
+  height: 47px;
   line-height: 47px;
   border-top: 1px solid #686868;
 }
@@ -861,31 +869,4 @@ form .btn {
   right: 0;
   margin: 0 auto;
   z-index: 2;
-}
-
-.place_order h2 {
-  margin-top: 30px;
-}
-
-.form_textarea {
-  border: 1px solid #C6F4E5;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  width: 100%;
-  height: 115px;
-  resize: vertical;
-  margin-bottom: 0;
-  outline: none;
-}
-
-.form_success p {
-  margin-top: 0;
-}
-
-.customer_info {
-  width: 600px;
-  margin: 0 auto;
-}
-.customer_info h2 {
-  margin-top: 20px;
 }

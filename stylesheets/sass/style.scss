@@ -1,11 +1,15 @@
+// utilities
 @import 'utilities/variables';
-@import 'utilities/common-styles';
+@import 'utilities/common-styles/classes';
+@import 'utilities/common-styles/elements';
 @import 'utilities/mixins';
 @import 'utilities/range_style';
 @import 'utilities/fonts';
 @import 'utilities/slider';
 @import 'utilities/flip_animated';
 @import 'utilities/flexbox';
+
+// pages styles
 @import 'pages/menu';
 @import 'pages/productItem';
 @import 'pages/dreamDessert';
@@ -14,39 +18,8 @@
 @import 'pages/placeOrder';
 @import 'pages/checkout';
 @import 'pages/home';
+
+// partials styles
 @import 'partials/nav';
 @import 'partials/btn';
 @import 'partials/menu';
-
-
-
-.place_order {
-  h2 {
-    margin-top: 30px;
-  }
-}
-
-.form_textarea {
-  border: 1px solid #C6F4E5;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  width: 100%;
-  height: 115px;
-  resize: vertical;
-  margin-bottom: 0;
-  outline: none;
-}
-
-.form_success {
-  p {
-    margin-top: 0;
-  }
-}
-
-.customer_info {
-  width: 600px;
-  margin: 0 auto;
-  h2 {
-    margin-top: 20px;
-  }
-}
