@@ -30,11 +30,31 @@ footer {
   background: #353535;
 }
 
+section.sec-short {
+  height: 300px;
+}
+section.sec-long {
+  height: 600px;
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 85px 0 40px;
+}
+
 h2 {
   font-size: 23px;
   line-height: 23px;
   margin: 50px 0 40px;
   text-transform: uppercase;
+}
+
+p {
+  font-size: 15px;
+  line-height: 29px;
+  width: 600px;
+  margin: 0 auto;
 }
 
 /* COMMON CLASSES */
@@ -192,7 +212,7 @@ input[type=range]::-ms-thumb {
   font-weight: 400;
 }
 
-.merel-bold {
+.merel-bold, h1 {
   font-family: Merel;
   font-weight: 700;
 }
@@ -211,7 +231,7 @@ input[type=range]::-ms-thumb {
   font-size: 20px;
 }
 
-.permianserif-regular {
+.permianserif-regular, p {
   font-family: PermianSerifTypeface;
   font-weight: 400;
 }
@@ -698,15 +718,21 @@ input[type=file] + label:hover {
   margin-bottom: 40px;
 }
 
-#home_menu .menu_item {
+#home_menu .menu-item {
   cursor: default;
 }
 #home_menu .btn {
   margin-top: 48px;
 }
 
-.promo, .place_order {
-  height: 300px;
+#promo {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/images/promo.jpg);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
+  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
+  background-size: contain;
+  color: white;
 }
 
 nav {
@@ -718,7 +744,7 @@ nav#nav-top {
   font-size: 18px;
   width: 660px;
   color: #353535;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 nav#nav-top li:hover {
   color: #3BBFA5;
@@ -783,45 +809,14 @@ form.validate .ng-invalid + label {
   background-color: #ffe6e6;
 }
 
-p {
-  font-family: PermianSerifTypeface;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 29px;
-  width: 600px;
-  margin: 0 auto;
-}
-
-.promo {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
-  background-size: contain;
-  color: white;
-}
-.promo h1 {
-  font-family: Merel;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 40px;
-  text-transform: uppercase;
-  vertical-align: middle;
-  margin-top: 95px;
-  margin-bottom: 40px;
-}
-
-.menu {
-  height: 600px;
-}
-.menu .menu_block {
-  height: auto;
-}
-.menu .menu_block .menu_item {
+.menu-block .menu-item {
   position: relative;
   height: 300px;
   width: 296px;
   cursor: pointer;
   margin-bottom: 4px;
 }
-.menu .menu_block .menu_item .btn {
+.menu-block .menu-item .btn {
   position: absolute;
   bottom: 20px;
   left: 0;
@@ -829,12 +824,12 @@ p {
   margin: 0 auto;
   z-index: 2;
 }
-.menu .menu_block .menu_item img {
+.menu-block .menu-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.menu .menu_block .menu_item .fading {
+.menu-block .menu-item .fading {
   position: absolute;
   left: 0;
   top: 0;
@@ -843,25 +838,25 @@ p {
   background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
-.menu .menu_block .menu_item .content_back p {
+.menu-block .menu-item .content_back p {
   width: 100%;
   color: white;
   position: absolute;
   z-index: 2;
 }
-.menu .menu_block .menu_item .content_back p.p_name {
+.menu-block .menu-item .content_back p.p_name {
   font-family: LeksaPro;
   font-style: italic;
   font-size: 20px;
   top: 50px;
 }
-.menu .menu_block .menu_item .content_back p.p_price {
+.menu-block .menu-item .content_back p.p_price {
   font-family: Merel;
   font-weight: 300;
   font-size: 30px;
   top: 100px;
 }
-.menu .menu_block .menu_item .leksapro-italic-large {
+.menu-block .menu-item .leksapro-italic-large {
   position: absolute;
   bottom: 0;
   width: 100%;

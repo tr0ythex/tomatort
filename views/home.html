@@ -1,25 +1,25 @@
-<section class="promo">
+<section id="promo" class="sec-short">
 	<h1>Tomatort</h1>
 	<p class="leksapro-italic-large">Кондитерская</p>
 </section>
 
-<section class="index_page">
+<section>
 	<h2>О нас</h2>
 	<p>
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую
+	  Томаторт создает кондитерские изделия ручной работы 
+	  с использованием только качественных ингредиентов. 
+	  У нас вы можете как заказать любой из уже существующих тортов, 
+	  так и создать свой собственный неповторимый торт! 
+	  И вкус, и дизайн могут быть любыми, однако мы стремимся сделать 
+	  состав максимально натуральным, поэтому мы используем мастику только 
+	  для небольших декоративных элементов.
 	</p>
 </section>
 
-<section id="home_menu" class="index_page menu">
+<section class="menu">
 	<h2>Меню</h2>
-	<ul class="menu_block fxbx fx-js-sp-around fx-wr-wrap">
-		<li class="menu_item fx-item" ng-repeat="product in data.products | limitTo:3">
+	<ul class="menu-block fxbx fx-js-sp-around fx-wr-wrap">
+		<li class="menu-item fx-item" ng-repeat="product in data.products | limitTo:3">
 			<img ng-src="{{product.imageUrl}}">
 			<p class="leksapro-italic-large">{{product.name}}</p>
 		</li>
@@ -27,7 +27,7 @@
 	<a href="#/menu" class="btn btn-dark">Больше</a>
 </section>
 
-<section class="index_page place_order">
+<section class="place_order">
 	<h2>Как сделать заказ?</h2>
 	<p>
 	  Некоторое количество текста про кондитерскую 

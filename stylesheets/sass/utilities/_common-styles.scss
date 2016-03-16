@@ -43,6 +43,20 @@ footer {
 // any section
 section {
   @extend .overflown-auto;
+  &.sec-short {
+    height: 300px;
+  }
+  &.sec-long {
+    height: 600px;
+  }
+}
+
+// header 1 lvl
+h1 {
+  @extend .merel-bold;
+  font-size: $fs-h1;
+  text-transform: uppercase;
+  margin: 85px 0 40px;
 }
 
 // header 2 lvl
@@ -52,6 +66,15 @@ h2 {
   line-height: $fs-xlarge;
   margin: 50px 0 40px;
   text-transform: uppercase;
+}
+
+// paragraph
+p {
+  @extend .permianserif-regular;
+  font-size: $fs-small;
+  line-height: 29px;
+  width: 600px;
+  margin: 0 auto;
 }
 
 
