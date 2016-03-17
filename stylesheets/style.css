@@ -247,7 +247,7 @@ input[type=range]::-ms-thumb {
   font-weight: 300;
 }
 
-.merel-regular, h2, nav, .btn {
+.merel-regular, h2, #sec-menu .sort-block, nav, .btn {
   font-family: Merel;
   font-weight: 400;
 }
@@ -393,24 +393,17 @@ input[type=range]::-ms-thumb {
   flex-wrap: wrap;
 }
 
-#menu_page {
-  height: auto;
+#sec-menu h2 {
+  margin-top: 0;
 }
-#menu_page h2 {
-  margin-top: 20px;
-}
-#menu_page .sort_block {
+#sec-menu .sort-block {
   width: 360px;
-  font-family: Merel;
-  font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
   text-transform: uppercase;
   margin: 0 auto 50px;
 }
-#menu_page .sort_block .sort_item {
-  margin-right: 0;
-}
-#menu_page .sort_block .sort_item:nth-of-type(2):hover, #menu_page .sort_block .sort_item:nth-of-type(3):hover {
+#sec-menu .sort-block .sort-item:nth-of-type(2):hover,
+#sec-menu .sort-block .sort-item:nth-of-type(3):hover {
   color: #3BBFA5;
   cursor: pointer;
 }

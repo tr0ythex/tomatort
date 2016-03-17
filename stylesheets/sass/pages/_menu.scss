@@ -1,21 +1,17 @@
-#menu_page {
-  height: auto;
+#sec-menu {
   h2 {
-    margin-top: 20px;
+    margin-top: 0;
   }
-  .sort_block {
+  .sort-block {
     width: 360px;
-    font-family: Merel;
-    font-weight: 400;
-    font-size: 14px;
+    @extend .merel-regular;
+    font-size: $fs-small;
     text-transform: uppercase;
     margin: 0 auto 50px;
-    .sort_item {
-      margin-right: 0;
-      &:nth-of-type(2):hover, &:nth-of-type(3):hover {
-        color: $puerto-rico;
-        cursor: pointer;
-      }
+    .sort-item:nth-of-type(2):hover, 
+    .sort-item:nth-of-type(3):hover {
+      color: $puerto-rico;
+      cursor: pointer;
     }
   }
 }
