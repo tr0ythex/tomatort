@@ -209,14 +209,14 @@ input[type=range]::-ms-thumb {
   /* Legacy iOS */
   font-weight: 700;
 }
-/* LeksaPro Bold */
+/* LeksaPro Light */
 @font-face {
   font-family: LeksaPro;
   src: url("/fonts/LeksaPro/LeksaPro-Light.eot");
   /* IE9 Compat Modes */
   src: url("/fonts/LeksaPro/LeksaPro-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/LeksaPro/LeksaPro-Light.woff") format("woff"), url("/fonts/LeksaPro/LeksaPro-Light.ttf") format("truetype"), url("/fonts/LeksaPro/LeksaPro-Light.svg#LeksaPro-Light") format("svg");
   /* Legacy iOS */
-  font-weight: 700;
+  font-weight: 300;
 }
 /* LeksaPro Italic */
 @font-face {
@@ -251,9 +251,13 @@ input[type=range]::-ms-thumb {
   font-weight: 700;
 }
 
-.leksapro-bold {
+.leksapro-light, .leksapro-light-small {
   font-family: LeksaPro;
-  font-weight: 700;
+  font-weight: 300;
+}
+
+.leksapro-light-small {
+  font-size: 15px;
 }
 
 .leksapro-italic, .leksapro-italic-large, .menu-item p.menu-item-title, .menu-item p.menu-item-name {
@@ -281,11 +285,12 @@ input[type=range]::-ms-thumb {
   position: absolute;
   bottom: 0;
   width: 891px;
-  height: 65px;
-  line-height: 65px;
+  height: 64px;
+  line-height: 24px;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   text-align: center;
+  padding-top: 14px;
 }
 .gallery-slider .gs-item img {
   margin: auto;

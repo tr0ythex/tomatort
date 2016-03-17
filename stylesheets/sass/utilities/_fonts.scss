@@ -31,7 +31,7 @@
         url('/fonts/Merel/Merel-Bold.svg#Merel-Bold') format('svg'); /* Legacy iOS */
     font-weight: 700; 
 }
-/* LeksaPro Bold */
+/* LeksaPro Light */
 @font-face { 
     font-family: LeksaPro;
     src: url('/fonts/LeksaPro/LeksaPro-Light.eot'); /* IE9 Compat Modes */
@@ -39,7 +39,7 @@
         url('/fonts/LeksaPro/LeksaPro-Light.woff') format('woff'), /* Pretty Modern Browsers */
         url('/fonts/LeksaPro/LeksaPro-Light.ttf') format('truetype'), /* Safari, Android, iOS */
         url('/fonts/LeksaPro/LeksaPro-Light.svg#LeksaPro-Light') format('svg'); /* Legacy iOS */
-    font-weight: 700; 
+    font-weight: 300; 
 }
 /* LeksaPro Italic */
 @font-face { 
@@ -75,9 +75,13 @@
     font-family: Merel;
     font-weight: 700;
 }
-.leksapro-bold {
+.leksapro-light {
     font-family: LeksaPro;
-    font-weight: 700;
+    font-weight: 300;
+}
+.leksapro-light-small {
+    @extend .leksapro-light;
+    font-size: $fs-small;
 }
 .leksapro-italic {
     font-family: LeksaPro;

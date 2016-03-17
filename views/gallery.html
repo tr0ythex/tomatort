@@ -1,19 +1,22 @@
-<section class="sec-lr-padded sec-bottom-margined">
+<section class="sec-lr-padded">
   <h2>Галерея</h2>
   <p>
 	  Все десерты изготавливаются вручную, и мы с удовольствием сделаем десерт, 
-	  идеально подхо-дящий дизайном и вкусом именно вам. 
+	  идеально подходящий дизайном и вкусом именно вам. 
 	  Мы используем только натуральные ингредиенты, 
 	  что уменьшает срок хранения готовых десертов. 
 	  Правда, они редко успевают испортиться — так вкусно!
 	</p>
 </section>
 
-<section>
+<section class="sec-top-margined sec-bottom-margined">
 	<div gallery-slider class="gallery-slider">
     <div class="gs-item" ng-repeat="product in data.products" gallery-slider-item>
       <img ng-src="{{product.imageUrl}}">
-      <div class="leksapro-italic-large slider-title">{{product.name}}</div>
+      <div class="slider-title">
+      	<div class="leksapro-italic">{{product.name}}</div>
+      	<div class="leksapro-light-small">{{product.description}}</div>
+      	</div>
     </div>
   </div>
   
