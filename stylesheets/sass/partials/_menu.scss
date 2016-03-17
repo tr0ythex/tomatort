@@ -19,12 +19,12 @@
     }
     &.menu-item-name {
       @extend .leksapro-italic-large;
-      top: 50px;
+      top: 20px;
     }
     &.menu-item-price {
       @extend .merel-light;
       font-size: $fs-xxlarge;
-      top: 100px;
+      top: 115px;
     }
   }
   .btn {
