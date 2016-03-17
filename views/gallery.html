@@ -1,24 +1,21 @@
-<section id="gallery">
+<section class="sec-lr-padded sec-bottom-margined">
   <h2>Галерея</h2>
+  <p>
+	  Все десерты изготавливаются вручную, и мы с удовольствием сделаем десерт, 
+	  идеально подхо-дящий дизайном и вкусом именно вам. 
+	  Мы используем только натуральные ингредиенты, 
+	  что уменьшает срок хранения готовых десертов. 
+	  Правда, они редко успевают испортиться — так вкусно!
+	</p>
+</section>
 
-	<div gallery-slider class="gallery_slider">
-    <div class="gs_item" ng-repeat="product in data.products" gallery-slider-item>
+<section>
+	<div gallery-slider class="gallery-slider">
+    <div class="gs-item" ng-repeat="product in data.products" gallery-slider-item>
       <img ng-src="{{product.imageUrl}}">
-      <div class="leksapro-italic-large slider_title">{{product.name}}</div>
+      <div class="leksapro-italic-large slider-title">{{product.name}}</div>
     </div>
   </div>
   
-  <p>
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую
-	  Некоторое количество текста про кондитерскую
-	  Некоторое количество текста про кондитерскую
-	</p>
 	<a href="#/menu" class="btn btn-dark">Перейти в меню</a>
 </section>
- 

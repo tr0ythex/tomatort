@@ -64,8 +64,8 @@ section.sec-short {
 section.sec-top-margined {
   margin-top: 50px;
 }
-section.sec-bottom-padded {
-  padding-bottom: 50px;
+section.sec-bottom-margined {
+  margin-bottom: 50px;
 }
 section.sec-lr-padded {
   padding-left: 150px;
@@ -271,13 +271,13 @@ input[type=range]::-ms-thumb {
 }
 
 /* bxslider */
-.gallery_slider .gs_item {
+.gallery-slider .gs-item {
   display: inline-block;
   vertical-align: middle;
   float: none !important;
   position: static !important;
 }
-.gallery_slider .gs_item .slider_title {
+.gallery-slider .gs-item .slider-title {
   position: absolute;
   bottom: 0;
   width: 891px;
@@ -287,7 +287,7 @@ input[type=range]::-ms-thumb {
   color: white;
   text-align: center;
 }
-.gallery_slider .gs_item img {
+.gallery-slider .gs-item img {
   margin: auto;
   max-height: 515px;
   width: auto;
@@ -547,13 +547,6 @@ input[type=file] + label:hover {
 
 #cake_params .customer_info h2 {
   margin-top: 80px;
-}
-
-#gallery p {
-  margin: 80px auto 50px;
-}
-#gallery .btn {
-  margin-bottom: 40px;
 }
 
 #contacts .fx-item {
