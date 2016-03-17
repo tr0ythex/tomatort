@@ -372,20 +372,17 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 
-#dream_dessert {
-  height: auto;
-}
-#dream_dessert h2 {
-  margin-bottom: 38px;
-}
-#dream_dessert .order_dream {
+#order-dream-dessert {
   height: 150px;
-  margin: 50px auto 80px;
-  overflow: auto;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url(/images/dream.png);
+  margin-top: 50px;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/images/dream.png);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/dream.png);
+  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/dream.png);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/dream.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/dream.png);
   background-size: contain;
 }
-#dream_dessert .btn {
+#order-dream-dessert .btn {
   width: 250px;
   margin-top: 50px;
 }

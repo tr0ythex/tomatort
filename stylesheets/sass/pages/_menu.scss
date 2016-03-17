@@ -11,18 +11,12 @@
   }
 }
 
-#dream_dessert {
-  height: auto;
-  h2 {
-    margin-bottom: 38px;
-  }
-  .order_dream {
-    height: 150px;
-    margin: 50px auto 80px;
-    overflow: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url(/images/dream.png);
-    background-size: contain;
-  }
+#order-dream-dessert {
+  height: 150px;
+  margin-top: 50px;
+  @include gradient-bg(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), 
+    url(/images/dream.png));
+  background-size: contain;
   .btn {
     width: 250px;
     margin-top: 50px;
