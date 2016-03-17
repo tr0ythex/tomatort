@@ -569,13 +569,9 @@ input[type=file] + label:hover {
   font-size: 20px;
 }
 
-.callback {
-  width: 600px;
-  margin: 0 auto;
-  height: auto;
-}
-.callback h2 {
-  margin-top: 20px;
+.ya-map {
+  height: 500px;
+  margin-top: 50px;
 }
 
 .delivery_form {

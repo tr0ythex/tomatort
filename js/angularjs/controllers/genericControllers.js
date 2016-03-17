@@ -154,6 +154,14 @@ angular.module("tomaTort")
     }
   };
 })
+.controller("yaMapCtrl", function ($scope) {
+  $scope.address = {
+    geometry: {
+      type: 'Point',
+      coordinates: [37.623267,55.777479]
+    },
+  };
+})
 .directive("gallerySlider", function() {
 	return {
 		restrict: 'A',
