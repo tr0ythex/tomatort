@@ -300,6 +300,7 @@ input[type=range]::-ms-thumb {
   left: 0 !important;
   border: none !important;
   box-sizing: border-box;
+  box-shadow: none !important;
 }
 
 .slideup-animated {
@@ -548,12 +549,6 @@ input[type=file] + label:hover {
   margin-top: 80px;
 }
 
-#gallery {
-  height: auto;
-}
-#gallery h2 {
-  margin-top: 20px;
-}
 #gallery p {
   margin: 80px auto 50px;
 }
