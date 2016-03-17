@@ -1,15 +1,12 @@
-#home_menu {
-  .menu-item {
-    cursor: default;
-  }
-  .btn {
-    margin-top: 48px;
-  }
-}
-
 #promo {
   @include gradient-bg(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), 
     url(/images/promo.jpg));
   background-size: contain;
   color: white;
+}
+
+.sec-two-column {
+  .fx-item {
+    width: 48%;
+  }
 }

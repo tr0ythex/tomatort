@@ -44,8 +44,15 @@ section {
   &.sec-short {
     height: 300px;
   }
-  &.sec-long {
-    height: 600px;
+  &.sec-top-padded {
+    padding-top: 50px;
+  }
+  &.sec-bottom-padded {
+    padding-bottom: 50px;
+  }
+  &.sec-lr-padded {
+    padding-left: 150px;
+    padding-right: 150px;
   }
 }
 
@@ -71,7 +78,7 @@ p {
   @extend .permianserif-regular;
   font-size: $fs-small;
   line-height: 29px;
-  width: 600px;
+  // width: 600px;
   margin: 0 auto;
 }
 

@@ -67,8 +67,15 @@ footer {
 section.sec-short {
   height: 300px;
 }
-section.sec-long {
-  height: 600px;
+section.sec-top-padded {
+  padding-top: 50px;
+}
+section.sec-bottom-padded {
+  padding-bottom: 50px;
+}
+section.sec-lr-padded {
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
 h1 {
@@ -87,7 +94,6 @@ h2 {
 p {
   font-size: 15px;
   line-height: 29px;
-  width: 600px;
   margin: 0 auto;
 }
 
@@ -752,13 +758,6 @@ input[type=file] + label:hover {
   margin-bottom: 40px;
 }
 
-#home_menu .menu-item {
-  cursor: default;
-}
-#home_menu .btn {
-  margin-top: 48px;
-}
-
 #promo {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/images/promo.jpg);
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
@@ -767,6 +766,10 @@ input[type=file] + label:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
   background-size: contain;
   color: white;
+}
+
+.sec-two-column .fx-item {
+  width: 48%;
 }
 
 nav {
@@ -812,7 +815,7 @@ nav li.li-active {
   width: 190px;
   height: 50px;
   line-height: 48px;
-  margin: 40px auto;
+  margin: 40px auto 0;
 }
 .btn:hover {
   color: #4d4d4d;
