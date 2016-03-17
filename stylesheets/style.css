@@ -720,7 +720,7 @@ nav#nav-bottom {
   font-size: 15px;
   width: 500px;
   color: #808080;
-  margin-top: 40px;
+  margin-top: 25px;
 }
 nav#nav-bottom li:hover {
   color: #A8CCC8;
@@ -731,6 +731,10 @@ nav li {
 }
 nav li.li-active {
   color: #3BBFA5;
+}
+nav .tel {
+  width: 55%;
+  margin: 12px auto;
 }
 
 .btn {

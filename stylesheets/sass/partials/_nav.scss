@@ -15,7 +15,7 @@ nav {
     font-size: $fs-small;
     width: 500px;
     color: $grey;
-    margin-top: 40px;
+    margin-top: 25px;
     li:hover {
       color: $jet-stream;
     }
@@ -26,5 +26,9 @@ nav {
     &.li-active {
       color: $puerto-rico;
     }
+  }
+  .tel {
+    width: 55%;
+    margin: 12px auto;
   }
 }
