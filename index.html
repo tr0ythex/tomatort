@@ -22,6 +22,10 @@
 					templateUrl: "/views/home.html"
 				});
 				
+				$routeProvider.when("/about", {
+					templateUrl: "/views/about.html"
+				});
+				
 				$routeProvider.when("/menu", {
 					templateUrl: "/views/menu.html"
 				});
@@ -70,8 +74,8 @@
 	
 	<body ng-controller="tomaTortCtrl">
 		<header class="wrapper">
-			<div class="overflown-auto">
-				<a href="#" class="logo"><img src="/images/logo.png"></a>
+			<div class="overflown-auto" ng-controller="menuCtrl">
+				<a href="#" class="logo" ng-click="selectMenuItem('')"><img src="/images/logo.png"></a>
 			</div>
 
 			<nav id="nav-top" ng-controller="menuCtrl">
@@ -119,8 +123,10 @@
 					<li ng-click="selectMenuItem('/contacts')">
 						<a href="#/contacts">Доставка и оплата</a>
 					</li>
-					<li ng-click="selectMenuItem('/contacts')">
-						<a href="#/contacts">Instagram</a>
+					<li>
+						<a href="https://www.instagram.com/_tomatort_" target="_blank">
+							Instagram
+						</a>
 					</li>
 				</ul>
 			</nav>
