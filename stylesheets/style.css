@@ -790,6 +790,10 @@ form .btn {
   font-size: 30px;
   top: 115px;
 }
+.menu-item p.set-price {
+  line-height: 40px;
+  top: 95px;
+}
 .menu-item .btn {
   position: absolute;
   bottom: 20px;

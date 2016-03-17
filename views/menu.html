@@ -17,7 +17,17 @@
 			  	<div class="hidden blackout"
 			  		ng-click="openProductItemPage(product)">
 			  		<p class="menu-item-name">{{product.name}}</p>
-				    <p class="menu-item-price">{{product.price}} Р</p>
+				    <p class="menu-item-price" 
+				    	ng-show="product.kgPrice">
+				    	{{product.kgPrice}} руб / кг
+				    </p>
+				    <p class="menu-item-price" 
+				    	ng-show="product.smallSetPrice && product.bigSetPrice"
+				    	ng-class=
+				    		"(product.smallSetPrice && product.bigSetPrice)?'set-price':''">
+				    	{{product.smallSetPrice}} руб / 9 шт <br>
+				    	{{product.bigSetPrice}} руб / 12 шт
+				    </p>
 				    <button class="btn btn-light" ng-hide="product.ordered"
 			    		ng-click="setOrdered(product.id); 
 			    		addToCart(product); 

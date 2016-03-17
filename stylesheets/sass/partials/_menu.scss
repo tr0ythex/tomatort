@@ -26,6 +26,11 @@
       font-size: $fs-xxlarge;
       top: 115px;
     }
+    // two lines of prices
+    &.set-price {
+      line-height: 40px;
+      top: 95px;
+    }
   }
   .btn {
     position: absolute;

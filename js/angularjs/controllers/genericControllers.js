@@ -61,18 +61,18 @@ angular.module("tomaTort")
        "imageUrl": "/images/products/halva.jpg"},
       {"id": 11, "name": "Морковный торт", "kgPrice": 1500,
        "imageUrl": "/images/products/halva.jpg"},
-      {"id": 12, "name": "Капкейки", "9setPrice": 1800, 
-       "12setPrice": 2400, "imageUrl": "/images/products/halva.jpg"},
-      {"id": 13, "name": "Кейкпопсы", "9setPrice": 1800, 
-       "12setPrice": 2400, "imageUrl": "/images/products/halva.jpg"},
-      {"id": 14, "name": "Яблоки в карамели", "9setPrice": 1500, 
-       "12setPrice": 2000, "imageUrl": "/images/products/halva.jpg"},
-      {"id": 15, "name": "Тирамису в стаканчика", "9setPrice": 2000, 
-       "12setPrice": 2700, "imageUrl": "/images/products/halva.jpg"},
-      {"id": 16, "name": "Пирожные", "9setPrice": 2000, 
-       "12setPrice": 2700, "imageUrl": "/images/products/halva.jpg"},
-      {"id": 17, "name": "Кексы/маффины", "9setPrice": 1500, 
-       "12setPrice": 2000, "imageUrl": "/images/products/halva.jpg"}
+      {"id": 12, "name": "Капкейки", "smallSetPrice": 1800, 
+       "bigSetPrice": 2400, "imageUrl": "/images/products/halva.jpg"},
+      {"id": 13, "name": "Кейкпопсы", "smallSetPrice": 1800, 
+       "bigSetPrice": 2400, "imageUrl": "/images/products/halva.jpg"},
+      {"id": 14, "name": "Яблоки в карамели", "smallSetPrice": 1500,
+       "bigSetPrice": 2000, "imageUrl": "/images/products/halva.jpg"},
+      {"id": 15, "name": "Тирамису в стаканчиках", "smallSetPrice": 2000, 
+       "bigSetPrice": 2700, "imageUrl": "/images/products/halva.jpg"},
+      {"id": 16, "name": "Пирожные", "smallSetPrice": 2000, 
+       "bigSetPrice": 2700, "imageUrl": "/images/products/halva.jpg"},
+      {"id": 17, "name": "Кексы/маффины", "smallSetPrice": 1500, 
+       "bigSetPrice": 2000, "imageUrl": "/images/products/halva.jpg"}
     ],
     shipping: {
       deliveryType: 'selfPickup',
@@ -199,15 +199,3 @@ angular.module("tomaTort")
       }
   };
 });
-// .directive('onFinishRender', function ($timeout) {
-// return {
-//     restrict: 'A',
-//     link: function (scope, element, attr) {
-//         if (scope.$last === true) {
-//             $timeout(function () {
-//                 scope.$emit('ngRepeatFinished');
-//             });
-//         }
-//     }
-//     };
-// });
