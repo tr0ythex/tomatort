@@ -1,6 +1,7 @@
 /* global angular */
 angular.module("tomaTort")
 .constant("menuActiveClass", "li-active")
+.constant("instagramLink", "https://www.instagram.com/_tomatort_")
 .factory("menu", function (menuActiveClass) {
   
   var selectedMenuItem = '';
@@ -31,7 +32,11 @@ angular.module("tomaTort")
   var pId = $location.path().split("/")[2];
   $scope.selectedProduct = $scope.getProduct(pId);
 })
-.controller("tomaTortCtrl", function ($scope, $location, menuActiveClass, cart) {
+.controller("tomaTortCtrl", function ($scope, $location, menuActiveClass, cart,
+  instagramLink) {
+    
+  $scope.instagramLink = instagramLink;
+  
   $scope.data = {
     products: [
       {"id": 1, "name": "Торт Наполеон", "price": 1500, "weight": 500, 
