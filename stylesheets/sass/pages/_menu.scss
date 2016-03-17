@@ -1,18 +1,13 @@
-#sec-menu {
-  h2 {
-    margin-top: 0;
-  }
-  .sort-block {
-    width: 360px;
-    @extend .merel-regular;
-    font-size: $fs-small;
-    text-transform: uppercase;
-    margin: 0 auto 50px;
-    .sort-item:nth-of-type(2):hover, 
-    .sort-item:nth-of-type(3):hover {
-      color: $puerto-rico;
-      cursor: pointer;
-    }
+#sort-block {
+  width: 360px;
+  @extend .merel-regular;
+  font-size: $fs-small;
+  text-transform: uppercase;
+  margin: 0 auto 50px;
+  .sort-item:nth-of-type(2):hover, 
+  .sort-item:nth-of-type(3):hover {
+    color: $puerto-rico;
+    cursor: pointer;
   }
 }
 

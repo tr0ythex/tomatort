@@ -61,8 +61,8 @@ footer {
 section.sec-short {
   height: 300px;
 }
-section.sec-top-padded {
-  padding-top: 50px;
+section.sec-top-margined {
+  margin-top: 50px;
 }
 section.sec-bottom-padded {
   padding-bottom: 50px;
@@ -241,7 +241,7 @@ input[type=range]::-ms-thumb {
   font-weight: 300;
 }
 
-.merel-regular, h2, #sec-menu .sort-block, nav, .btn {
+.merel-regular, h2, #sort-block, nav, .btn {
   font-family: Merel;
   font-weight: 400;
 }
@@ -360,17 +360,14 @@ input[type=range]::-ms-thumb {
   flex-wrap: wrap;
 }
 
-#sec-menu h2 {
-  margin-top: 0;
-}
-#sec-menu .sort-block {
+#sort-block {
   width: 360px;
   font-size: 15px;
   text-transform: uppercase;
   margin: 0 auto 50px;
 }
-#sec-menu .sort-block .sort-item:nth-of-type(2):hover,
-#sec-menu .sort-block .sort-item:nth-of-type(3):hover {
+#sort-block .sort-item:nth-of-type(2):hover,
+#sort-block .sort-item:nth-of-type(3):hover {
   color: #3BBFA5;
   cursor: pointer;
 }
@@ -718,7 +715,7 @@ input[type=file] + label:hover {
   margin-bottom: 40px;
 }
 
-#promo {
+#sec-promo {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/images/promo.jpg);
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
   background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
@@ -741,7 +738,6 @@ nav#nav-top {
   font-size: 18px;
   width: 660px;
   color: #353535;
-  margin-bottom: 50px;
 }
 nav#nav-top li:hover {
   color: #3BBFA5;
