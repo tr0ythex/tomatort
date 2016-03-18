@@ -496,21 +496,21 @@ input[type=radio]:checked + label {
   overflow-x: visible;
 }
 
-.title_block {
-  width: 106%;
-  margin-left: -3%;
+.title-block {
+  width: 110%;
+  margin-left: -7%;
   margin-top: 10px;
 }
 
-.range_block {
+.range-block {
   width: 580px;
   margin: -19px auto 0;
   height: 16px;
   border-left: 1px solid #B0EADA;
   border-right: 1px solid #B0EADA;
 }
-.range_block .range_item {
-  width: 150px;
+.range-block .range_item {
+  width: 200px;
   border-left: 1px solid #B0EADA;
 }
 
