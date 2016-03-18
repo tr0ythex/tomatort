@@ -514,6 +514,47 @@ input[type=radio]:checked + label {
   border-left: 1px solid #B0EADA;
 }
 
+a.tooltips {
+  position: relative;
+  display: inline;
+}
+
+a.tooltips span {
+  position: absolute;
+  width: 140px;
+  color: #000000;
+  background: #B4EEDE;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid #B4EEDE;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+a.tooltips:hover span {
+  visibility: visible;
+  opacity: 0.7;
+  top: 30px;
+  left: 50%;
+  margin-left: -76px;
+  z-index: 999;
+}
+
 #cake_file h2 {
   margin-bottom: 21px;
 }
