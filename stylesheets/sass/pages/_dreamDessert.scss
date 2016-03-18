@@ -21,67 +21,70 @@
   }
 }
 
-// .tooltip {
+.tooltip {
+	border-bottom: 1px dotted #0077AA;
+	cursor: help;
+}
+
+.tooltip::after {
+	background: rgba(0, 0, 0, 0.8);
+	border-radius: 8px 8px 8px 0px;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+	color: #FFF;
+	content: attr(data-tooltip); /* Главная часть кода, определяющая содержимое всплывающей подсказки */
+	margin-top: -24px;
+	opacity: 0; /* Наш элемент прозрачен... */
+	padding: 3px 7px;
+	position: absolute;
+	visibility: hidden; /* ...и скрыт. */
+			
+	transition: all 0.4s ease-in-out; /* Добавить плавности по вкусу */
+}
+		
+.tooltip:hover::after {
+	opacity: 1; /* Показываем его */
+	visibility: visible;
+}
+
+// a.tooltips {
 //   position: relative;
-//   display: inline-block;
-//   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+//   display: inline;
 // }
-
-// /* Tooltip text */
-// .tooltip .tooltiptext {
-//   visibility: hidden;
-//   width: 120px;
-//   background-color: black;
-//   color: #fff;
-//   text-align: center;
-//   padding: 5px 0;
-//   border-radius: 6px;
-
-//   /* Position the tooltip text - see examples below! */
+// a.tooltips span {
 //   position: absolute;
-//   z-index: 1;
+//   width: 140px;
+//   color: #000000;
+//   background: #B4EEDE;
+//   height: 50px;
+//   line-height: 50px;
+//   text-align: center;
+//   visibility: hidden;
+//   border-radius: 0px;
+//   opacity: 0;
+//   transition: opacity 0.5s ease-in-out;
 // }
-
-// /* Show the tooltip text when you mouse over the tooltip container */
-// .tooltip:hover .tooltiptext {
-//   visibility: visible;
+// a.tooltips span:after {
+//   content: '';
+//   position: absolute;
+//   bottom: 100%;
+//   left: 50%;
+//   margin-left: -8px;
+//   width: 0; height: 0;
+//   border-bottom: 8px solid #B4EEDE;
+//   border-right: 8px solid transparent;
+//   border-left: 8px solid transparent;
 // }
-a.tooltips {
-  position: relative;
-  display: inline;
-}
-a.tooltips span {
-  position: absolute;
-  width: 140px;
-  color: #000000;
-  background: #B4EEDE;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  visibility: hidden;
-  border-radius: 0px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-a.tooltips span:after {
-  content: '';
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -8px;
-  width: 0; height: 0;
-  border-bottom: 8px solid #B4EEDE;
-  border-right: 8px solid transparent;
-  border-left: 8px solid transparent;
-}
-a.tooltips:hover span {
-  visibility: visible;
-  opacity: 0.7;
-  top: 30px;
-  left: 50%;
-  margin-left: -76px;
-  z-index: 999;
-}
+// a.tooltips:hover {
+//   span {
+//     // transition: opacity 0.5s ease-in-out;
+//     visibility: visible;
+//     opacity: 0.7;
+//     top: 30px;
+//     left: 50%;
+//     margin-left: -76px;
+//     z-index: 999;
+//   }
+// }
 
 #cake_file {
   h2 {
