@@ -1,12 +1,10 @@
-.toma-form {
-  input[type=checkbox] {
-    // don't show checkboxes
-    display: none;
-    &:checked + label {
-      background: #C6F4E5;
-    }
+input[type=checkbox] {
+  // don't show checkboxes
+  display: none;
+  &:checked + label {
+    background: #C6F4E5;
   }
-  label {
+  & + label {
     cursor: pointer;
     padding: 10px;
     margin: 5px 0;

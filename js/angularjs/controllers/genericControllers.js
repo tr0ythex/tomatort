@@ -179,9 +179,9 @@ angular.module("tomaTort")
 		});
   });
   $scope.dreamDessert = {
-    param1: [],
-    param2: '',
-    param3: 1,
+    design: [],
+    base: 'Шоколадная',
+    cream: '',
     file: null,
     sent: false
   };

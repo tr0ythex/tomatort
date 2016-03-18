@@ -74,17 +74,6 @@
     tr {
       border-top: 2px solid $cruise;
     }
-    input[type=radio] {
-      display: none;
-      & + label {
-        cursor: pointer;
-        padding: 8px 16px;
-        margin-right: 10px;
-      }
-      &:checked + label {
-        background-color: $cruise;
-      }
-    }
   }
   .btn {
     margin-bottom: 40px;

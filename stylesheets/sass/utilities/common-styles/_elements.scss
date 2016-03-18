@@ -36,7 +36,7 @@ footer {
 
 // any section
 section {
-  @extend .overflown-auto;
+  // @extend .overflown-auto;
   &.sec-short {
     height: 300px;
   }

@@ -10,42 +10,100 @@
 	ng-controller="dreamDessertCtrl" 
 	ng-submit="sendDreamDessert(dreamDessertForm)" 
 	ng-class="showValidation ? 'validate' : ''">
+	
+	<section id="dd-base">
+		<h2>Основа</h2>
+		<div class="fxbx fx-js-sp-between">
+			<input type="radio" name="dd-base" value="Шоколадная" 
+	      ng-model="dreamDessert.base" id="dd-base-choco">
+	    <label class="leksapro-italic-large" for="dd-base-choco">Шоколадная</label>
+	    <input type="radio" name="dd-base" value="Ванильная" 
+	      ng-model="dreamDessert.base" id="dd-base-vanilla">
+	    <label class="leksapro-italic-large" for="dd-base-vanilla">Ванильная</label>
+	    <input type="radio" name="dd-base" value="Медовая" 
+	      ng-model="dreamDessert.base" id="dd-base-honey">
+	    <label class="leksapro-italic-large" for="dd-base-honey">Медовая</label>
+	    <input type="radio" name="dd-base" value="Песочная" 
+	      ng-model="dreamDessert.base" id="dd-base-shortcrust">
+	    <label class="leksapro-italic-large" for="dd-base-shortcrust">Песочная</label>
+	    <input type="radio" name="dd-base" value="Другое" 
+	      ng-model="dreamDessert.base" id="dd-base-other">
+	    <label class="leksapro-italic-large" for="dd-base-other">Другое</label>
+    </div>
+	</section>
+	
+	<section id="dd-cream">
+	  <h2>Крем</h2>
+  	<input type="range" min="1" max="5" step="1" value="1" 
+  		ng-model="dreamDessert.cream" required>
+  	<div class="range_block fxbx fx-js-sp-between">
+  		<div class="range_item"></div>
+  		<div class="range_item"></div>
+  		<div class="range_item"></div>
+  		<div class="range_item"></div>
+	  </div>
+	  <div class="title-block leksapro-italic-large fxbx fx-js-sp-between">
+	  	<div class="leksapro-italic-large">Пояснение</div>
+	  	<div class="leksapro-italic-large">Пояснение</div>
+	  	<div class="leksapro-italic-large">Пояснение</div>
+	  	<div class="leksapro-italic-large">Пояснение</div>
+	  	<div class="leksapro-italic-large">Пояснение</div>
+	  </div>
+	</section>
+	
   <section id="dd-design">
 	  <h2>Дизайн</h2>
-	  <div class="cb-design fxbx fx-js-sp-between fx-wr-wrap">
+	  <div class="fxbx fx-js-sp-between fx-wr-wrap">
 	  	<input type="checkbox" name="dd-design" id="dd-design-1"
 	  		ng-model="dreamDessert.design[0]" ng-required="shouldBeRequired()">
-	  	<label class="leksapro-italic-large variat_item" for="dd-design-1">Ягоды/фрукты</label>
+	  	<label class="leksapro-italic-large" for="dd-design-1">
+	  		Ягоды/фрукты
+	  	</label>
 	  	
     	<input type="checkbox" name="dd-design" id="dd-design-2"
     	 	ng-model="dreamDessert.design[1]" ng-required="shouldBeRequired()">
-    	<label class="leksapro-italic-large variat_item" for="dd-design-2">Цветы</label>
+    	<label class="leksapro-italic-large" for="dd-design-2">
+    		Цветы
+    	</label>
     	
     	<input type="checkbox" name="dd-design" id="dd-design-3"
     		ng-model="dreamDessert.design[2]" ng-required="shouldBeRequired()">
-    	<label class="leksapro-italic-large variat_item" for="dd-design-3">Глазурь</label>
+    	<label class="leksapro-italic-large" for="dd-design-3">
+    		Глазурь
+    	</label>
     	
     	<input type="checkbox" name="dd-design" id="dd-design-4"
     		ng-model="dreamDessert.design[3]" ng-required="shouldBeRequired()">
-    	<label class="leksapro-italic-large variat_item" for="dd-design-4">Декор из мастики</label>
+    	<label class="leksapro-italic-large" for="dd-design-4">
+    		Декор из мастики
+    	</label>
     	
     	<input type="checkbox" name="dd-design" id="dd-design-5"
     		ng-model="dreamDessert.design[4]" ng-required="shouldBeRequired()">
-    	<label class="leksapro-italic-large variat_item" for="dd-design-5">Надпись</label>
+    	<label class="leksapro-italic-large" for="dd-design-5">
+    		Надпись
+    	</label>
     	
     	<input type="checkbox" name="dd-design" id="dd-design-6"
     		ng-model="dreamDessert.design[5]" ng-required="shouldBeRequired()">
-    	<label class="leksapro-italic-large variat_item" for="dd-design-6">Флажки/несъедобные элементы</label>
+    	<label class="leksapro-italic-large" for="dd-design-6">
+    		Флажки/несъедобные элементы
+    	</label>
     	
     	<input type="checkbox" name="dd-design" id="dd-design-7"
     		ng-model="dreamDessert.design[6]" ng-required="shouldBeRequired()">
-    	<label class="leksapro-italic-large variat_item" for="dd-design-7">Конфеты/маршмеллоу/мармелад</label>
+    	<label class="leksapro-italic-large" for="dd-design-7">
+    		Конфеты/маршмеллоу/мармелад
+    	</label>
     	
     	<input type="checkbox" name="dd-design" id="dd-design-8"
     		ng-model="dreamDessert.design[7]" ng-required="shouldBeRequired()">
-    	<label class="leksapro-italic-large variat_item" for="dd-design-8">Другое</label>
+    	<label class="leksapro-italic-large" for="dd-design-8">
+    		Другое
+    	</label>
 	  </div>
 	</section>
+	
 	<section id="param2">
 	  <h2>Важный параметр 2</h2>
 	  <textarea class="leksapro-italic-large" name="comment" 
@@ -53,24 +111,7 @@
 	  	ng-model="dreamDessert.param2" required>
 	  </textarea>
 	</section>
-	<section id="param3">
-	  <h2>Важный параметр 3</h2>
-  	<input type="range" min="1" max="5" step="1" value="1" 
-  		ng-model="dreamDessert.param3" required>
-  	<div class="range_block fxbx fx-js-sp-between">
-  		<div class="range_item"></div>
-  		<div class="range_item"></div>
-  		<div class="range_item"></div>
-  		<div class="range_item"></div>
-	  </div>
-	  <div class="leksapro-italic-large fxbx fx-js-sp-between">
-	  	<div class="leksapro-italic-large title_item">Пояснение</div>
-	  	<div class="leksapro-italic-large title_item">Пояснение</div>
-	  	<div class="leksapro-italic-large title_item">Пояснение</div>
-	  	<div class="leksapro-italic-large title_item">Пояснение</div>
-	  	<div class="leksapro-italic-large title_item">Пояснение</div>
-	  </div>
-	</section>
+	
 	<section id="cake_file">
 		<h2>Прикрепление файла</h2>
 		<p class="leksapro-italic-large">Если Вам очень понравился какой-то торт, прикрепите фото</p>

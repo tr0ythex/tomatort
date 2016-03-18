@@ -1,4 +1,4 @@
-.overflown-auto, section {
+.overflown-auto {
   overflow: auto;
 }
 
@@ -372,13 +372,13 @@ input[type=range]::-ms-thumb {
   align-items: center;
 }
 
-.toma-form input[type=checkbox] {
+input[type=checkbox] {
   display: none;
 }
-.toma-form input[type=checkbox]:checked + label {
+input[type=checkbox]:checked + label {
   background: #C6F4E5;
 }
-.toma-form label {
+input[type=checkbox] + label {
   cursor: pointer;
   padding: 10px;
   margin: 5px 0;
@@ -400,6 +400,18 @@ input[type=range]::-ms-thumb {
   flex-direction: column;
   -webkit-justify-content: center;
   justify-content: center;
+}
+
+input[type=radio] {
+  display: none;
+}
+input[type=radio] + label {
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 8px 16px;
+}
+input[type=radio]:checked + label {
+  background-color: #B0EADA;
 }
 
 #sort-block {
@@ -481,13 +493,13 @@ input[type=range]::-ms-thumb {
 
 #dd-form {
   border-top: 1px solid #B0EADA;
+  overflow-x: visible;
 }
 
 .title_block {
-  position: absolute;
   width: 106%;
   margin-left: -3%;
-  margin-top: 26px;
+  margin-top: 10px;
 }
 
 .range_block {
@@ -657,17 +669,6 @@ input[type=file] + label:hover {
 }
 #checkout .toma_table tr {
   border-top: 2px solid #B0EADA;
-}
-#checkout .toma_table input[type=radio] {
-  display: none;
-}
-#checkout .toma_table input[type=radio] + label {
-  cursor: pointer;
-  padding: 8px 16px;
-  margin-right: 10px;
-}
-#checkout .toma_table input[type=radio]:checked + label {
-  background-color: #B0EADA;
 }
 #checkout .btn {
   margin-bottom: 40px;

@@ -1,0 +1,11 @@
+input[type=radio] {
+  display: none;
+  & + label {
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 8px 16px;
+  }
+  &:checked + label {
+    background-color: $cruise;
+  }
+}
