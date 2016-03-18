@@ -186,7 +186,7 @@ angular.module("tomaTort")
     sent: false
   };
   $scope.shouldBeRequired = function () {
-    if ($scope.dreamDessert.param1.indexOf(true) > -1) {
+    if ($scope.dreamDessert.design.indexOf(true) > -1) {
       return false;
     } else {
       return true;
