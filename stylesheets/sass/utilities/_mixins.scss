@@ -83,7 +83,7 @@
 
 // vertically aligns text in a block
 @mixin col-vertical-align() {
-  @extend flexbox();
-  @extend flex-direction(column);
-  @extend flex-justify(center);
+  @include flexbox();
+  @include flex-direction(column);
+  @include flex-justify(center);
 }
