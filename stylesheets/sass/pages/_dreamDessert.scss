@@ -1,45 +1,5 @@
-#dream_dessert_sec {
-  height: 300px;
-  h2 {
-    margin-top: 20px;
-  }
-}
-#param1, #param2, #param3, #cake_file, #customer_info {
-  height: auto;
-  width: 600px;
-  margin: 0 auto;
-}
-
-#param1 {
-  h2 {
-    margin-top: 40px;
-  }
-  border-top: 1px solid #B4EEDE;
-}
-#param2 {
-  h2 {
-    margin-top: 40px;
-  }
-}
-#param3 {
-  h2 {
-    margin-top: 40px;
-  }
-  position: relative;
-  overflow: visible;
-  padding-bottom: 80px;
-}
-
-.variat_block {
-  width: 500px;
-  margin: 0 auto 57px;
-  label {
-    cursor: pointer;
-    padding: 10px;
-  }
-  input:checked + label {
-    background: #C6F4E5;
-  }
+#dd-form {
+  border-top: 1px solid $cruise;
 }
 
 .title_block {

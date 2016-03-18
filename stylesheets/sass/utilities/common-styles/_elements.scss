@@ -21,10 +21,6 @@ a {
 input {
   border: none;
   outline: none;
-  // don't show checkboxes
-  &[type=checkbox] {
-    display: none;
-  }
   // show spinner on type number input (webkit browsers)
   &[type=number]::-webkit-inner-spin-button, 
   &[type=number]::-webkit-outer-spin-button { 
@@ -83,8 +79,7 @@ p {
 
 // generic form styles
 form {
-  width: 600px;
-  margin: 0 auto;
+  padding: 0 150px;
   textarea {
     border: 1px solid #C6F4E5;
     padding: 10px 15px;

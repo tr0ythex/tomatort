@@ -27,3 +27,8 @@
 .fx-wr-wrap {
   @include flex-wrap(wrap);
 }
+
+// content vertically centered
+.fx-va-center {
+  @include flex-vertical-align(center);
+}

@@ -46,9 +46,6 @@ input {
   border: none;
   outline: none;
 }
-input[type=checkbox] {
-  display: none;
-}
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
   opacity: 1;
 }
@@ -92,8 +89,7 @@ p {
 }
 
 form {
-  width: 600px;
-  margin: 0 auto;
+  padding: 0 150px;
 }
 form textarea {
   border: 1px solid #C6F4E5;
@@ -369,6 +365,30 @@ input[type=range]::-ms-thumb {
   flex-wrap: wrap;
 }
 
+.fx-va-center {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.toma-form input[type=checkbox] {
+  display: none;
+}
+.toma-form input[type=checkbox]:checked + label {
+  background: #C6F4E5;
+}
+.toma-form label {
+  cursor: pointer;
+  padding: 10px;
+  width: 25%;
+  height: 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #sort-block {
   width: 360px;
   font-size: 15px;
@@ -446,49 +466,8 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 
-#dream_dessert_sec {
-  height: 300px;
-}
-#dream_dessert_sec h2 {
-  margin-top: 20px;
-}
-
-#param1, #param2, #param3, #cake_file, #customer_info {
-  height: auto;
-  width: 600px;
-  margin: 0 auto;
-}
-
-#param1 {
-  border-top: 1px solid #B4EEDE;
-}
-#param1 h2 {
-  margin-top: 40px;
-}
-
-#param2 h2 {
-  margin-top: 40px;
-}
-
-#param3 {
-  position: relative;
-  overflow: visible;
-  padding-bottom: 80px;
-}
-#param3 h2 {
-  margin-top: 40px;
-}
-
-.variat_block {
-  width: 500px;
-  margin: 0 auto 57px;
-}
-.variat_block label {
-  cursor: pointer;
-  padding: 10px;
-}
-.variat_block input:checked + label {
-  background: #C6F4E5;
+#dd-form {
+  border-top: 1px solid #B0EADA;
 }
 
 .title_block {

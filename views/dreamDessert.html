@@ -1,34 +1,49 @@
-<section id="dream_dessert_sec">
+<section class="sec-bottom-margined sec-lr-padded">
   <h2>Десерт мечты</h2>
   <p>
-    Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую 
-	  Некоторое количество текста про кондитерскую
+    Не уверены, какой именно торт хотите заказать, но можете его описать? 
+    Эта страница для вас! Немного фантазии и мы сделаем для вас именно 
+    тот торт, о котором вы мечтаете.
   </p>
 </section>
-<form name="dreamDessertForm" class="dreamDessert" novalidate
+<form id="dd-form" name="dreamDessertForm" class="toma-form" novalidate
 	ng-controller="dreamDessertCtrl" 
 	ng-submit="sendDreamDessert(dreamDessertForm)" 
 	ng-class="showValidation ? 'validate' : ''">
-  <section id="param1">
-	  <h2>Важный параметр 1</h2>
-	  <div class="variat_block fxbx fx-js-sp-between">
-	  	<input type="checkbox" name="param1" id="var1"
-	  		ng-model="dreamDessert.param1[0]" ng-required="shouldBeRequired()">
-	  	<label class="leksapro-italic-large variat_item" for="var1">Вариант</label>
-    	<input type="checkbox" name="param1" id="var2"
-    	 	ng-model="dreamDessert.param1[1]" ng-required="shouldBeRequired()">
-    	<label class="leksapro-italic-large variat_item" for="var2">Вариант</label>
-    	<input type="checkbox" name="param1" id="var3"
-    		ng-model="dreamDessert.param1[2]" ng-required="shouldBeRequired()">
-    	<label class="leksapro-italic-large variat_item" for="var3">Вариант</label>
-    	<input type="checkbox" name="param1" id="var4"
-    		ng-model="dreamDessert.param1[3]" ng-required="shouldBeRequired()">
-    	<label class="leksapro-italic-large variat_item" for="var4">Вариант</label>
+  <section id="dd-design">
+	  <h2>Дизайн</h2>
+	  <div class="cb-design fxbx fx-js-sp-between fx-wr-wrap">
+	  	<input type="checkbox" name="dd-design" id="dd-design-1"
+	  		ng-model="dreamDessert.design[0]" ng-required="shouldBeRequired()">
+	  	<label class="leksapro-italic-large variat_item" for="dd-design-1">Ягоды/фрукты</label>
+	  	
+    	<input type="checkbox" name="dd-design" id="dd-design-2"
+    	 	ng-model="dreamDessert.design[1]" ng-required="shouldBeRequired()">
+    	<label class="leksapro-italic-large variat_item" for="dd-design-2">Цветы</label>
+    	
+    	<input type="checkbox" name="dd-design" id="dd-design-3"
+    		ng-model="dreamDessert.design[2]" ng-required="shouldBeRequired()">
+    	<label class="leksapro-italic-large variat_item" for="dd-design-3">Глазурь</label>
+    	
+    	<input type="checkbox" name="dd-design" id="dd-design-4"
+    		ng-model="dreamDessert.design[3]" ng-required="shouldBeRequired()">
+    	<label class="leksapro-italic-large variat_item" for="dd-design-4">Декор из мастики</label>
+    	
+    	<input type="checkbox" name="dd-design" id="dd-design-5"
+    		ng-model="dreamDessert.design[4]" ng-required="shouldBeRequired()">
+    	<label class="leksapro-italic-large variat_item" for="dd-design-5">Надпись</label>
+    	
+    	<input type="checkbox" name="dd-design" id="dd-design-6"
+    		ng-model="dreamDessert.design[5]" ng-required="shouldBeRequired()">
+    	<label class="leksapro-italic-large variat_item" for="dd-design-6">Флажки/несъедобные элементы</label>
+    	
+    	<input type="checkbox" name="dd-design" id="dd-design-7"
+    		ng-model="dreamDessert.design[6]" ng-required="shouldBeRequired()">
+    	<label class="leksapro-italic-large variat_item" for="dd-design-7">Конфеты/маршмеллоу/мармелад</label>
+    	
+    	<input type="checkbox" name="dd-design" id="dd-design-8"
+    		ng-model="dreamDessert.design[7]" ng-required="shouldBeRequired()">
+    	<label class="leksapro-italic-large variat_item" for="dd-design-8">Другое</label>
 	  </div>
 	</section>
 	<section id="param2">

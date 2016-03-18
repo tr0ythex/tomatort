@@ -1,0 +1,25 @@
+.toma-form {
+  input[type=checkbox] {
+    // don't show checkboxes
+    display: none;
+    &:checked + label {
+      background: #C6F4E5;
+    }
+  }
+  label {
+    cursor: pointer;
+    padding: 10px;
+    width: 25%;
+    height: 100px;
+    // position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // div {
+    //   position: absolute;
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    // }
+  }
+}

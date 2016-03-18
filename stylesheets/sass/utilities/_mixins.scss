@@ -20,6 +20,12 @@
   -webkit-flex-wrap: $wrap_type; /* Safari 6.1+ */
   flex-wrap: $wrap_type;
 }
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
 @mixin gradient-bg($from_color, $to_color, $url) {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from($from_color), to($to_color)), $url;
   background-image: -webkit-linear-gradient($from_color, $to_color), $url;
@@ -55,10 +61,29 @@
   -ms-transform: $params;
   transform: $params;
 }
+
+// vertically aligns block in a block
 @mixin vertical-align($position: relative) {
   position: $position;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+// aligns flexbox elements
+// usefull when it's necessary to vertically align inline blocks (flexbox items) 
+// but the height of each element will fit the size of inner text
+@mixin flex-vertical-align($position) {
+  -ms-flex-align: $position;
+	-webkit-align-items: $position;
+	-webkit-box-align: $position;
+	align-items: $position;
+}
+
+// vertically aligns text in a block
+@mixin col-vertical-align() {
+  @extend flexbox();
+  @extend flex-direction(column);
+  @extend flex-justify(center);
 }
