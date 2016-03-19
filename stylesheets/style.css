@@ -379,7 +379,7 @@ input[type=range]::-ms-thumb {
 }
 .tooltiped:hover span {
   visibility: visible;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 .tooltiped span {
   position: absolute;
@@ -531,12 +531,6 @@ input[type=radio]:checked + label {
   overflow-x: visible;
 }
 
-.title-block {
-  width: 110%;
-  margin-left: -7%;
-  margin-top: 10px;
-}
-
 .range-block {
   width: 580px;
   margin: -19px auto 0;
@@ -544,9 +538,28 @@ input[type=radio]:checked + label {
   border-left: 1px solid #B0EADA;
   border-right: 1px solid #B0EADA;
 }
-.range-block .range_item {
-  width: 200px;
+.range-block .range-item {
   border-left: 1px solid #B0EADA;
+}
+.range-block .range-item-3 {
+  width: 200px;
+}
+.range-block .range-item-6 {
+  width: 100px;
+}
+
+.title-block {
+  margin-top: 10px;
+}
+
+.title-block-3 {
+  width: 110%;
+  margin-left: -7%;
+}
+
+.title-block-6 {
+  width: 102%;
+  margin-left: -1%;
 }
 
 #cake_file h2 {

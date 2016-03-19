@@ -186,6 +186,7 @@ angular.module("tomaTort")
     base: 'Шоколадная',
     cream: 1,
     topping: '',
+    size: 2,
     file: null,
     sent: false
   };
