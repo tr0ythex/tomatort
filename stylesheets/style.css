@@ -53,12 +53,12 @@
   /* Legacy iOS */
   font-weight: 400;
 }
-.merel-light, input[type=number], .menu-item p.menu-item-price, #checkout-table td {
+.merel-light, input[type=number], .menu-item p.menu-item-price, .product-info .price, #checkout-table td {
   font-family: Merel;
   font-weight: 300;
 }
 
-.merel-regular, h2, input[type=file] + label, input[type=file] + label + span.chosenFile, nav, .btn, #sort-block, #contacts .fx-item:nth-child(n+4) {
+.merel-regular, h2, input[type=file] + label, input[type=file] + label + span.chosenFile, nav, .btn, #sort-block, .back-to-menu, #contacts .fx-item:nth-child(n+4) {
   font-family: Merel;
   font-weight: 400;
 }
@@ -87,7 +87,7 @@
   font-size: 20px;
 }
 
-.permianserif-regular, p {
+.permianserif-regular, p, .product-info .desc {
   font-family: PermianSerifTypeface;
   font-weight: 400;
 }
@@ -192,6 +192,7 @@ input {
 
 footer {
   height: 100px;
+  width: 100%;
   background: #353535;
 }
 
@@ -622,18 +623,13 @@ form .btn {
   margin-top: 50px;
 }
 
-#product_info {
-  height: auto;
-}
-#product_info h2 {
-  margin-top: 30px;
-}
-#product_info .product_pic {
+.product-img {
   width: 600px;
   height: 450px;
   float: left;
 }
-#product_info .info {
+
+.product-info {
   position: relative;
   width: 300px;
   height: 450px;
@@ -642,33 +638,24 @@ form .btn {
   padding-left: 46px;
   box-sizing: border-box;
 }
-#product_info .info .price {
-  font-family: Merel;
-  font-weight: 300;
+.product-info .price {
   font-size: 53px;
   line-height: 30px;
 }
-#product_info .info .desc {
-  font-family: PermianSerifTypeface;
-  font-size: 16px;
-  font-weight: 400;
-  margin-top: 60px;
+.product-info .desc {
+  font-size: 15px;
+  margin-top: 50px;
 }
-#product_info .info .composition {
-  text-align: left;
-  margin-top: 78px;
-}
-#product_info .info .btn {
+.product-info .btn {
   position: absolute;
   bottom: 0;
 }
-#product_info .back {
+
+.back-to-menu {
   text-transform: uppercase;
-  font-family: Merel;
-  font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   float: left;
-  margin: 78px 0;
+  margin: 50px 0;
   cursor: pointer;
 }
 
@@ -725,27 +712,13 @@ form .btn {
   margin-top: 50px;
 }
 
-.delivery_form {
-  width: 600px;
-  margin: 0 auto;
+#po-delivery-info h2 {
+  margin-top: 10px;
 }
-.delivery_form h2 {
-  margin-top: 20px;
-}
-.delivery_form .di_item {
-  width: 600px;
-  height: 50px;
-  border: 1px solid #B4EEDE;
-  margin: 0 auto 40px;
-  font-family: LeksaPro;
-  font-size: 20px;
-  font-style: italic;
+#po-delivery-info input[type=text] {
+  width: 100%;
+  text-align: left;
   padding-left: 15px;
-  box-sizing: border-box;
-}
-
-.delivery_info {
-  height: auto;
 }
 
 #checkout-table {

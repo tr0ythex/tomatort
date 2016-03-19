@@ -1,28 +1,30 @@
-<form class="delivery_form" name="deliveryForm" ng-submit="sendShip(deliveryForm)" 
+<form name="deliveryForm" ng-submit="sendShip(deliveryForm)" 
 	ng-class="showValidation ? 'validate' : ''" novalidate>
   <section class="customer_info">
 		<h2>Информация о заказчике</h2>
-		<div class="ci_block fxbx fx-js-sp-between fx-wr-wrap">
-			<input type="text" id="ci_first_name" name="firstName" class="ci_item" 
-				placeholder="Имя" ng-model="data.shipping.firstName" required>
-			<input type="text" id="ci_last_name" name="lastName" class="ci_item" 
-				placeholder="Фамилия" ng-model="data.shipping.lastName" required>
-			<input type="email" id="ci_email" name="email" class="ci_item" 
-				placeholder="Электронная почта" ng-model="data.shipping.email" required>
-			<input type="tel" id="ci_tel" name="tel" class="ci_item" 
-			  placeholder="Телефон" ng-model="data.shipping.tel" required>
+		<div class="fxbx fx-js-sp-between fx-wr-wrap">
+			<input type="text" name="firstName" placeholder="Имя" 
+				ng-model="data.shipping.firstName" required>
+			<input type="text" name="lastName" placeholder="Фамилия" 
+				ng-model="data.shipping.lastName" required>
+			<input type="email" name="email" placeholder="Электронная почта" 
+				ng-model="data.shipping.email" required>
+			<input type="tel" name="tel" placeholder="Телефон" 
+				ng-model="data.shipping.tel" required>
 		</div>
 	</section>
-	<section class="delivery_info">
+	
+	<section id="po-delivery-info">
 	  <h2>Информация о доставке</h2>
-	  <input type="text" id="di_address" name="address" class="leksapro-italic-large di_item" 
+	  <input type="text" name="address" class="leksapro-italic-large" 
 	  	placeholder="Адрес" ng-model="data.shipping.address" required>
 		<textarea class="leksapro-italic-large" name="comment" form="delivery_form" 
 			placeholder="Комментарий" ng-model="data.shipping.comment"></textarea>
 	</section>
 	<input type="submit" value="Заказать" class="btn btn-dark"
 		ng-hide="data.shipping.sent">
-	<p class="leksapro-italic-large top-margined bottom-margined" ng-show="data.shipping.sent">
+	<p class="leksapro-italic-large bottom-margined" 
+		ng-show="data.shipping.sent">
 		Ваш заказ успешно отправлен!<br>
 		Скоро мы с вами свяжемся для уточнения заказа
 	</p>

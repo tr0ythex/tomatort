@@ -1,21 +1,10 @@
-.delivery_form {
-  width: 600px;
-  margin: 0 auto;
+#po-delivery-info {
   h2 {
-    margin-top: 20px;
+    margin-top: 10px;
   }
-  .di_item {
-    width: 600px;
-    height: 50px;
-    border: 1px solid #B4EEDE;
-    margin: 0 auto 40px;
-    font-family: LeksaPro;
-    font-size: 20px;
-    font-style: italic;
+  input[type=text] {
+    width: 100%;
+    text-align: left;
     padding-left: 15px;
-    box-sizing: border-box;
   }
-}
-.delivery_info {
-  height: auto;
 }

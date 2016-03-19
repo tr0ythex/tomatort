@@ -1,49 +1,36 @@
-#product_info {
-  height: auto;
-  h2 {
-    margin-top: 30px;
+.product-img {
+  width: 600px;
+  height: 450px;
+  float: left;
+}
+.product-info {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  float: right;
+  text-align: left;
+  padding-left: 46px;
+  box-sizing: border-box;
+  .price {
+    @extend .merel-light;
+    font-size: $fs-price;
+    line-height: 30px;
   }
-  .product_pic {
-    width: 600px;
-    height: 450px;
-    float: left;
+  .desc {
+    @extend .permianserif-regular;
+    font-size: $fs-small;
+    margin-top: 50px;
   }
-  .info {
-    position: relative;
-    width: 300px;
-    height: 450px;
-    float: right;
-    text-align: left;
-    padding-left: 46px;
-    box-sizing: border-box;
-    .price {
-      font-family: Merel;
-      font-weight: 300;
-      font-size: 53px;
-      line-height: 30px;
-    }
-    .desc {
-      font-family: PermianSerifTypeface;
-      font-size: 16px;
-      font-weight: 400;
-      margin-top: 60px;
-    }
-    .composition {
-      text-align: left;
-      margin-top: 78px;
-    }
-    .btn {
-      position: absolute;
-      bottom: 0;
-    }
+  .btn {
+    position: absolute;
+    bottom: 0;
   }
-  .back {
-    text-transform: uppercase;
-    font-family: Merel;
-    font-weight: 400;
-    font-size: 16px;
-    float: left;
-    margin: 78px 0;
-    cursor: pointer;
-  }
+}
+.back-to-menu {
+  text-transform: uppercase;
+  @extend .merel-regular;
+  font-size: $fs-small;
+  float: left;
+  margin: 50px 0;
+  cursor: pointer;
 }

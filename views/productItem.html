@@ -1,19 +1,9 @@
-<section id="product_info" ng-controller="productCtrl">
+<section ng-controller="productCtrl">
   <h2>{{selectedProduct.name}}</h2>
-  <img ng-src="{{selectedProduct.imageUrl}}" class="product_pic">
-  <div class="info">
-    <div class="price">
-	    {{selectedProduct.price}} Р
-	  </div>
-	  <div class="desc">
-	    Описание Описание Описание
-	    Описание Описание Описание
-	    Описание Описание Описание
-	    Описание Описание Описание
-	  </div>
-	  <div class="leksapro-italic-large composition">
-	    Масса: {{selectedProduct.weight}} г<br>
-	  </div>
+  <img ng-src="{{selectedProduct.imageUrl}}" class="product-img img-cover">
+  <div class="product-info">
+    <div class="price">{{selectedProduct.price}} руб</div>
+	  <div class="desc">{{selectedProduct.description}}</div>
 	  <button class="btn btn-dark" ng-hide="selectedProduct.ordered"
 	  	ng-click="setOrdered(selectedProduct.id); 
 			    			addToCart(selectedProduct);">
@@ -25,6 +15,6 @@
     </a>
   </div>
   
-  <div class="back"><a href="#/menu">&lt;&nbsp;&nbsp;Вернуться в меню</a></div>
+  <div class="back-to-menu"><a href="#/menu">&lt;&nbsp;&nbsp;Вернуться в меню</a></div>
  
 </section>
