@@ -33,34 +33,6 @@
   margin-left: -1%;
 }
 
-input[type=file] {
-  display: none;
-  & + label {
-    margin-top: 45px;
-    border: 1px solid #B4EEDE;
-    font-family: Merel;
-    font-size: 16px;
-    font-weight: 400;
-    width: 200px;
-    height: 50px;
-    display: inline-block;
-    text-transform: uppercase;
-    padding: 15px;
-    box-sizing: border-box;
-    &:hover {
-      background: $cruise;
-      color: lighten($tundora, 5%);
-    }
-  }
-}
-
-.chosenFile {
-  font-family: Merel;
-  font-weight: 400;
-  font-size: 16px;
-  margin-left: 40px;
-}
-
 .ci_item {
   width: 260px;
   height: 50px;
