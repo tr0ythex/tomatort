@@ -78,7 +78,7 @@
   font-size: 15px;
 }
 
-.leksapro-italic, .leksapro-italic-large, .menu-item p.menu-item-title, .menu-item p.menu-item-name {
+.leksapro-italic, .leksapro-italic-large, .menu-item p.menu-item-title, .menu-item p.menu-item-name, input[type=text], input[type=email], input[type=tel] {
   font-family: LeksaPro;
   font-style: italic;
 }
@@ -152,8 +152,12 @@
   margin: 40px auto;
 }
 
-.top-bottom-margined {
-  margin: 40px 0;
+.top-margined {
+  margin-top: 40px;
+}
+
+.bottom-margined {
+  margin-bottom: 40px;
 }
 
 .blackout {
@@ -336,6 +340,15 @@ form.validate .ng-invalid + label {
   top: 230px;
   left: 0;
   transition: top 0.5s ease-in-out;
+}
+
+input[type=text], input[type=email], input[type=tel] {
+  width: 260px;
+  height: 50px;
+  border: 1px solid #B0EADA;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 input[type=checkbox] {
@@ -579,21 +592,6 @@ input[type=file] + label + span.chosenFile {
   margin-left: -1%;
 }
 
-.ci_item {
-  width: 260px;
-  height: 50px;
-  border: 1px solid #B4EEDE;
-  font-family: LeksaPro;
-  font-size: 20px;
-  font-style: italic;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-#cake_params .customer_info h2 {
-  margin-top: 80px;
-}
-
 #contacts .fx-item {
   width: 33%;
   height: 60px;
@@ -787,7 +785,7 @@ nav .tel {
 }
 
 form .btn {
-  margin-top: 40px;
+  margin-top: 0;
   margin-bottom: 40px;
 }
 

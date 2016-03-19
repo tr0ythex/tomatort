@@ -68,7 +68,7 @@
 	  <h2>Идеальные добавки к торту</h2>
 	  <textarea class="leksapro-italic-large" name="comment" 
 	  	form="dreamDessertForm" placeholder="{{toppingPlaceholder}}"
-	  	ng-model="dreamDessert.topping" required>
+	  	ng-model="dreamDessert.topping">
 	  </textarea>
 	</section>
 	
@@ -76,49 +76,49 @@
 	  <h2>Дизайн</h2>
 	  <div class="fxbx fx-js-sp-between fx-wr-wrap">
 	  	<input type="checkbox" name="dd-design" id="dd-design-1"
-	  		ng-model="dreamDessert.design[0]" ng-required="shouldBeRequired()">
+	  		ng-model="dreamDessert.design[0]"><!-- ng-required="shouldBeRequired()" -->
 	  	<label class="leksapro-italic-large" for="dd-design-1">
 	  		Ягоды/фрукты
 	  	</label>
 	  	
     	<input type="checkbox" name="dd-design" id="dd-design-2"
-    	 	ng-model="dreamDessert.design[1]" ng-required="shouldBeRequired()">
+    	 	ng-model="dreamDessert.design[1]">
     	<label class="leksapro-italic-large" for="dd-design-2">
     		Цветы
     	</label>
     	
     	<input type="checkbox" name="dd-design" id="dd-design-3"
-    		ng-model="dreamDessert.design[2]" ng-required="shouldBeRequired()">
+    		ng-model="dreamDessert.design[2]">
     	<label class="leksapro-italic-large" for="dd-design-3">
     		Глазурь
     	</label>
     	
     	<input type="checkbox" name="dd-design" id="dd-design-4"
-    		ng-model="dreamDessert.design[3]" ng-required="shouldBeRequired()">
+    		ng-model="dreamDessert.design[3]">
     	<label class="leksapro-italic-large" for="dd-design-4">
     		Декор из мастики
     	</label>
     	
     	<input type="checkbox" name="dd-design" id="dd-design-5"
-    		ng-model="dreamDessert.design[4]" ng-required="shouldBeRequired()">
+    		ng-model="dreamDessert.design[4]">
     	<label class="leksapro-italic-large" for="dd-design-5">
     		Надпись
     	</label>
     	
     	<input type="checkbox" name="dd-design" id="dd-design-6"
-    		ng-model="dreamDessert.design[5]" ng-required="shouldBeRequired()">
+    		ng-model="dreamDessert.design[5]">
     	<label class="leksapro-italic-large" for="dd-design-6">
     		Флажки/несъедобные элементы
     	</label>
     	
     	<input type="checkbox" name="dd-design" id="dd-design-7"
-    		ng-model="dreamDessert.design[6]" ng-required="shouldBeRequired()">
+    		ng-model="dreamDessert.design[6]">
     	<label class="leksapro-italic-large" for="dd-design-7">
     		Конфеты/маршмеллоу/мармелад
     	</label>
     	
     	<input type="checkbox" name="dd-design" id="dd-design-8"
-    		ng-model="dreamDessert.design[7]" ng-required="shouldBeRequired()">
+    		ng-model="dreamDessert.design[7]">
     	<label class="leksapro-italic-large" for="dd-design-8">
     		Другое
     	</label>
@@ -149,28 +149,30 @@
 	  </div>
 	</section>
 	
-	<section id="cake_file">
+	<section id="dd-file">
 		<h2>Прикрепление файла</h2>
 		<p class="leksapro-italic-large">Если Вам очень понравился какой-то торт, прикрепите фото</p>
 		<file-upload/>
 	</section>
 	
-	<section class="customer_info">
+	<section class="dd-info">
 		<h2>Информация о заказчике</h2>
-		<div class="ci_block fxbx fx-js-sp-between fx-wr-wrap">
-			<input type="text" id="ci_first_name" name="firstName" class="ci_item" 
-				placeholder="Имя" ng-model="data.shipping.firstName" required>
-			<input type="text" id="ci_last_name" name="lastName" class="ci_item" 
-				placeholder="Фамилия" ng-model="data.shipping.lastName" required>
-			<input type="email" id="ci_email" name="email" class="ci_item" 
-				placeholder="Электронная почта" ng-model="data.shipping.email" required>
-			<input type="tel" id="ci_tel" name="tel" class="ci_item" 
-				placeholder="Телефон" ng-model="data.shipping.tel" required>
+		<div class="fxbx fx-js-sp-between fx-wr-wrap">
+			<input type="text" name="firstName" placeholder="Имя" 
+				ng-model="data.shipping.firstName" required>
+			<input type="text" name="lastName" placeholder="Фамилия" 
+				ng-model="data.shipping.lastName" required>
+			<input type="email" name="email" placeholder="Электронная почта" 
+				ng-model="data.shipping.email" required>
+			<input type="tel" name="tel" placeholder="Телефон" 
+				ng-model="data.shipping.tel" required>
 		</div>
 	</section>
-	<input type="submit" id="submit_form" value="Отправить" 
+	
+	<input type="submit" value="Отправить" 
 		class="btn btn-dark" ng-hide="dreamDessert.sent">
-	<p class="leksapro-italic-large top-bottom-margined" ng-show="dreamDessert.sent">
+		
+	<p class="leksapro-italic-large bottom-margined" ng-show="dreamDessert.sent">
 		Ваш заказ успешно отправлен!<br>
 		Скоро мы с вами свяжемся для уточнения заказа
 	</p>

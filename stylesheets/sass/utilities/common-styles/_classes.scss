@@ -16,9 +16,14 @@
   margin: 40px auto;
 }
 
-// adds top and bottom margins to block element
-.top-bottom-margined {
-  margin: 40px 0;
+// adds top margin to block element
+.top-margined {
+  margin-top: 40px;
+}
+
+// adds bottom margin to block element
+.bottom-margined {
+  margin-bottom: 40px;
 }
 
 // black semitransparent cover on the block
