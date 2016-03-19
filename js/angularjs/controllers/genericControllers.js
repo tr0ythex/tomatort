@@ -170,7 +170,7 @@ angular.module("tomaTort")
   };
 })
 .controller("dreamDessertCtrl", function ($scope) {
-  $scope.$on('$viewContentLoaded', function () {
+  // $scope.$on('$viewContentLoaded', function () {
     var fileUpload = document.querySelector( '#fileUpload' );
 		fileUpload.addEventListener('change', function(e) {
 			var fileName = '';
@@ -180,14 +180,14 @@ angular.module("tomaTort")
 				// fileUpload.filename = fileName;
 			}
 		});
-  });
+  // });
   $scope.dreamDessert = {
     design: [],
     base: 'Шоколадная',
     cream: 1,
     topping: '',
     size: 2,
-    file: null,
+    // file: null,
     sent: false
   };
   $scope.shouldBeRequired = function () {
