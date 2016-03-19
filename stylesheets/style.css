@@ -53,7 +53,7 @@
   /* Legacy iOS */
   font-weight: 400;
 }
-.merel-light, input[type=number], .menu-item p.menu-item-price {
+.merel-light, input[type=number], .menu-item p.menu-item-price, #checkout-table td {
   font-family: Merel;
   font-weight: 300;
 }
@@ -216,8 +216,8 @@ h1 {
 }
 
 h2 {
-  font-size: 23px;
-  line-height: 23px;
+  font-size: 24px;
+  line-height: 24px;
   margin: 50px 0 40px;
   text-transform: uppercase;
 }
@@ -477,7 +477,7 @@ input[type=file] + label + span.chosenFile {
 }
 
 input[type=number] {
-  font-size: 30px;
+  font-size: 24px;
   width: 40px;
   height: 40px;
   padding: 0;
@@ -584,10 +584,6 @@ form .btn {
 .menu-item p.menu-item-price {
   font-size: 30px;
   top: 115px;
-}
-.menu-item p.set-price {
-  line-height: 40px;
-  top: 95px;
 }
 .menu-item .btn {
   position: absolute;
@@ -776,16 +772,22 @@ form .btn {
   height: 40px;
 }
 #checkout-table td {
-  height: 150px;
+  height: 120px;
+  font-size: 24px;
+  box-sizing: border-box;
+}
+#checkout-table td.td-del-type, #checkout-table td.td-name {
+  text-align: left;
 }
 #checkout-table td.td-img {
-  padding: 10px;
+  padding: 10px 15px 5px;
 }
-#checkout-table td.td-del-type {
-  text-align: left;
+#checkout-table td.td-name {
+  padding-left: 20px;
 }
 #checkout-table td.td-total-txt {
   text-align: right;
+  text-transform: uppercase;
 }
 
 #sec-promo {

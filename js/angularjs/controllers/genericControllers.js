@@ -137,11 +137,11 @@ angular.module("tomaTort")
        "imageUrl": "/images/products/pirozhnoe.jpg",
        "description": "Бисквитная основа и любой крем или мусс на ваш выбор"
       },
-      {"id": 22, "name": "Кексы/маффины", "smallSetPrice": 1500, "set": 9,
+      {"id": 22, "name": "Кексы/маффины", "price": 1500, "set": 9,
        "imageUrl": "/images/products/muffin.jpg",
        "description": ""
       },
-      {"id": 23, "name": "Кексы/маффины", "smallSetPrice": 2000, "set": 12,
+      {"id": 23, "name": "Кексы/маффины", "price": 2000, "set": 12,
        "imageUrl": "/images/products/muffin.jpg",
        "description": ""
       }

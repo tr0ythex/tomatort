@@ -22,15 +22,22 @@
     height: 40px;
   }
   td {
-    height: 150px;
-    &.td-img {
-      padding: 10px;
-    }
-    &.td-del-type {
+    height: 120px;
+    @extend .merel-light;
+    font-size: $fs-xlarge;
+    box-sizing: border-box;
+    &.td-del-type, &.td-name {
       text-align: left;
+    }
+    &.td-img {
+      padding: 10px 15px 5px;
+    }
+    &.td-name {
+      padding-left: 20px;
     }
     &.td-total-txt {
       text-align: right;
+      text-transform: uppercase;
     }
   }
 }
