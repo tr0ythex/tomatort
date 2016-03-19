@@ -2,6 +2,8 @@
 angular.module("tomaTort")
 .constant("menuActiveClass", "li-active")
 .constant("instagramLink", "https://www.instagram.com/_tomatort_")
+.constant("toppingPlaceholder", "Топпинги, прослойки, другие элементы " +
+  "(орехи, ягоды и др.), а также любая информация, которая кажется вам важной")
 .factory("menu", function (menuActiveClass) {
   
   var selectedMenuItem = '';
@@ -33,9 +35,10 @@ angular.module("tomaTort")
   $scope.selectedProduct = $scope.getProduct(pId);
 })
 .controller("tomaTortCtrl", function ($scope, $location, menuActiveClass, cart,
-  instagramLink) {
+  instagramLink, toppingPlaceholder) {
     
   $scope.instagramLink = instagramLink;
+  $scope.toppingPlaceholder = toppingPlaceholder;
   
   $scope.data = {
     products: [
