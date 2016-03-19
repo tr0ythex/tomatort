@@ -10,20 +10,19 @@
     </thead>
     <tbody>
       <tr ng-repeat="item in cartData">
-        <td class="td_img"><img ng-src="{{item.imageUrl}}"></td>
+        <td class="td-img"><img ng-src="{{item.imageUrl}}" class="img-cover"></td>
         <td colspan="2">
-          <p class="name">{{item.name}}</p>
-          <p class="weight"><!--Масса: {{item.weight}} г--></p>
+          {{item.name}}
         </td>
-        <td class="td_price">{{item.kgPrice}} Р</td>
-        <td class="td_count"><input type="number" name="count" 
+        <td class="td-price">{{item.kgPrice}} руб / кг</td>
+        <td class="td-count"><input type="number" name="count" 
           ng-model="cartData[$index].count" ng-value="{{item.count}}"></td>
-        <td class="td_subtotal">{{(item.kgPrice * item.count)}} Р</td>
+        <td class="td-subtotal">{{(item.kgPrice * item.count)}} Р</td>
       </tr>
     </tbody>
     <tfoot>
       <tr>
-        <td colspan="2" class="td_del_type">
+        <td colspan="2" class="td-del-type">
           <input type="radio" name="deliveryType" value="selfPickup" 
             ng-model="data.shipping.deliveryType" id="selfPickup">
           <label for="selfPickup">Самовывоз</label>
@@ -31,10 +30,10 @@
             ng-model="data.shipping.deliveryType" id="delivery">
           <label for="delivery">Доставка</label>
         </td>
-        <td class="td_total_txt" colspan="3">Итого:</td>
-        <td class="td_total">{{total()}} Р</td>
+        <td class="td-total-txt" colspan="3">Итого:</td>
+        <td class="td-total">{{total()}} Р</td>
       </tr>
     </tfoot>
   </table>
-  <a href="#/placeorder" class="btn btn-dark">Оформить заказ</a>
+  <a href="#/placeorder" class="btn btn-dark bottom-margined">Оформить заказ</a>
 </section>

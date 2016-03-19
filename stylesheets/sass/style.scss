@@ -12,12 +12,18 @@
 @import 'utilities/effects/slider';
 @import 'utilities/effects/slideup-animated';
 // form elements (checkboxes, radios, etc.)
-@import 'utilities/form-elements/common';
-@import 'utilities/form-elements/checkbox';
-@import 'utilities/form-elements/radio';
-@import 'utilities/form-elements/range';
-@import 'utilities/form-elements/textarea';
-@import 'utilities/form-elements/file';
+@import 'utilities/inputs/common';
+@import 'utilities/inputs/checkbox';
+@import 'utilities/inputs/radio';
+@import 'utilities/inputs/range';
+@import 'utilities/inputs/textarea';
+@import 'utilities/inputs/file';
+@import 'utilities/inputs/number';
+
+/* partial styles */
+@import 'partials/nav';
+@import 'partials/btn';
+@import 'partials/menu';
 
 /* page styles */
 @import 'pages/menu';
@@ -27,8 +33,3 @@
 @import 'pages/placeOrder';
 @import 'pages/checkout';
 @import 'pages/home';
-
-/* partial styles */
-@import 'partials/nav';
-@import 'partials/btn';
-@import 'partials/menu';

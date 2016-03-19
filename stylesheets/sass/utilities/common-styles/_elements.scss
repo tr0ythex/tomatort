@@ -21,11 +21,6 @@ a {
 input {
   border: none;
   outline: none;
-  // show spinner on type number input (webkit browsers)
-  &[type=number]::-webkit-inner-spin-button, 
-  &[type=number]::-webkit-outer-spin-button { 
-    opacity: 1;
-  }
 }
 
 // footer
