@@ -181,7 +181,8 @@ angular.module("tomaTort")
   $scope.dreamDessert = {
     design: [],
     base: 'Шоколадная',
-    cream: '',
+    cream: 1,
+    topping: '',
     file: null,
     sent: false
   };

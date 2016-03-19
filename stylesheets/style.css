@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .overflown-auto {
   overflow: auto;
 }
@@ -251,6 +250,7 @@ input[type=range]::-ms-thumb {
 .leksapro-light, .leksapro-light-small {
   font-family: LeksaPro;
   font-weight: 300;
+  font-style: normal;
 }
 
 .leksapro-light-small {
@@ -371,6 +371,40 @@ input[type=range]::-ms-thumb {
   -webkit-align-items: center;
   -webkit-box-align: center;
   align-items: center;
+}
+
+.tooltiped {
+  position: relative;
+  display: inline;
+}
+.tooltiped:hover span {
+  visibility: visible;
+  opacity: 0.7;
+}
+.tooltiped span {
+  position: absolute;
+  width: 180px;
+  background: #B0EADA;
+  visibility: hidden;
+  box-sizing: border-box;
+  padding: 10px;
+  opacity: 0;
+  top: 30px;
+  left: 50%;
+  margin-left: -90px;
+  transition: all 0.5s ease-in-out;
+}
+.tooltiped span:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid #B0EADA;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
 }
 
 input[type=checkbox] {
@@ -513,35 +547,6 @@ input[type=radio]:checked + label {
 .range-block .range_item {
   width: 200px;
   border-left: 1px solid #B0EADA;
-}
-
-.tooltip {
-  border-bottom: 1px dotted #0077AA;
-  cursor: help;
-}
-
-.tooltip::after {
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 8px 8px 8px 0px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-  color: #FFF;
-  content: attr(data-tooltip);
-  /* Главная часть кода, определяющая содержимое всплывающей подсказки */
-  margin-top: -24px;
-  opacity: 0;
-  /* Наш элемент прозрачен... */
-  padding: 3px 7px;
-  position: absolute;
-  visibility: hidden;
-  /* ...и скрыт. */
-  transition: all 0.4s ease-in-out;
-  /* Добавить плавности по вкусу */
-}
-
-.tooltip:hover::after {
-  opacity: 1;
-  /* Показываем его */
-  visibility: visible;
 }
 
 #cake_file h2 {

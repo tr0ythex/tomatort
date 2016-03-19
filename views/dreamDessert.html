@@ -10,31 +10,25 @@
 	ng-controller="dreamDessertCtrl" 
 	ng-submit="sendDreamDessert(dreamDessertForm)" 
 	ng-class="showValidation ? 'validate' : ''">
-	
 	<section id="dd-base">
 		<h2>Основа</h2>
 		<div class="fxbx fx-js-sp-between">
 			<input type="radio" name="dd-base" value="Шоколадная" 
-	      ng-model="dreamDessert.base" id="dd-base-choco">
-	    <label class="leksapro-italic-large" for="dd-base-choco">Шоколадная</label>
-	    <input type="radio" name="dd-base" value="Ванильная" 
-	      ng-model="dreamDessert.base" id="dd-base-vanilla">
-	    <label class="leksapro-italic-large" for="dd-base-vanilla">Ванильная</label>
-	    <input type="radio" name="dd-base" value="Медовая" 
-	      ng-model="dreamDessert.base" id="dd-base-honey">
-	    <label class="leksapro-italic-large" for="dd-base-honey">Медовая</label>
-	    <input type="radio" name="dd-base" value="Песочная" 
-	      ng-model="dreamDessert.base" id="dd-base-shortcrust">
-	    <label class="leksapro-italic-large" for="dd-base-shortcrust">Песочная</label>
-	    <input type="radio" name="dd-base" value="Другое" 
-	      ng-model="dreamDessert.base" id="dd-base-other">
-	    <label class="leksapro-italic-large" for="dd-base-other">Другое</label>
-    </div>
-
-		<!--<a class="tooltips" href="#">CSS Tooltips-->
-		<!--	<span>abrakadabra</span>-->
-		<!--</a>-->
-		<span class="tooltip" data-tooltip="I'm small tooltip. Don't kill me!">Hover me!</span>
+		      ng-model="dreamDessert.base" id="dd-base-choco">
+		    <label class="leksapro-italic-large" for="dd-base-choco">Шоколадная</label>
+		    <input type="radio" name="dd-base" value="Ванильная" 
+		      ng-model="dreamDessert.base" id="dd-base-vanilla">
+		    <label class="leksapro-italic-large" for="dd-base-vanilla">Ванильная</label>
+		    <input type="radio" name="dd-base" value="Медовая" 
+		      ng-model="dreamDessert.base" id="dd-base-honey">
+		    <label class="leksapro-italic-large" for="dd-base-honey">Медовая</label>
+		    <input type="radio" name="dd-base" value="Песочная" 
+		      ng-model="dreamDessert.base" id="dd-base-shortcrust">
+		    <label class="leksapro-italic-large" for="dd-base-shortcrust">Песочная</label>
+		    <input type="radio" name="dd-base" value="Другое" 
+		      ng-model="dreamDessert.base" id="dd-base-other">
+		    <label class="leksapro-italic-large" for="dd-base-other">Другое</label>
+	    </div>
 	</section>
 	
 	<section id="dd-cream">
@@ -45,13 +39,27 @@
   		<div class="range_item"></div>
   		<div class="range_item"></div>
   		<div class="range_item"></div>
-  		<!--<div class="range_item"></div>-->
 	  </div>
 	  <div class="title-block leksapro-italic-large fxbx fx-js-sp-between">
-	  	<div class="leksapro-italic-large">С кислинкой</div>
-	  	<div class="leksapro-italic-large">Послаще</div>
-	  	<div class="leksapro-italic-large">Шоколадный</div>
-	  	<div class="leksapro-italic-large">Особый</div>
+	  	<div class="leksapro-italic-large tooltiped">С кислинкой
+	  		<span class="leksapro-light-small">ягодный, фруктовый</span>
+	  	</div>
+	  	<div class="leksapro-italic-large tooltiped">Послаще
+	  		<span class="leksapro-light-small">
+	  			сливочно-сырный, крем-чиз, ванильный
+	  		</span>
+	  	</div>
+	  	<div class="leksapro-italic-large tooltiped">Шоколадный
+	  		<span class="leksapro-light-small">
+	  			шоколадно-сливочный, шоколадный мусс
+	  		</span>
+	  	</div>
+	  	<div class="leksapro-italic-large tooltiped">Особый
+	  		<span class="leksapro-light-small">
+	  			кофейный, ореховый, с вареной сгущенкой, "орео", 
+	  			кокосовый&nbsp;и&nbsp;др.
+	  		</span>
+	  	</div>
 	  </div>
 	</section>
 	

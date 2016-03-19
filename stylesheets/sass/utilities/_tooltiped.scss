@@ -1,0 +1,34 @@
+.tooltiped {
+  position: relative;
+  display: inline;
+  &:hover {
+    span {
+      visibility: visible;
+      opacity: 0.7;
+    }
+  }
+  span {
+    position: absolute;
+    width: 180px;
+    background: $cruise;
+    visibility: hidden;
+    box-sizing: border-box;
+    padding: 10px;
+    opacity: 0;
+    top: 30px;
+    left: 50%;
+    margin-left: -90px;
+    transition: all 0.5s ease-in-out;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -8px;
+      width: 0; height: 0;
+      border-bottom: 8px solid $cruise;
+      border-right: 8px solid transparent;
+      border-left: 8px solid transparent;
+    }
+  }
+}
