@@ -4,7 +4,7 @@ angular.module("tomaTort")
   var cartData = [];
   
   return {
-    addProduct: function (id, name, price, weight, imageUrl) {
+    addProduct: function (id, name, kgPrice, imageUrl) {
       var addedToExistingItem = false;
       for (var i = 0; i < cartData.length; i++) {
         if (cartData[i].id == id) {
@@ -15,8 +15,7 @@ angular.module("tomaTort")
       }
       if (!addedToExistingItem) {
         cartData.push({
-          count: 1, id: id, price: price, name: name, weight: weight, 
-          imageUrl: imageUrl
+          count: 1, id: id, kgPrice: kgPrice, name: name, imageUrl: imageUrl
         });
       }
     },

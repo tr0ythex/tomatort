@@ -148,8 +148,7 @@ angular.module("tomaTort")
     }
   };
   $scope.addToCart = function (product) {
-    cart.addProduct(product.id, product.name, product.price, 
-                    product.weight, product.imageUrl);
+    cart.addProduct(product.id, product.name, product.kgPrice, product.imageUrl);
   };
   $scope.openProductItemPage = function (product) {
     $scope.selectedProduct = product;
@@ -161,7 +160,7 @@ angular.module("tomaTort")
   $scope.total = function () {
     var total = 0;
     for (var i = 0; i < $scope.cartData.length; i++) {
-      total += ($scope.cartData[i].price * $scope.cartData[i].count);
+      total += ($scope.cartData[i].kgPrice * $scope.cartData[i].count);
     }
     return total;
   };
@@ -170,16 +169,6 @@ angular.module("tomaTort")
   };
 })
 .controller("dreamDessertCtrl", function ($scope) {
-  // $scope.$on('$viewContentLoaded', function () {
-  //   var fileUpload = document.querySelector( '#fileUpload' );
-		// fileUpload.addEventListener('change', function(e) {
-		// 	var fileName = '';
-		// 	fileName = e.target.value.split('\\').pop();
-		// 	if (fileName) {
-		// 		document.querySelector('.chosenFile').innerHTML = fileName;
-		// 	}
-		// });
-  // });
   $scope.dreamDessert = {
     design: [],
     base: 'Шоколадная',

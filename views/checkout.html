@@ -1,5 +1,5 @@
 <section id="checkout" ng-controller="checkoutCtrl">
-  <table class="toma_table" id="checkout_table">
+  <table id="checkout-table">
     <thead>
       <tr>
         <th colspan="3">Товар</th>
@@ -13,11 +13,12 @@
         <td class="td_img"><img ng-src="{{item.imageUrl}}"></td>
         <td colspan="2">
           <p class="name">{{item.name}}</p>
-          <p class="weight">Масса: {{item.weight}} г</p>
+          <p class="weight"><!--Масса: {{item.weight}} г--></p>
         </td>
-        <td class="td_price">{{item.price}} Р</td>
-        <td class="td_count"><input type="number" name="count" ng-model="cartData[$index].count" ng-value="{{item.count}}"></td>
-        <td class="td_subtotal">{{(item.price * item.count)}} Р</td>
+        <td class="td_price">{{item.kgPrice}} Р</td>
+        <td class="td_count"><input type="number" name="count" 
+          ng-model="cartData[$index].count" ng-value="{{item.count}}"></td>
+        <td class="td_subtotal">{{(item.kgPrice * item.count)}} Р</td>
       </tr>
     </tbody>
     <tfoot>
