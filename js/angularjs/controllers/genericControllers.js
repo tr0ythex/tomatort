@@ -42,82 +42,107 @@ angular.module("tomaTort")
   
   $scope.data = {
     products: [
-      {"id": 1, "name": "Томаторт", "kgPrice": 1500,
+      {"id": 1, "name": "Томаторт", "price": 1500,
        "imageUrl": "/images/products/tomatort.jpg",
        "description": "Наш фирменный торт с бисквитной основой, " +
                       "сливочно-сырным кремом и любыми топпингами на ваш вкус"
       },
-      {"id": 2, "name": "Чизкейк", "kgPrice": 1700,
+      {"id": 2, "name": "Чизкейк", "price": 1700,
        "imageUrl": "/images/products/cheesecake.jpg",
        "description": "Нежнейший торт из сливочного сыра с песочной основой"
       },
-      {"id": 3, "name": "Тирамису", "kgPrice": 1700,
+      {"id": 3, "name": "Тирамису", "price": 1700,
        "imageUrl": "/images/products/tiramisu.jpg",
        "description": "Всеми любимый классический воздушный десерт " +
                       "с Маскарпоне и бисквитным печеньем"
       },
-      {"id": 4, "name": "Красный бархат", "kgPrice": 1500,
+      {"id": 4, "name": "Красный бархат", "price": 1500,
        "imageUrl": "/images/products/red-velvet.jpg",
       "description": "Один из самых стильных и изысканных тортов " +
                      "с ярко-красным бисквитом и легким шоколадным послевкусием"
       },
-      {"id": 5, "name": "Брауни", "kgPrice": 1500,
+      {"id": 5, "name": "Брауни", "price": 1500,
        "imageUrl": "/images/products/brauni.jpg",
        "description": "Влажная текстура и глубокий шоколадный вкус – " +
                       "настоящий рай для шокоголиков!"
       },
-      {"id": 6, "name": "Медовик", "kgPrice": 1500, 
+      {"id": 6, "name": "Медовик", "price": 1500, 
        "imageUrl": "/images/products/medovik.jpg",
        "description": "12 нежных коржей, приготовленных по специальной " +
                     "рецептуре, несомненно, сделают наш Медовик вашим фаворитом"
       },
-      {"id": 7, "name": "Наполеон", "kgPrice": 1500,
+      {"id": 7, "name": "Наполеон", "price": 1500,
        "imageUrl": "/images/products/napoleon.jpg",
        "description": "Пышное слоеное тесто в сочетании с неповторимым  " +
                      "кремом дипломат – лучшее исполнение классического десерта"
       },
-      {"id": 8, "name": "Птичье молоко", "kgPrice": 1500,
+      {"id": 8, "name": "Птичье молоко", "price": 1500,
        "imageUrl": "/images/products/bird-milk.jpg",
        "description": "Торт по оригинальной рецептуре для настоящих " +
                       "ценителей классики"
       },
-      {"id": 9, "name": "Анна Павлова", "kgPrice": 1500,
+      {"id": 9, "name": "Анна Павлова", "price": 1500,
        "imageUrl": "/images/products/anna-pavlova.jpg",
        "description": "Один из самых оригинальных десертов с тающим "+
              "во рту безе и легким кремом в сочетании с вашими любимыми ягодами"
       },
-      {"id": 10, "name": "Прага", "kgPrice": 1500,
+      {"id": 10, "name": "Прага", "price": 1500,
        "imageUrl": "/images/products/praga.jpg",
        "description": "Один из любимых вкусов детства, который мы " +
                       "воспроизвели для вас в этом прекрасном торте"
       },
-      {"id": 11, "name": "Морковный торт", "kgPrice": 1500,
+      {"id": 11, "name": "Морковный торт", "price": 1500,
        "imageUrl": "/images/products/carrot-cake.jpg",
        "description": ""
       },
-      {"id": 12, "name": "Капкейки", "smallSetPrice": 1800, 
-       "bigSetPrice": 2400, "imageUrl": "/images/products/cupcakes.jpg",
+      {"id": 12, "name": "Капкейки", "price": 1800, "set": 9,
+       "imageUrl": "/images/products/cupcakes.jpg",
        "description": "Мини-тортики с начинкой и кремом на любой вкус"
       },
-      {"id": 13, "name": "Кейкпопсы", "smallSetPrice": 1800, 
-       "bigSetPrice": 2400, "imageUrl": "/images/products/cakepops.jpg",
+      {"id": 13, "name": "Капкейки", "price": 2400, "set": 12,
+       "imageUrl": "/images/products/cupcakes.jpg",
+       "description": "Мини-тортики с начинкой и кремом на любой вкус"
+      },
+      {"id": 14, "name": "Кейкпопсы", "price": 1800, "set": 9,
+       "imageUrl": "/images/products/cakepops.jpg",
        "description": "Полюбившиеся всем бисквитные шарики в шоколадной глазури"
       },
-      {"id": 14, "name": "Яблоки в карамели", "smallSetPrice": 1500,
-       "bigSetPrice": 2000, "imageUrl": "/images/products/apples.jpg",
+      {"id": 15, "name": "Кейкпопсы", "price": 2400, "set": 12, 
+       "imageUrl": "/images/products/cakepops.jpg",
+       "description": "Полюбившиеся всем бисквитные шарики в шоколадной глазури"
+      },
+      {"id": 16, "name": "Яблоки в карамели", "price": 1500, "set": 9,
+       "imageUrl": "/images/products/apples.jpg",
        "description": "Легкий и яркий десерт для ценителей оригинальности"
       },
-      {"id": 15, "name": "Тирамису в стаканчиках", "smallSetPrice": 2000, 
-       "bigSetPrice": 2700, "imageUrl": "/images/products/tiramisu-cup.jpg",
+      {"id": 17, "name": "Яблоки в карамели", "price": 2000, "set": 12,
+       "imageUrl": "/images/products/apples.jpg",
+       "description": "Легкий и яркий десерт для ценителей оригинальности"
+      },
+      {"id": 18, "name": "Тирамису в стаканчиках", "price": 2000, "set": 9,
+       "imageUrl": "/images/products/tiramisu-cup.jpg",
        "description": "Порционное исполнение любимого десерта, " +
                       "идеально подходит для больших компаний"
       },
-      {"id": 16, "name": "Пирожные", "smallSetPrice": 2000, 
-       "bigSetPrice": 2700, "imageUrl": "/images/products/pirozhnoe.jpg",
-        "description": "Бисквитная основа и любой крем или мусс на ваш выбор"
+      {"id": 19, "name": "Тирамису в стаканчиках", "price": 2700, "set": 12,
+       "imageUrl": "/images/products/tiramisu-cup.jpg",
+       "description": "Порционное исполнение любимого десерта, " +
+                      "идеально подходит для больших компаний"
       },
-      {"id": 17, "name": "Кексы/маффины", "smallSetPrice": 1500, 
-       "bigSetPrice": 2000, "imageUrl": "/images/products/muffin.jpg",
+      {"id": 20, "name": "Пирожные", "price": 2000, "set": 9,
+       "imageUrl": "/images/products/pirozhnoe.jpg",
+       "description": "Бисквитная основа и любой крем или мусс на ваш выбор"
+      },
+      {"id": 21, "name": "Пирожные", "price": 2700, "set": 12,
+       "imageUrl": "/images/products/pirozhnoe.jpg",
+       "description": "Бисквитная основа и любой крем или мусс на ваш выбор"
+      },
+      {"id": 22, "name": "Кексы/маффины", "smallSetPrice": 1500, "set": 9,
+       "imageUrl": "/images/products/muffin.jpg",
+       "description": ""
+      },
+      {"id": 23, "name": "Кексы/маффины", "smallSetPrice": 2000, "set": 12,
+       "imageUrl": "/images/products/muffin.jpg",
        "description": ""
       }
     ],
@@ -148,7 +173,12 @@ angular.module("tomaTort")
     }
   };
   $scope.addToCart = function (product) {
-    cart.addProduct(product.id, product.name, product.kgPrice, product.imageUrl);
+    cart.addProduct(product.id, 
+                    product.name, 
+                    product.kgPrice,
+                    product.smallSetPrice,
+                    product.bigSetPrice,
+                    product.imageUrl);
   };
   $scope.openProductItemPage = function (product) {
     $scope.selectedProduct = product;

@@ -13,8 +13,10 @@
         <td class="td-img"><img ng-src="{{item.imageUrl}}" class="img-cover"></td>
         <td colspan="2">{{item.name}}</td>
         <td class="td-price">{{item.kgPrice}} руб / кг</td>
-        <td class="td-count"><input type="number" name="count" 
-          ng-model="cartData[$index].count" ng-value="{{item.count}}"></td>
+        <td class="td-count">
+          <input type="number" name="count" ng-model="cartData[$index].count" 
+            ng-value="{{item.count}}">
+        </td>
         <td class="td-subtotal">{{(item.kgPrice * item.count)}} Р</td>
       </tr>
     </tbody>
