@@ -171,15 +171,14 @@ angular.module("tomaTort")
 })
 .controller("dreamDessertCtrl", function ($scope) {
   // $scope.$on('$viewContentLoaded', function () {
-    var fileUpload = document.querySelector( '#fileUpload' );
-		fileUpload.addEventListener('change', function(e) {
-			var fileName = '';
-			fileName = e.target.value.split('\\').pop();
-			if (fileName) {
-				document.querySelector('.chosenFile').innerHTML = fileName;
-				// fileUpload.filename = fileName;
-			}
-		});
+  //   var fileUpload = document.querySelector( '#fileUpload' );
+		// fileUpload.addEventListener('change', function(e) {
+		// 	var fileName = '';
+		// 	fileName = e.target.value.split('\\').pop();
+		// 	if (fileName) {
+		// 		document.querySelector('.chosenFile').innerHTML = fileName;
+		// 	}
+		// });
   // });
   $scope.dreamDessert = {
     design: [],
@@ -246,5 +245,25 @@ angular.module("tomaTort")
               gallerySliderCtrl.update();
           }
       }
+  };
+})
+.directive("fileUpload", function () {
+  return {
+    restrict: "E",
+    template: 
+    '<input type="file" name="file" id="fileUpload" class="inputfile"' +
+		'ng-model="dreamDessert.file">' +
+		'<label for="fileUpload">Выберите файл</label>' +
+		'<span class="chosenFile">Файл не выбран</span>',
+    controller: function () {
+      var fileUpload = document.querySelector( '#fileUpload' );
+  		fileUpload.addEventListener('change', function(e) {
+  			var fileName = '';
+  			fileName = e.target.value.split('\\').pop();
+  			if (fileName) {
+  				document.querySelector('.chosenFile').innerHTML = fileName;
+  			}
+  		});
+    }
   };
 });
