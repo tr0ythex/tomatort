@@ -175,9 +175,8 @@ angular.module("tomaTort")
   $scope.addToCart = function (product) {
     cart.addProduct(product.id, 
                     product.name, 
-                    product.kgPrice,
-                    product.smallSetPrice,
-                    product.bigSetPrice,
+                    product.price,
+                    product.set,
                     product.imageUrl);
   };
   $scope.openProductItemPage = function (product) {
@@ -190,7 +189,7 @@ angular.module("tomaTort")
   $scope.total = function () {
     var total = 0;
     for (var i = 0; i < $scope.cartData.length; i++) {
-      total += ($scope.cartData[i].kgPrice * $scope.cartData[i].count);
+      total += ($scope.cartData[i].price * $scope.cartData[i].count);
     }
     return total;
   };

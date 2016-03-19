@@ -9,7 +9,7 @@
   
 	<ul class="menu-block fxbx fx-js-start-3 fx-wr-wrap"
 		ng-controller="productCtrl">
-		<li class="menu-item fx-item flip_animated" 
+		<li class="menu-item fx-item" 
 			ng-repeat="product in data.products">
 			<div class="slideup-animated">
 			  <div class="visible">
@@ -17,15 +17,11 @@
 			  	<div class="hidden blackout"
 			  		ng-click="openProductItemPage(product)">
 			  		<p class="menu-item-name">{{product.name}}</p>
-				    <p class="menu-item-price" 
-				    	ng-show="product.kgPrice">
-				    	{{product.kgPrice}} руб / кг
-				    </p>
-				    <p class="menu-item-price" 
-				    	ng-show="product.smallSetPrice && product.bigSetPrice"
-				    	ng-class="(product.smallSetPrice && product.bigSetPrice) ? 'set-price' : ''">
-				    	{{product.smallSetPrice}} руб / 9 шт <br>
-				    	{{product.bigSetPrice}} руб / 12 шт
+				    <p class="menu-item-price">
+				    	{{product.price}} 
+				    	<span ng-hide="product.set">руб / кг</span>
+				    	<span ng-show="product.set == 9">руб / 9 шт</span>
+				    	<span ng-show="product.set == 12">руб / 12 шт</span>
 				    </p>
 				    <button class="btn btn-light" ng-hide="product.ordered"
 			    		ng-click="setOrdered(product.id); 
