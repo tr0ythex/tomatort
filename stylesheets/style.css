@@ -562,6 +562,10 @@ input[type=file] + label + span.chosenFile {
   overflow-x: visible;
 }
 
+#dd-topping textarea {
+  margin-bottom: 0;
+}
+
 .range-block {
   width: 580px;
   margin: -19px auto 0;

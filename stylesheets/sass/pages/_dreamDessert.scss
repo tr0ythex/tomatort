@@ -2,6 +2,11 @@
   border-top: 1px solid $cruise;
   overflow-x: visible;
 }
+#dd-topping {
+  textarea {
+    margin-bottom: 0;
+  }
+}
 
 // range styles for dd-form
 .range-block {
