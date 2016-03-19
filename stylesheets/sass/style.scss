@@ -1,21 +1,24 @@
-// utilities
+/* utilities */
+// general things
 @import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/fonts';
+@import 'utilities/flexbox';
+// general styles
 @import 'utilities/common-styles/classes';
 @import 'utilities/common-styles/elements';
-@import 'utilities/mixins';
-@import 'utilities/range_style';
-@import 'utilities/fonts';
-@import 'utilities/slider';
-@import 'utilities/slideup-animated';
-@import 'utilities/flexbox';
-@import 'utilities/tooltiped';
+// css animations, effects and other cool things
+@import 'utilities/effects/tooltiped';
+@import 'utilities/effects/slider';
+@import 'utilities/effects/slideup-animated';
+// form elements (checkboxes, radios, etc.)
 @import 'utilities/form-elements/checkbox';
 @import 'utilities/form-elements/radio';
 @import 'utilities/form-elements/range';
 @import 'utilities/form-elements/textarea';
 @import 'utilities/form-elements/file';
 
-// pages styles
+/* page styles */
 @import 'pages/menu';
 @import 'pages/productItem';
 @import 'pages/dreamDessert';
@@ -24,7 +27,7 @@
 @import 'pages/checkout';
 @import 'pages/home';
 
-// partials styles
+/* partial styles */
 @import 'partials/nav';
 @import 'partials/btn';
 @import 'partials/menu';

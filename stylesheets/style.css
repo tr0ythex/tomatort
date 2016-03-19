@@ -1,68 +1,832 @@
-/*
-Error: File to import not found or unreadable: utilities/range_style.
-       Load paths:
-         Compass::SpriteImporter
-         /home/ubuntu/workspace/stylesheets/sass
-         /usr/local/rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets
-        on line 6 of /home/ubuntu/workspace/stylesheets/sass/style.scss
+/* utilities */
+/* Merel Light */
+@font-face {
+  font-family: Merel;
+  src: url("/fonts/Merel/Merel-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/Merel/Merel-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/Merel/Merel-Light.otf") format("opentype"), url("/fonts/Merel/Merel-Light.woff") format("woff"), url("/fonts/Merel/Merel-Light.ttf") format("truetype"), url("/fonts/Merel/Merel-Light.svg#Merel-Light") format("svg");
+  /* Legacy iOS */
+  font-weight: 300;
+}
+/* Merel Regular */
+@font-face {
+  font-family: Merel;
+  src: url("/fonts/Merel/Merel.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/Merel/Merel.eot?#iefix") format("embedded-opentype"), url("/fonts/Merel/Merel.otf") format("opentype"), url("/fonts/Merel/Merel.woff") format("woff"), url("/fonts/Merel/Merel.ttf") format("truetype"), url("/fonts/Merel/Merel.svg#Merel") format("svg");
+  /* Legacy iOS */
+  font-weight: 400;
+}
+/* Merel Bold */
+@font-face {
+  font-family: Merel;
+  src: url("/fonts/Merel/Merel-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/Merel/Merel-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Merel/Merel-Bold.otf") format("opentype"), url("/fonts/Merel/Merel-Bold.woff") format("woff"), url("/fonts/Merel/Merel-Bold.ttf") format("truetype"), url("/fonts/Merel/Merel-Bold.svg#Merel-Bold") format("svg");
+  /* Legacy iOS */
+  font-weight: 700;
+}
+/* LeksaPro Light */
+@font-face {
+  font-family: LeksaPro;
+  src: url("/fonts/LeksaPro/LeksaPro-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/LeksaPro/LeksaPro-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/LeksaPro/LeksaPro-Light.woff") format("woff"), url("/fonts/LeksaPro/LeksaPro-Light.ttf") format("truetype"), url("/fonts/LeksaPro/LeksaPro-Light.svg#LeksaPro-Light") format("svg");
+  /* Legacy iOS */
+  font-weight: 300;
+}
+/* LeksaPro Italic */
+@font-face {
+  font-family: LeksaPro;
+  src: url("/fonts/LeksaPro/LeksaPro-Italic.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/LeksaPro/LeksaPro-Italic.eot?#iefix") format("embedded-opentype"), url("/fonts/LeksaPro/LeksaPro-Italic.woff") format("woff"), url("/fonts/LeksaPro/LeksaPro-Italic.ttf") format("truetype"), url("/fonts/LeksaPro/LeksaPro-Italic.svg#LeksaPro-Italic") format("svg");
+  /* Legacy iOS */
+  font-style: italic;
+}
+/* PremianSerif Regular*/
+@font-face {
+  font-family: PermianSerifTypeface;
+  src: url("/fonts/PermianSerifTypeface/PermianSerifTypeface.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/PermianSerifTypeface/PermianSerifTypeface.eot?#iefix") format("embedded-opentype"), url("/fonts/PermianSerifTypeface/PermianSerifTypeface.woff") format("woff"), url("/fonts/PermianSerifTypeface/PermianSerifTypeface.ttf") format("truetype"), url("/fonts/PermianSerifTypeface/PermianSerifTypeface.svg#PermianSerifTypeface") format("svg");
+  /* Legacy iOS */
+  font-weight: 400;
+}
+.merel-light, .menu-item p.menu-item-price {
+  font-family: Merel;
+  font-weight: 300;
+}
 
-1: // utilities
-2: @import 'utilities/variables';
-3: @import 'utilities/common-styles/classes';
-4: @import 'utilities/common-styles/elements';
-5: @import 'utilities/mixins';
-6: @import 'utilities/range_style';
-7: @import 'utilities/fonts';
-8: @import 'utilities/slider';
-9: @import 'utilities/slideup-animated';
-10: @import 'utilities/flexbox';
-11: @import 'utilities/tooltiped';
+.merel-regular, h2, input[type=file] + label, input[type=file] + label + span.chosenFile, #sort-block, #contacts .fx-item:nth-child(n+4), nav, .btn {
+  font-family: Merel;
+  font-weight: 400;
+}
 
-Backtrace:
-/home/ubuntu/workspace/stylesheets/sass/style.scss:6
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/import_node.rb:45:in `import'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/import_node.rb:28:in `imported_file'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/import_node.rb:37:in `css_import?'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/root_node.rb:20:in `render'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/engine.rb:278:in `render'
-/usr/local/rvm/gems/ruby-2.2.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-/usr/local/rvm/gems/ruby-2.2.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-/usr/local/rvm/gems/ruby-2.2.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `each'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `call'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:254:in `call'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/usr/local/rvm/gems/ruby-2.2.1/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: utilities/range_style.\A        Load paths:\A          Compass::SpriteImporter\A          /home/ubuntu/workspace/stylesheets/sass\A          /usr/local/rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets\A         on line 6 of /home/ubuntu/workspace/stylesheets/sass/style.scss\A \A 1: // utilities\A 2: @import 'utilities/variables';\A 3: @import 'utilities/common-styles/classes';\A 4: @import 'utilities/common-styles/elements';\A 5: @import 'utilities/mixins';\A 6: @import 'utilities/range_style';\A 7: @import 'utilities/fonts';\A 8: @import 'utilities/slider';\A 9: @import 'utilities/slideup-animated';\A 10: @import 'utilities/flexbox';\A 11: @import 'utilities/tooltiped';"; }
+.merel-bold, h1 {
+  font-family: Merel;
+  font-weight: 700;
+}
+
+.leksapro-light, .leksapro-light-small {
+  font-family: LeksaPro;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.leksapro-light-small {
+  font-size: 15px;
+}
+
+.leksapro-italic, .leksapro-italic-large, .menu-item p.menu-item-title, .menu-item p.menu-item-name {
+  font-family: LeksaPro;
+  font-style: italic;
+}
+
+.leksapro-italic-large, .menu-item p.menu-item-title, .menu-item p.menu-item-name {
+  font-size: 20px;
+}
+
+.permianserif-regular, p {
+  font-family: PermianSerifTypeface;
+  font-weight: 400;
+}
+
+.fxbx {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.fx-js-sp-between {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.fx-js-start-3 {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.fx-js-start-3 .fx-item:nth-child(3n-1) {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.fx-js-sp-around {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+.fx-wr-wrap {
+  -webkit-flex-wrap: wrap;
+  /* Safari 6.1+ */
+  flex-wrap: wrap;
+}
+
+.fx-va-center {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.overflown-auto {
+  overflow: auto;
+}
+
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  width: 170px;
+  margin: 40px auto;
+}
+
+.top-bottom-margined {
+  margin: 40px 0;
+}
+
+.blackout {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul, li, h1, h2, p, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+footer {
+  height: 100px;
+  background: #353535;
+}
+
+section.sec-short {
+  height: 300px;
+}
+section.sec-top-margined {
+  margin-top: 50px;
+}
+section.sec-bottom-margined {
+  margin-bottom: 50px;
+}
+section.sec-lr-padded {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 85px 0 40px;
+}
+
+h2 {
+  font-size: 23px;
+  line-height: 23px;
+  margin: 50px 0 40px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 15px;
+  line-height: 29px;
+  margin: 0 auto;
+}
+
+form {
+  padding: 0 150px;
+}
+form textarea {
+  border: 1px solid #C6F4E5;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 115px;
+  resize: vertical;
+  margin-bottom: 0;
+  outline: none;
+}
+form.validate .ng-invalid {
+  background-color: #ffe6e6;
+}
+form.validate .ng-invalid + label {
+  background-color: #ffe6e6;
+}
+
+.tooltiped {
+  position: relative;
+  display: inline;
+}
+.tooltiped:hover span {
+  visibility: visible;
+  opacity: 0.9;
+}
+.tooltiped span {
+  position: absolute;
+  width: 180px;
+  background: #B0EADA;
+  visibility: hidden;
+  box-sizing: border-box;
+  padding: 10px;
+  opacity: 0;
+  top: 30px;
+  left: 50%;
+  margin-left: -90px;
+  transition: all 0.5s ease-in-out;
+}
+.tooltiped span:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid #B0EADA;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+/* bxslider */
+.gallery-slider .gs-item {
+  display: inline-block;
+  vertical-align: middle;
+  float: none !important;
+  position: static !important;
+}
+.gallery-slider .gs-item .slider-title {
+  position: absolute;
+  bottom: 0;
+  width: 891px;
+  height: 64px;
+  line-height: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding-top: 14px;
+}
+.gallery-slider .gs-item img {
+  margin: auto;
+  max-height: 515px;
+  width: auto;
+}
+
+.bx-wrapper {
+  margin-bottom: 30px !important;
+}
+.bx-wrapper .bx-viewport {
+  width: 99% !important;
+  height: 515px !important;
+  margin: 0 auto !important;
+  left: 0 !important;
+  border: none !important;
+  box-sizing: border-box;
+  box-shadow: none !important;
+}
+
+.slideup-animated {
+  height: inherit;
+}
+.slideup-animated .visible {
+  height: inherit;
+  position: relative;
+  overflow-y: hidden;
+}
+.slideup-animated .visible:hover .hidden {
+  top: 0%;
+}
+.slideup-animated .visible .hidden {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 230px;
+  left: 0;
+  transition: top 0.5s ease-in-out;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox]:checked + label {
+  background: #C6F4E5;
+}
+input[type=checkbox] + label {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px 0;
+  width: 142px;
+  height: 100px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+input[type=radio] {
+  display: none;
+}
+input[type=radio] + label {
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 8px 16px;
+}
+input[type=radio]:checked + label {
+  background-color: #B0EADA;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  /* webkit styles */
+  /* mozilla styles */
+  /* explorer styles */
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #B0EADA;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #B0EADA;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #B0EADA;
+}
+input[type=range]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #B0EADA;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower, input[type=range]::-ms-fill-upper {
+  background: #B0EADA;
+}
+input[type=range]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #B0EADA;
+  cursor: pointer;
+}
+
+input[type=file] {
+  display: none;
+}
+input[type=file] + label {
+  display: inline-block;
+  width: 190px;
+  height: 50px;
+  line-height: 48px;
+  font-size: 15px;
+  margin-top: 30px;
+  border: 1px solid #B0EADA;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+input[type=file] + label:hover {
+  background: #B0EADA;
+  color: #4d4d4d;
+  border: none;
+}
+input[type=file] + label + span.chosenFile {
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+/* page styles */
+#sort-block {
+  width: 360px;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 0 auto 50px;
+}
+#sort-block .sort-item:nth-of-type(2):hover,
+#sort-block .sort-item:nth-of-type(3):hover {
+  color: #3BBFA5;
+  cursor: pointer;
+}
+
+#order-dream-dessert {
+  height: 150px;
+  margin-top: 50px;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/images/dream.png);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/dream.png);
+  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/dream.png);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/dream.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/dream.png);
+  background-size: contain;
+}
+#order-dream-dessert .btn {
+  width: 250px;
+  margin-top: 50px;
+}
+
+#product_info {
+  height: auto;
+}
+#product_info h2 {
+  margin-top: 30px;
+}
+#product_info .product_pic {
+  width: 600px;
+  height: 450px;
+  float: left;
+}
+#product_info .info {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  float: right;
+  text-align: left;
+  padding-left: 46px;
+  box-sizing: border-box;
+}
+#product_info .info .price {
+  font-family: Merel;
+  font-weight: 300;
+  font-size: 53px;
+  line-height: 30px;
+}
+#product_info .info .desc {
+  font-family: PermianSerifTypeface;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 60px;
+}
+#product_info .info .composition {
+  text-align: left;
+  margin-top: 78px;
+}
+#product_info .info .btn {
+  position: absolute;
+  bottom: 0;
+}
+#product_info .back {
+  text-transform: uppercase;
+  font-family: Merel;
+  font-weight: 400;
+  font-size: 16px;
+  float: left;
+  margin: 78px 0;
+  cursor: pointer;
+}
+
+#dd-form {
+  border-top: 1px solid #B0EADA;
+  overflow-x: visible;
+}
+
+.range-block {
+  width: 580px;
+  margin: -19px auto 0;
+  height: 16px;
+  border-left: 1px solid #B0EADA;
+  border-right: 1px solid #B0EADA;
+}
+.range-block .range-item {
+  border-left: 1px solid #B0EADA;
+}
+.range-block .range-item-3 {
+  width: 200px;
+}
+.range-block .range-item-6 {
+  width: 100px;
+}
+
+.title-block {
+  margin-top: 10px;
+}
+
+.title-block-3 {
+  width: 110%;
+  margin-left: -7%;
+}
+
+.title-block-6 {
+  width: 102%;
+  margin-left: -1%;
+}
+
+.ci_item {
+  width: 260px;
+  height: 50px;
+  border: 1px solid #B4EEDE;
+  font-family: LeksaPro;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#cake_params .customer_info h2 {
+  margin-top: 80px;
+}
+
+#contacts .fx-item {
+  width: 33%;
+  height: 60px;
+}
+#contacts .fx-item:nth-child(n+4) {
+  font-size: 20px;
+}
+
+.ya-map {
+  height: 500px;
+  margin-top: 50px;
+}
+
+.delivery_form {
+  width: 600px;
+  margin: 0 auto;
+}
+.delivery_form h2 {
+  margin-top: 20px;
+}
+.delivery_form .di_item {
+  width: 600px;
+  height: 50px;
+  border: 1px solid #B4EEDE;
+  margin: 0 auto 40px;
+  font-family: LeksaPro;
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.delivery_info {
+  height: auto;
+}
+
+#checkout .toma_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#checkout .toma_table th, #checkout .toma_table td {
+  width: 150px;
+  min-width: 150px;
+}
+#checkout .toma_table th[colspan='2'], #checkout .toma_table td[colspan='2'] {
+  width: 300px;
+  max-width: 300px;
+}
+#checkout .toma_table th[colspan='3'], #checkout .toma_table td[colspan='3'] {
+  width: 450px;
+  max-width: 450px;
+}
+#checkout .toma_table th {
+  font-family: LeksaPro;
+  font-size: 16px;
+  font-style: italic;
+  height: 40px;
+}
+#checkout .toma_table td {
+  height: 150px;
+}
+#checkout .toma_table td.td_img {
+  padding: 10px;
+}
+#checkout .toma_table td.td_count input {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  border: 2px solid #B0EADA;
+}
+#checkout .toma_table td.td_price, #checkout .toma_table td.td_count input, #checkout .toma_table td.td_subtotal, #checkout .toma_table td.td_total_txt, #checkout .toma_table td.td_total {
+  font-family: Merel;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#checkout .toma_table td.td_del_type {
+  font-family: LeksaPro;
+  font-size: 20px;
+  font-style: italic;
+  text-align: left;
+}
+#checkout .toma_table td.td_total_txt {
+  text-align: right;
+}
+#checkout .toma_table td img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#checkout .toma_table td p {
+  text-align: left;
+  margin: 15px 0 15px 10px;
+}
+#checkout .toma_table td p.name {
+  font-family: Merel;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+#checkout .toma_table td p.weight {
+  font-family: LeksaPro;
+  font-size: 20px;
+  font-style: italic;
+}
+#checkout .toma_table tr {
+  border-top: 2px solid #B0EADA;
+}
+#checkout .btn {
+  margin-bottom: 40px;
+}
+
+#sec-promo {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/images/promo.jpg);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
+  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/promo.jpg);
+  background-size: contain;
+  color: white;
+}
+
+.sec-two-column .fx-item {
+  width: 48%;
+}
+
+/* partial styles */
+nav {
+  text-transform: uppercase;
+  width: 660px;
+  margin: 0 auto;
+}
+nav#nav-top {
+  font-size: 18px;
+  width: 660px;
+  color: #353535;
+}
+nav#nav-top li:hover {
+  color: #3BBFA5;
+}
+nav#nav-bottom {
+  font-size: 15px;
+  width: 500px;
+  color: #808080;
+  margin-top: 25px;
+}
+nav#nav-bottom li:hover {
+  color: #A8CCC8;
+}
+nav li {
+  display: inline-block;
+  cursor: pointer;
+}
+nav li.li-active {
+  color: #3BBFA5;
+}
+nav .tel {
+  width: 55%;
+  margin: 12px auto;
+}
+
+.btn {
+  display: block;
+  box-sizing: border-box;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 190px;
+  height: 50px;
+  line-height: 48px;
+  margin: 40px auto 0;
+}
+.btn:hover {
+  color: #4d4d4d;
+  background: #B0EADA;
+  border: none;
+}
+
+.btn-dark {
+  border: 1px solid #686868;
+  color: #444444;
+}
+
+.btn-light {
+  border: 1px solid white;
+  color: white;
+}
+
+form .btn {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.menu-item {
+  position: relative;
+  height: 300px;
+  width: 296px;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+.menu-item p {
+  width: 100%;
+  color: white;
+  position: absolute;
+  z-index: 2;
+}
+.menu-item p.menu-item-title {
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  height: 47px;
+  line-height: 47px;
+  border-top: 1px solid #686868;
+}
+.menu-item p.menu-item-name {
+  top: 20px;
+}
+.menu-item p.menu-item-price {
+  font-size: 30px;
+  top: 115px;
+}
+.menu-item p.set-price {
+  line-height: 40px;
+  top: 95px;
+}
+.menu-item .btn {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+}
