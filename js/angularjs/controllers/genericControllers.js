@@ -86,10 +86,10 @@ angular.module("tomaTort")
        "description": "Один из самых оригинальных десертов с тающим "+
              "во рту безе и легким кремом в сочетании с вашими любимыми ягодами"
       },
-      {"id": 10, "name": "Прага", "price": 1500,
-       "imageUrl": "/images/products/praga.jpg",
-       "description": "Один из любимых вкусов детства, который мы " +
-                      "воспроизвели для вас в этом прекрасном торте"
+      {"id": 10, "name": "Муссовый торт", "price": 2000,
+       "imageUrl": "/images/products/mousse-cake.jpg",
+       "description": "Изысканный современный десерт на основе мусса вашего " +
+                      "любимого вкуса"
       },
       {"id": 11, "name": "Морковный торт", "price": 1500,
        "imageUrl": "/images/products/carrot-cake.jpg",
