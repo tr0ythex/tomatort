@@ -28,5 +28,5 @@
   $subject = "Новый заказ";
   $headers = "From: info@tomatort.ru";
  
-  mail($to, $subject, $txt, $headers);
+  mail($to, $subject, $msg_body, $headers);
 ?>
