@@ -1,6 +1,4 @@
 <?php
-  require("sendgrid-php/sendgrid-php.php");
-  
   // get data from form and decode it
   $postdata = file_get_contents("php://input");
   $request = json_decode($postdata);
