@@ -15,12 +15,41 @@
   $deliveryType = $request->deliveryType;
   $cartData = $request->cartData;
   
-  // make html body of message
-  $html = "<h2>Информация о заказчике</h2>";
+  /* make html body of message */
+  // form order table
+  $table = "
+    <table>
+      <thead>
+        <tr>
+          <th>Название</th>
+          <th>Цена</th>
+          <th>Количество</th>
+          <th>Упаковка</th>
+        </tr>
+      </thead>
+      <tbody>";
+  foreach ($cartData as $item) {
+    $set = $item->set ? $item->set . ' шт' : 'кг';
+    $row = "
+        <tr>
+          <td>{$item->name}</td>
+          <td>{$item->price}</td>
+          <td>{$item->count}</td>
+          <td>{$set}</td>
+        </tr>";
+    $table .= $row;
+  }
+  $table .= "
+      </tbody>
+    </table>";
+  $html = $table;
+    
+  $html .= "<h2>Информация о заказчике</h2>";
   $html .= "<strong>Имя: </strong>" . $firstName . "<br>";
   $html .= "<strong>Фамилия: </strong>" . $lastName . "<br>";
   $html .= "<strong>E-mail: </strong>" . $email . "<br>";
   $html .= "<strong>Телефон: </strong>" . $tel . "<br>";
+  
   $html .= "<h2>Информация о доставке</h2>";
   $html .= "<strong>Адрес: </strong>" . $address . "<br>";
   $html .= "<strong>Комментарий: </strong>" . $comment . "<br>";
