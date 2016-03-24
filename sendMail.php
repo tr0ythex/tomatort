@@ -18,7 +18,7 @@
   /* make html body of message */
   // form order table
   $table = "
-    <table>
+    <table border='1'>
       <thead>
         <tr>
           <th>Название</th>
@@ -42,7 +42,9 @@
   $table .= "
       </tbody>
     </table>";
-  $html = $table;
+    
+  $html = "<h2>Заказ</h2>";
+  $html .= $table;
     
   $html .= "<h2>Информация о заказчике</h2>";
   $html .= "<strong>Имя: </strong>" . $firstName . "<br>";
