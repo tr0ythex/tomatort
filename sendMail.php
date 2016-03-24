@@ -9,17 +9,24 @@
   $address = $request->address;
   $comment = $request->comment;
   
-  $output = "Новый заказ\n\n";
+  $msg_body = "Новый заказ\n\n";
   
-  $output .= "Информация о заказчике\n";
-  $output .= "Имя: " . $firstName . "\n";
-  $output .= "Фамилия: " . $lastName . "\n";
-  $output .= "E-mail: " . $email . "\n";
-  $output .= "Телефон: " . $tel . "\n";
+  $msg_body .= "Информация о заказчике\n";
+  $msg_body .= "Имя: " . $firstName . "\n";
+  $msg_body .= "Фамилия: " . $lastName . "\n";
+  $msg_body .= "E-mail: " . $email . "\n";
+  $msg_body .= "Телефон: " . $tel . "\n";
   
-  $output .= "Информация о доставке\n";
-  $output .= "Адрес: " . $address . "\n";
-  $output .= "Комментарий: " . $comment . "\n";
+  $msg_body .= "Информация о доставке\n";
+  $msg_body .= "Адрес: " . $address . "\n";
+  $msg_body .= "Комментарий: " . $comment . "\n";
   
-  echo $output;
+  // echo $msg_body;
+  
+  // message
+  $to = "scytherclaw@gmail.com";
+  $subject = "Новый заказ";
+  $headers = "From: info@tomatort.ru";
+ 
+  mail($to, $subject, $txt, $headers);
 ?>
