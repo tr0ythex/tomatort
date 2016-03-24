@@ -13,6 +13,7 @@
   $address = $request->address;
   $comment = $request->comment;
   $deliveryType = $request->deliveryType;
+  $cartData = $request->cartData;
   
   // make html body of message
   $html = "<h2>Информация о заказчике</h2>";
