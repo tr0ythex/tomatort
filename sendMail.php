@@ -12,6 +12,7 @@
   $tel = $request->tel;
   $address = $request->address;
   $comment = $request->comment;
+  $deliveryType = $request->deliveryType;
   
   // make html body of message
   $html = "<h2>Информация о заказчике</h2>";
@@ -22,6 +23,7 @@
   $html .= "<h2>Информация о доставке</h2>";
   $html .= "<strong>Адрес: </strong>" . $address . "<br>";
   $html .= "<strong>Комментарий: </strong>" . $comment . "<br>";
+  $html .= "<strong>Способ доставки: </strong>" . $deliveryType . "<br>";
   
   // set headers
   $to = "tr0ythex@gmail.com";

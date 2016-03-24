@@ -147,7 +147,7 @@ angular.module("tomaTort")
       }
     ],
     shipping: {
-      deliveryType: 'selfPickup',
+      deliveryType: 'Самовывоз',
       sent: false
     }
   };
@@ -177,7 +177,8 @@ angular.module("tomaTort")
           email: $scope.data.shipping.email,
           tel: $scope.data.shipping.tel,
           address: $scope.data.shipping.address,
-          comment: $scope.data.shipping.comment
+          comment: $scope.data.shipping.comment,
+          deliveryType: $scope.data.shipping.deliveryType
         },
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       });
