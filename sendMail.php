@@ -58,7 +58,8 @@
   $html .= "<strong>Способ доставки: </strong>" . $deliveryType . "<br>";
   
   // set headers
-  $to = "tr0ythex@gmail.com";
+  $admin_email = "scytherclaw@gmail.com";
+  $customer_email = $email;
   $from = "info@tomatort.ru";
   $subject = "Новый заказ";
   
@@ -66,14 +67,25 @@
   $sendgrid = new SendGrid
     ('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');
   
-  // make a sendgrid email message with all previous data
+  // make a sendgrid email to admin
   $email = new SendGrid\Email();
   $email
-    ->addTo($to)
+    ->addTo($admin_email)
     ->setFrom($from)
     ->setSubject($subject)
     ->setHtml($html);
-    
-  // send email
+  $sendgrid->send($email);
+  
+  // make a sendgrid email to customer
+  $html = "<h2>Ваш заказ</h2>";
+  $html .= $table;
+  $html .= "<p>Заказ был успешно отправлен. Скоро с Вами свяжется менеджер для
+    уточнения заказа</p>";
+  $email = new SendGrid\Email();
+  $email
+    ->addTo($customer_email)
+    ->setFrom($from)
+    ->setSubject($subject)
+    ->setHtml($html);
   $sendgrid->send($email);
 ?>
