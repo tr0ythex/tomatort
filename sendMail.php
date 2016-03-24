@@ -60,32 +60,18 @@
   // set headers
   $admin_email = "scytherclaw@gmail.com";
   $customer_email = $email;
-  $from = "info@tomatort.ru";
   $subject = "Новый заказ";
-  
-  // create sendgrid object with api key
-  $sendgrid = new SendGrid
-    ('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');
-  
-  // make a sendgrid email to admin
-  $email = new SendGrid\Email();
-  $email
-    ->addTo($admin_email)
-    ->setFrom($from)
-    ->setSubject($subject)
-    ->setHtml($html);
-  $sendgrid->send($email);
+  $headers = "From: info@tomatort.ru";
+ 
+  // send email to admin
+  mail($admin_email, $subject, $html, $headers);
   
   // make a sendgrid email to customer
   $html = "<h2>Ваш заказ</h2>";
   $html .= $table;
   $html .= "<p>Заказ был успешно отправлен. Скоро с Вами свяжется менеджер для
     уточнения заказа</p>";
-  $email = new SendGrid\Email();
-  $email
-    ->addTo($customer_email)
-    ->setFrom($from)
-    ->setSubject($subject)
-    ->setHtml($html);
-  $sendgrid->send($email);
+  
+  // send email to customer
+  mail($customer_email, $subject, $html, $headers);
 ?>
