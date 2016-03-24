@@ -719,6 +719,7 @@ form .btn {
   width: 100%;
   text-align: left;
   padding-left: 15px;
+  box-sizing: border-box;
 }
 
 #checkout-table {

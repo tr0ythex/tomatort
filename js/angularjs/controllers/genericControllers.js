@@ -168,13 +168,16 @@ angular.module("tomaTort")
   $scope.sendShip = function (deliveryForm) {
     if (deliveryForm.$valid) {
       $scope.data.shipping.sent = true;
-      
       var request = $http({
         method: "post",
-        url: "http://tomatort.ru/sendMail.php",
+        url: "/sendMail.php",
         data: {
           firstName: $scope.data.shipping.firstName,
-          lastName: $scope.data.shipping.lastName
+          lastName: $scope.data.shipping.lastName,
+          email: $scope.data.shipping.email,
+          tel: $scope.data.shipping.tel,
+          address: $scope.data.shipping.address,
+          comment: $scope.data.shipping.comment
         },
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       });
