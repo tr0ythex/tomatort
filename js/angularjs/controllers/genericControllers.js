@@ -183,7 +183,7 @@ angular.module("tomaTort")
       });
       
       request.success(function (data) {
-        console.log("Success: " + data);
+        console.log("Success: E-mail successfully sent");
       });
        
     } else {
