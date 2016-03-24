@@ -171,7 +171,7 @@ angular.module("tomaTort")
       
       var request = $http({
         method: "post",
-        // url: window.location.href + "sendMail.php",
+        url: "http://tomatort.ru/sendMail.php",
         data: {
           firstName: $scope.data.shipping.firstName,
           lastName: $scope.data.shipping.lastName
