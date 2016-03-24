@@ -24,9 +24,9 @@
   // echo $msg_body;
   
   // message
-  $to = "scytherclaw@gmail.com";
+  $to = "tr0ythex@gmail.com";
   $subject = "Новый заказ";
   $headers = "From: info@tomatort.ru";
  
-  mail($to, $subject, $txt, $headers);
+  mail($to, $subject, $msg_body, $headers);
 ?>
