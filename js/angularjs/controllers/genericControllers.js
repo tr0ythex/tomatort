@@ -167,7 +167,7 @@ angular.module("tomaTort")
   };
   $scope.sendShip = function (deliveryForm) {
     if (deliveryForm.$valid) {
-      $scope.data.shipping.sent = true;
+      
       var request = $http({
         method: "post",
         url: "/sendMail.php",
@@ -183,7 +183,7 @@ angular.module("tomaTort")
       });
       
       request.success(function (data) {
-        console.log("Success: E-mail successfully sent");
+        $scope.data.shipping.sent = true;
       });
        
     } else {

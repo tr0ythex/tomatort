@@ -14,15 +14,14 @@
   $comment = $request->comment;
   
   // make html body of message
-  $html = "<h1>Поступил новый заказ</h1>";
-  $html .= "<h2>Информация о заказчике</h2>";
-  $html .= "Имя: " . $firstName . "<br>";
-  $html .= "Фамилия: " . $lastName . "<br>";
-  $html .= "E-mail: " . $email . "<br>";
-  $html .= "Телефон: " . $tel . "<br>";
+  $html = "<h2>Информация о заказчике</h2>";
+  $html .= "<strong>Имя: </strong>" . $firstName . "<br>";
+  $html .= "<strong>Фамилия: </strong>" . $lastName . "<br>";
+  $html .= "<strong>E-mail: </strong>" . $email . "<br>";
+  $html .= "<strong>Телефон: </strong>" . $tel . "<br>";
   $html .= "<h2>Информация о доставке</h2>";
-  $html .= "Адрес: " . $address . "<br>";
-  $html .= "Комментарий: " . $comment . "<br>";
+  $html .= "<strong>Адрес: </strong>" . $address . "<br>";
+  $html .= "<strong>Комментарий: </strong>" . $comment . "<br>";
   
   // set headers
   $to = "tr0ythex@gmail.com";
