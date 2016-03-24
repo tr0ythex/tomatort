@@ -59,17 +59,19 @@
   $admin_email = "scytherclaw@gmail.com";
   $customer_email = $email;
   $subject = "Новый заказ";
-  $headers = "From: order@tomatort.ru";
+  // Для отправки HTML-письма должен быть установлен заголовок Content-type
+  $headers  = 'MIME-Version: 1.0' . "\r\n";
+  $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+  $headers .= "From: Tomatort Info <info@tomatort.ru>";
  
   // send email to admin
   mail($admin_email, $subject, $html, $headers);
   
-  // make a sendgrid email to customer
-  // $html = "<h2>Ваш заказ</h2>";
-  // $html .= $table;
-  // $html .= "<p>Заказ был успешно отправлен. Скоро с Вами свяжется менеджер для
-  //   уточнения заказа</p>";
-  
-  // // send email to customer
-  // mail($customer_email, $subject, $html, $headers);
+  // send email to customer
+  $html = "<h2>Ваш заказ</h2>";
+  $html .= $table;
+  $html .= "<p>Заказ был успешно отправлен. Скоро с Вами свяжется менеджер для
+    уточнения заказа</p>";
+    
+  mail($customer_email, $subject, $html, $headers);
 ?>
