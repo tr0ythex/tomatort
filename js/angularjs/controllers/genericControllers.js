@@ -165,9 +165,24 @@ angular.module("tomaTort")
       }
     }
   };
-  $scope.sendShip = function (deliveryForm) {
+  $scope.sendShip = function (deliveryForm, $http) {
     if (deliveryForm.$valid) {
       $scope.data.shipping.sent = true;
+      
+      var request = $http({
+        method: "post",
+        url: window.location.href + "sendMail.php",
+        data: {
+          firstName: $scope.data.shipping.firstName,
+          lastName: $scope.data.shipping.lastName
+        },
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      });
+      
+      request.success(function (data) {
+        console.log("Success: " + data);
+      });
+       
     } else {
       $scope.showValidation = true;
     }
