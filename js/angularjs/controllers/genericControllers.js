@@ -186,7 +186,7 @@ angular.module("tomaTort")
       
       request.success(function (data) {
         $scope.data.shipping.sent = true;
-        // console.log(data);
+        console.log(data);
       });
        
     } else {
