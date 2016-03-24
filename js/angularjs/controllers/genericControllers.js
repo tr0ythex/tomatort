@@ -34,8 +34,8 @@ angular.module("tomaTort")
   var pId = $location.path().split("/")[2];
   $scope.selectedProduct = $scope.getProduct(pId);
 })
-.controller("tomaTortCtrl", function ($scope, $location, menuActiveClass, cart,
-  instagramLink, toppingPlaceholder) {
+.controller("tomaTortCtrl", function ($scope, $http, $location, 
+  menuActiveClass, cart, instagramLink, toppingPlaceholder) {
     
   $scope.instagramLink = instagramLink;
   $scope.toppingPlaceholder = toppingPlaceholder;
@@ -165,7 +165,7 @@ angular.module("tomaTort")
       }
     }
   };
-  $scope.sendShip = function (deliveryForm, $http) {
+  $scope.sendShip = function (deliveryForm) {
     if (deliveryForm.$valid) {
       $scope.data.shipping.sent = true;
       
