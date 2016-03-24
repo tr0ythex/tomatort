@@ -9,6 +9,7 @@
   $address = $request->address;
   $comment = $request->comment;
   $deliveryType = $request->deliveryType;
+  $cartData = $request->cartData;
   
   $msg_body = "Новый заказ\n\n";
   

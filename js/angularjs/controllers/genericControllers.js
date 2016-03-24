@@ -178,7 +178,8 @@ angular.module("tomaTort")
           tel: $scope.data.shipping.tel,
           address: $scope.data.shipping.address,
           comment: $scope.data.shipping.comment,
-          deliveryType: $scope.data.shipping.deliveryType
+          deliveryType: $scope.data.shipping.deliveryType,
+          cartData: cart.getProducts()
         },
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       });
