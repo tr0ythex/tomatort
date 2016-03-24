@@ -8,6 +8,7 @@
   $tel = $request->tel;
   $address = $request->address;
   $comment = $request->comment;
+  $deliveryType = $request->deliveryType;
   
   $msg_body = "Новый заказ\n\n";
   
@@ -20,6 +21,7 @@
   $msg_body .= "Информация о доставке\n";
   $msg_body .= "Адрес: " . $address . "\n";
   $msg_body .= "Комментарий: " . $comment . "\n";
+  $msg_body .= "Способ доставки: " . $deliveryType . "\n";
   
   // echo $msg_body;
   
