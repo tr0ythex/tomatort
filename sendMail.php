@@ -10,6 +10,7 @@
   $tel = $request->tel;
   $comment = $request->comment;
   $cartData = $request->cartData;
+  $dreamDessert = $request->dreamDessert;
   
   // set email params
   $admin_email = "scytherclaw@gmail.com";
@@ -20,10 +21,11 @@
   $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
   $headers .= "From: Tomatort Info <info@tomatort.ru>";
   
-  if ($cartData) {
+  if ($dreamDessert) {
+    
+  } else if ($cartData) {
     $address = $request->address;
     $deliveryType = $request->deliveryType;
-    // $cartData = $request->cartData;
     
     /* make html body of message */
     // form order table

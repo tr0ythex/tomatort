@@ -186,7 +186,6 @@ angular.module("tomaTort")
       
       request.success(function (data) {
         $scope.data.shipping.sent = true;
-        console.log(data);
       });
        
     } else {
@@ -220,10 +219,10 @@ angular.module("tomaTort")
 })
 .controller("dreamDessertCtrl", function ($scope, $http) {
   $scope.dreamDessert = {
-    design: [],
     base: 'Шоколадная',
     cream: 1,
     topping: '',
+    design: [],
     size: 2,
     // file: null,
     sent: false
@@ -245,13 +244,12 @@ angular.module("tomaTort")
           lastName: $scope.data.shipping.lastName,
           email: $scope.data.shipping.email,
           tel: $scope.data.shipping.tel,
-          comment: $scope.data.shipping.comment
+          dreamDessert: $scope.dreamDessert
         },
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       });
       request.success(function (data) {
         $scope.dreamDessert.sent = true;
-        console.log(data);
       });
     } else {
       $scope.showValidation = true;
@@ -278,7 +276,6 @@ angular.module("tomaTort")
       });
       request.success(function (data) {
         $scope.callback.sent = true;
-        console.log(data);
       });
     } else {
       $scope.showValidation = true;
