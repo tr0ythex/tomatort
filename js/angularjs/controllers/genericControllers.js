@@ -253,15 +253,7 @@ angular.module("tomaTort")
       {name: 'Другое', selected: false},
     ],
     size: 2,
-    // file: null,
     sent: false
-  };
-  $scope.shouldBeRequired = function () {
-    if ($scope.dreamDessert.design.indexOf(true) > -1) {
-      return false;
-    } else {
-      return true;
-    }
   };
   $scope.sendDreamDessert = function (dreamDessertForm) {
     if (dreamDessertForm.$valid) {

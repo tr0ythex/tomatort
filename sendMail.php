@@ -21,9 +21,40 @@
   $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
   $headers .= "From: Tomatort Info <info@tomatort.ru>";
   
-  if ($dreamDessert) {
-    print_r($dreamDessert);
-  } else if ($cartData) {
+  if ($dreamDessert) { // send email from dreamDessert page
+    // send email to admin
+    $subject = "Десерт мечты";
+    
+    $dd_content = "<strong>Основа: </strong>" . $dreamDessert->base ."<br>";
+    $dd_content .= "<strong>Крем: </strong>" . $dreamDessert->cream->name ."<br>";
+    $dd_content .= "<strong>Добавки: </strong>" . $dreamDessert->topping ."<br>";
+    $dd_content .= "<strong>Дизайн: </strong>";
+    foreach ($item as $dreamDessert->design) {
+      if ($item->selected) {
+        $dd_content .= $item->name . ", ";
+      }
+    }
+    // replace last comma and space with <br> and return result
+    $dd_content = substr_replace($html, "<br>", -2);
+    $dd_content .= "<strong>Размер торта: </strong>" 
+      . $dreamDessert->size . " кг<br>";
+      
+    $html = "<h2>Заказ десерта мечты</h2>";
+    $html .= $dd_content;
+    $html .= "<h2>Информация о заказчике</h2>";
+    $html .= "<strong>Имя: </strong>" . $firstName . "<br>";
+    $html .= "<strong>Фамилия: </strong>" . $lastName . "<br>";
+    $html .= "<strong>E-mail: </strong>" . $email . "<br>";
+    $html .= "<strong>Телефон: </strong>" . $tel . "<br>";
+    
+    mail($admin_email, $subject, $html, $headers);
+    
+    $html = "<h2>Ваш десерт мечты</h2>";
+    $html .= $dd_content;
+    $html .= "<p>Скоро с Вами свяжется менеджер для уточнения заказа</p>";
+
+    mail($customer_email, $subject, $html, $headers);
+  } else if ($cartData) { // send email from placeOrder page
     $address = $request->address;
     $deliveryType = $request->deliveryType;
     
@@ -79,8 +110,8 @@
       уточнения заказа</p>";
       
     mail($customer_email, $subject, $html, $headers);
-  } else {
-    $html = "<h2>Заказан обратный звонок</h2>";
+  } else { // send email from contacts page
+    $html = "<h2>Заказ обратного звонка</h2>";
     $html .= "<strong>Имя: </strong>" . $firstName . "<br>";
     $html .= "<strong>Фамилия: </strong>" . $lastName . "<br>";
     $html .= "<strong>E-mail: </strong>" . $email . "<br>";
