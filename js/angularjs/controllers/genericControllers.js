@@ -218,9 +218,29 @@ angular.module("tomaTort")
   };
 })
 .controller("dreamDessertCtrl", function ($scope, $http) {
+  
+  function Cream(curId) {
+    var creamNameArr = ['С кислинкой', 'Послаще', 'Шоколадный', 'Особый'];
+    var id = curId;
+    var name = creamNameArr[id - 1];
+    
+    this.__defineGetter__("id", function () {
+        return id;
+    });
+    this.__defineSetter__("id", function (val) {        
+        id = parseInt(val, 10);
+    });
+    this.__defineGetter__("name", function () {
+        return name;
+    });
+    this.__defineSetter__("name", function (val) {
+        name = creamNameArr[val];
+    });
+  }
+  
   $scope.dreamDessert = {
     base: 'Шоколадная',
-    cream: 1,
+    cream: new Cream(1),
     topping: '',
     design: [
       {name: 'Ягоды/фрукты', selected: false},
