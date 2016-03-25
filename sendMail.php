@@ -9,6 +9,7 @@
   $email = $request->email;
   $tel = $request->tel;
   $comment = $request->comment;
+  $cartData = $request->cartData;
   
   // set email params
   $admin_email = "scytherclaw@gmail.com";
@@ -19,7 +20,7 @@
   $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
   $headers .= "From: Tomatort Info <info@tomatort.ru>";
   
-  if ($cartData = $request->cartData) {
+  if ($cartData) {
     $address = $request->address;
     $deliveryType = $request->deliveryType;
     // $cartData = $request->cartData;
