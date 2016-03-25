@@ -222,7 +222,16 @@ angular.module("tomaTort")
     base: 'Шоколадная',
     cream: 1,
     topping: '',
-    design: [],
+    design: [
+      {name: 'Ягоды/фрукты', selected: false},
+      {name: 'Цветы', selected: false},
+      {name: 'Глазурь', selected: false},
+      {name: 'Декор из мастики', selected: false},
+      {name: 'Надпись', selected: false},
+      {name: 'Флажки/несъедобные элементы', selected: false},
+      {name: 'Конфеты/маршмеллоу/мармелад', selected: false},
+      {name: 'Другое', selected: false},
+    ],
     size: 2,
     // file: null,
     sent: false
@@ -250,6 +259,7 @@ angular.module("tomaTort")
       });
       request.success(function (data) {
         $scope.dreamDessert.sent = true;
+        console.log(data);
       });
     } else {
       $scope.showValidation = true;

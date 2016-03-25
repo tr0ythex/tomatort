@@ -75,53 +75,13 @@
   <section id="dd-design">
 	  <h2>Дизайн</h2>
 	  <div class="fxbx fx-js-sp-between fx-wr-wrap">
-	  	<input type="checkbox" name="dd-design" id="dd-design-1"
-	  		ng-model="dreamDessert.design[0]"><!-- ng-required="shouldBeRequired()" -->
-	  	<label class="leksapro-italic-large" for="dd-design-1">
-	  		Ягоды/фрукты
-	  	</label>
-	  	
-    	<input type="checkbox" name="dd-design" id="dd-design-2"
-    	 	ng-model="dreamDessert.design[1]">
-    	<label class="leksapro-italic-large" for="dd-design-2">
-    		Цветы
-    	</label>
-    	
-    	<input type="checkbox" name="dd-design" id="dd-design-3"
-    		ng-model="dreamDessert.design[2]">
-    	<label class="leksapro-italic-large" for="dd-design-3">
-    		Глазурь
-    	</label>
-    	
-    	<input type="checkbox" name="dd-design" id="dd-design-4"
-    		ng-model="dreamDessert.design[3]">
-    	<label class="leksapro-italic-large" for="dd-design-4">
-    		Декор из мастики
-    	</label>
-    	
-    	<input type="checkbox" name="dd-design" id="dd-design-5"
-    		ng-model="dreamDessert.design[4]">
-    	<label class="leksapro-italic-large" for="dd-design-5">
-    		Надпись
-    	</label>
-    	
-    	<input type="checkbox" name="dd-design" id="dd-design-6"
-    		ng-model="dreamDessert.design[5]">
-    	<label class="leksapro-italic-large" for="dd-design-6">
-    		Флажки/несъедобные элементы
-    	</label>
-    	
-    	<input type="checkbox" name="dd-design" id="dd-design-7"
-    		ng-model="dreamDessert.design[6]">
-    	<label class="leksapro-italic-large" for="dd-design-7">
-    		Конфеты/маршмеллоу/мармелад
-    	</label>
-    	
-    	<input type="checkbox" name="dd-design" id="dd-design-8"
-    		ng-model="dreamDessert.design[7]">
-    	<label class="leksapro-italic-large" for="dd-design-8">
-    		Другое
-    	</label>
+    	<div ng-repeat="item in dreamDessert.design">
+    		<input type="checkbox" name="dd-design" id="dd-design-{{$index+1}}"
+    			ng-model="item.selected">
+    		<label class="leksapro-italic-large" for="dd-design-{{$index+1}}">
+    			{{item.name}}
+    		</label>
+    	</div>
 	  </div>
 	</section>
 	

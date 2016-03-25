@@ -22,7 +22,7 @@
   $headers .= "From: Tomatort Info <info@tomatort.ru>";
   
   if ($dreamDessert) {
-    
+    print_r($dreamDessert);
   } else if ($cartData) {
     $address = $request->address;
     $deliveryType = $request->deliveryType;
