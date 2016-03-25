@@ -28,14 +28,12 @@
     $dd_content = "<strong>Основа: </strong>" . $dreamDessert->base ."<br>";
     $dd_content .= "<strong>Крем: </strong>" . $dreamDessert->cream->name ."<br>";
     $dd_content .= "<strong>Добавки: </strong>" . $dreamDessert->topping ."<br>";
-    $dd_content .= "<strong>Дизайн: </strong>";
-    foreach ($item as $dreamDessert->design) {
+    $dd_content .= "<strong>Дизайн:</strong><br>";
+    foreach ($dreamDessert->design as $item) {
       if ($item->selected) {
-        $dd_content .= $item->name . ", ";
+        $dd_content .= $item->name . "<br>";
       }
     }
-    // replace last comma and space with <br> and return result
-    $dd_content = substr_replace($html, "<br>", -2);
     $dd_content .= "<strong>Размер торта: </strong>" 
       . $dreamDessert->size . " кг<br>";
       
