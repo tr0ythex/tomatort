@@ -92,7 +92,7 @@ angular.module("tomaTort")
                       "любимого вкуса"
       },
       {"id": 11, "name": "Морковный торт", "price": 1500,
-       "imageUrl": "/images/products/carrot-cake.jpg",
+       "imageUrl": "/images/products/carrotcake.jpg",
        "description": "Пряный торт для любителей чего-то особенного"
       },
       {"id": 12, "name": "Капкейки", "price": 1800, "set": 9,
@@ -143,6 +143,14 @@ angular.module("tomaTort")
       },
       {"id": 23, "name": "Кексы/маффины", "price": 2000, "set": 12,
        "imageUrl": "/images/products/muffin.jpg",
+       "description": "Мягкая текстура любимых маффинов и любой вкус на выбор"
+      },
+      {"id": 24, "name": "Другое",
+       "imageUrl": "/images/products/other.jpg",
+       "description": "Мягкая текстура любимых маффинов и любой вкус на выбор"
+      },
+      {"id": 25, "name": "Сладкий стол",
+       "imageUrl": "/images/products/sweet-table.jpg",
        "description": "Мягкая текстура любимых маффинов и любой вкус на выбор"
       }
     ],
