@@ -18,8 +18,8 @@
 			  		ng-click="openProductItemPage(product)">
 			  		<p class="menu-item-name">{{product.name}}</p>
 				    <p class="menu-item-price">
-				    	{{product.price}} 
-				    	<span ng-hide="product.set">руб / кг</span>
+				    	{{product.price || 'Индивидуально'}} 
+				    	<span ng-hide="product.set || !product.price">руб / кг</span>
 				    	<span ng-show="product.set == 9">руб / 9 шт</span>
 				    	<span ng-show="product.set == 12">руб / 12 шт</span>
 				    </p>
