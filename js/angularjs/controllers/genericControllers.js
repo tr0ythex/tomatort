@@ -258,13 +258,28 @@ angular.module("tomaTort")
     }
   };
 })
-.controller("callbackCtrl", function ($scope) {
+.controller("callbackCtrl", function ($scope, $http) {
   $scope.callback = {
     sent: false
   };
   $scope.sendCallback = function (callbackForm) {
     if (callbackForm.$valid) {
-      $scope.callback.sent = true;
+      var request = $http({
+        method: "post",
+        url: "/sendMail.php",
+        data: {
+          firstName: $scope.data.shipping.firstName,
+          lastName: $scope.data.shipping.lastName,
+          email: $scope.data.shipping.email,
+          tel: $scope.data.shipping.tel,
+          comment: $scope.data.shipping.comment
+        },
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      });
+      request.success(function (data) {
+        $scope.callback.sent = true;
+        console.log(data);
+      });
     } else {
       $scope.showValidation = true;
     }
