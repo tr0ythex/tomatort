@@ -27,5 +27,8 @@
     allowtransparency="true" frameborder="0" scrolling="no" 
     style="border:none;overflow:hidden;width:900px;height:900px">
   </iframe>
-  <a href="#/menu" class="btn btn-dark top-margined bottom-margined">Перейти в меню</a>
+  <a href="#/menu" class="btn btn-dark top-margined bottom-margined"
+    ng-controller="menuCtrl" ng-click="selectMenuItem('/menu')">
+    Перейти в меню
+  </a>
 </section>

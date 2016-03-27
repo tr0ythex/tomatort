@@ -30,9 +30,10 @@
       ng-hide="sp.orderedSet[sp.set]"
 	  	ng-click="sp.orderedSet[sp.set] = true;
 	  	          addToCart(sp);">
-	  	Заказать {{sp.set != 'кг' ? sp.set : ''}}
+	  	Заказать {{(sp.set == '9 шт' || sp.set == '12 шт') ? sp.set : ''}}
 	  </button>
 	  <a href="#/checkout" class="btn btn-dark" 
+	    ng-controller="menuCtrl"
 	    ng-show="sp.orderedSet[sp.set]"
     	ng-click="selectMenuItem('/checkout')">
     	Перейти в корзину
