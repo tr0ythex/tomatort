@@ -136,8 +136,12 @@ angular.module("tomaTort")
   };
   $scope.getProduct = function (pId) {
     for (var i = 0; i < $scope.data.products.length; i++) {
-      if ($scope.data.products[i].id == pId) {
-        return $scope.data.products[i];
+      var product = $scope.data.products[i];
+      if (product.id == pId) {
+        if (product.price9 || product.price12) {
+          product.set = '9 шт'; // set default value for set
+        }
+        return product;
       }
     }
   };
@@ -176,14 +180,31 @@ angular.module("tomaTort")
     }
   };
   $scope.addToCart = function (product) {
-    cart.addProduct(product.id, 
-                    product.name, 
-                    product.price,
-                    product.set,
-                    product.imageUrl);
+    if (product.price) {
+      cart.addProduct(
+        product.id, 
+        product.name, 
+        product.price,
+        product.imageUrl);
+    } else if (product.price9) {
+      cart.addProduct(
+        product.id, 
+        product.name, 
+        product.price9,
+        product.imageUrl);
+    } else {
+      cart.addProduct(
+        product.id, 
+        product.name, 
+        product.price12,
+        product.imageUrl);
+    }
   };
   $scope.openProductItemPage = function (product) {
     $scope.selectedProduct = product;
+    if (product.price9 || product.price12) {
+      $scope.selectedProduct.set = '9 шт'; // 9 set default
+    }
     $location.path("/menu/" + product.id);
   };
 })

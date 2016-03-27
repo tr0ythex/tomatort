@@ -2,12 +2,29 @@
   <h2>{{selectedProduct.name}}</h2>
   <img ng-src="{{selectedProduct.imageUrl}}" class="product-img img-cover">
   <div class="product-info">
-    <div class="price">{{selectedProduct.price}} руб</div>
+    <div class="price" ng-show="selectedProduct.price">
+      {{selectedProduct.price}} руб / кг
+    </div>
+    <div class="price" ng-show="selectedProduct.price9">
+      {{selectedProduct.price9}} руб / 9 шт
+    </div><br>
+    <div class="price" ng-show="selectedProduct.price12">
+      {{selectedProduct.price12}} руб / 12 шт
+    </div>
 	  <div class="desc">{{selectedProduct.description}}</div>
+	  <div class="set fxbx fx-js-sp-between" 
+	    ng-show="selectedProduct.price9 && selectedProduct.price12">
+      <input type="radio" name="set" value="9 шт" id="set9" 
+        ng-model="selectedProduct.set">
+      <label for="set9">9 шт</label>
+      <input type="radio" name="set" value="12 шт" id="set12"
+        ng-model="selectedProduct.set">
+      <label for="set12">12 шт</label>
+    </div>
 	  <button class="btn btn-dark" ng-hide="selectedProduct.ordered"
 	  	ng-click="setOrdered(selectedProduct.id); 
 			    			addToCart(selectedProduct);">
-	  	Заказать
+	  	Заказать {{selectedProduct.set}}
 	  </button>
 	  <a href="#/checkout" class="btn btn-dark" ng-show="selectedProduct.ordered"
     	ng-click="selectMenuItem('/checkout')">

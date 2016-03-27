@@ -1,11 +1,11 @@
 .product-img {
-  width: 600px;
+  width: 500px;
   height: 450px;
   float: left;
 }
 .product-info {
   position: relative;
-  width: 300px;
+  width: 400px;
   height: 450px;
   float: right;
   text-align: left;
@@ -20,6 +20,13 @@
     @extend .permianserif-regular;
     font-size: $fs-small;
     margin-top: 50px;
+  }
+  .set {
+    @extend .merel-light;
+    font-size: $fs-xlarge;
+    width: 190px;
+    position: absolute;
+    bottom: 60px;
   }
   .btn {
     position: absolute;

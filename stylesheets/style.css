@@ -53,7 +53,7 @@
   /* Legacy iOS */
   font-weight: 400;
 }
-.merel-light, input[type=number], .menu-item p.menu-item-price, .product-info .price, #checkout-table td {
+.merel-light, input[type=number], .menu-item p.menu-item-price, .product-info .price, .product-info .set, #checkout-table td {
   font-family: Merel;
   font-weight: 300;
 }
@@ -630,14 +630,14 @@ form .btn {
 }
 
 .product-img {
-  width: 600px;
+  width: 500px;
   height: 450px;
   float: left;
 }
 
 .product-info {
   position: relative;
-  width: 300px;
+  width: 400px;
   height: 450px;
   float: right;
   text-align: left;
@@ -645,12 +645,18 @@ form .btn {
   box-sizing: border-box;
 }
 .product-info .price {
-  font-size: 53px;
+  font-size: 40px;
   line-height: 30px;
 }
 .product-info .desc {
   font-size: 15px;
   margin-top: 50px;
+}
+.product-info .set {
+  font-size: 24px;
+  width: 190px;
+  position: absolute;
+  bottom: 60px;
 }
 .product-info .btn {
   position: absolute;
