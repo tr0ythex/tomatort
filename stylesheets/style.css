@@ -586,6 +586,12 @@ form .btn {
   font-size: 30px;
   top: 115px;
 }
+.menu-item p.menu-item-price.menu-item-price-9 {
+  top: 100px;
+}
+.menu-item p.menu-item-price.menu-item-price-12 {
+  top: 140px;
+}
 .menu-item .btn {
   position: absolute;
   bottom: 20px;

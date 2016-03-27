@@ -17,23 +17,31 @@
 			  	<div class="hidden blackout"
 			  		ng-click="openProductItemPage(product)">
 			  		<p class="menu-item-name">{{product.name}}</p>
-				    <p class="menu-item-price">
-				    	{{product.price || 'Индивидуально'}} 
-				    	<span ng-hide="product.set || !product.price">руб / кг</span>
-				    	<span ng-show="product.set == 9">руб / 9 шт</span>
-				    	<span ng-show="product.set == 12">руб / 12 шт</span>
-				    </p>
-				    <button class="btn btn-light" ng-hide="product.ordered"
-			    		ng-click="setOrdered(product.id); 
-			    		addToCart(product); 
-			    		$event.stopPropagation()">
-			    		Заказать
-			    	</button>
-			    	<a href="#/checkout" ng-controller="menuCtrl" class="btn btn-light"
-			    		ng-show="product.ordered"
-			    		ng-click="selectMenuItem('/checkout')">
-							Перейти в корзину
-			    	</a>
+			  		
+			  		<p class="menu-item-price" ng-show="product.price">
+			  			{{product.price}} руб / кг
+			  		</p>
+			  		<p class="menu-item-price menu-item-price-9" ng-show="product.price9">
+			  			{{product.price9}} руб / 9 шт
+			  		</p>
+			  		<p class="menu-item-price menu-item-price-12" ng-show="product.price12">
+			  			{{product.price12}} руб / 12 шт
+			  		</p>
+			  		<p class="menu-item-price" ng-show="!product.price12 && !product.price && !product.price9">
+			  			Индивидуально
+			  		</p>
+
+				   <!-- <button class="btn btn-light" ng-hide="product.ordered"-->
+			    <!--		ng-click="setOrdered(product.id); -->
+			    <!--		addToCart(product); -->
+			    <!--		$event.stopPropagation()">-->
+			    <!--		Заказать-->
+			    <!--	</button>-->
+			    <!--	<a href="#/checkout" ng-controller="menuCtrl" class="btn btn-light"-->
+			    <!--		ng-show="product.ordered"-->
+			    <!--		ng-click="selectMenuItem('/checkout')">-->
+							<!--Перейти в корзину-->
+			    <!--	</a>-->
 			  	</div>
 			  </div>
 			</div>

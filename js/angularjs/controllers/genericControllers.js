@@ -66,7 +66,7 @@ angular.module("tomaTort")
        "description": "Влажная текстура и глубокий шоколадный вкус – " +
                       "настоящий рай для шокоголиков!"
       },
-      {"id": 6, "name": "Медовик", "price": 1500, 
+      {"id": 6, "name": "Медовик", "price": 1500,
        "imageUrl": "/images/products/medovik.jpg",
        "description": "12 нежных коржей, приготовленных по специальной " +
                     "рецептуре, несомненно, сделают наш Медовик вашим фаворитом"
@@ -95,61 +95,36 @@ angular.module("tomaTort")
        "imageUrl": "/images/products/carrotcake.jpg",
        "description": "Пряный торт для любителей чего-то особенного"
       },
-      {"id": 12, "name": "Капкейки", "price": 1800, "set": 9,
+      {"id": 12, "name": "Капкейки", "price9": 1800, "price12": 2400,
        "imageUrl": "/images/products/cupcakes.jpg",
        "description": "Мини-тортики с начинкой и кремом на любой вкус"
       },
-      {"id": 13, "name": "Капкейки", "price": 2400, "set": 12,
-       "imageUrl": "/images/products/cupcakes.jpg",
-       "description": "Мини-тортики с начинкой и кремом на любой вкус"
-      },
-      {"id": 14, "name": "Кейкпопсы", "price": 1800, "set": 9,
+      {"id": 13, "name": "Кейкпопсы", "price9": 1800, "price12": 2400,
        "imageUrl": "/images/products/cakepops.jpg",
        "description": "Полюбившиеся всем бисквитные шарики в шоколадной глазури"
       },
-      {"id": 15, "name": "Кейкпопсы", "price": 2400, "set": 12, 
-       "imageUrl": "/images/products/cakepops.jpg",
-       "description": "Полюбившиеся всем бисквитные шарики в шоколадной глазури"
-      },
-      {"id": 16, "name": "Яблоки в карамели", "price": 1500, "set": 9,
+      {"id": 14, "name": "Яблоки в карамели", "price9": 1500, "price12": 2000,
        "imageUrl": "/images/products/apples.jpg",
        "description": "Легкий и яркий десерт для ценителей оригинальности"
       },
-      {"id": 17, "name": "Яблоки в карамели", "price": 2000, "set": 12,
-       "imageUrl": "/images/products/apples.jpg",
-       "description": "Легкий и яркий десерт для ценителей оригинальности"
-      },
-      {"id": 18, "name": "Тирамису в стаканчиках", "price": 2000, "set": 9,
+      {"id": 15, "name": "Тирамису в стаканчиках", "price9": 2000, "price12": 2700,
        "imageUrl": "/images/products/tiramisu-cup.jpg",
        "description": "Порционное исполнение любимого десерта, " +
                       "идеально подходит для больших компаний"
       },
-      {"id": 19, "name": "Тирамису в стаканчиках", "price": 2700, "set": 12,
-       "imageUrl": "/images/products/tiramisu-cup.jpg",
-       "description": "Порционное исполнение любимого десерта, " +
-                      "идеально подходит для больших компаний"
-      },
-      {"id": 20, "name": "Пирожные", "price": 2000, "set": 9,
+      {"id": 16, "name": "Пирожные", "price9": 2000, "price12": 2700,
        "imageUrl": "/images/products/pirozhnoe.jpg",
        "description": "Бисквитная основа и любой крем или мусс на ваш выбор"
       },
-      {"id": 21, "name": "Пирожные", "price": 2700, "set": 12,
-       "imageUrl": "/images/products/pirozhnoe.jpg",
-       "description": "Бисквитная основа и любой крем или мусс на ваш выбор"
-      },
-      {"id": 22, "name": "Кексы/маффины", "price": 1500, "set": 9,
+      {"id": 17, "name": "Кексы/маффины", "price9": 1500, "price12": 2000,
        "imageUrl": "/images/products/muffin.jpg",
        "description": "Мягкая текстура любимых маффинов и любой вкус на выбор"
       },
-      {"id": 23, "name": "Кексы/маффины", "price": 2000, "set": 12,
-       "imageUrl": "/images/products/muffin.jpg",
-       "description": "Мягкая текстура любимых маффинов и любой вкус на выбор"
-      },
-      {"id": 24, "name": "Другое",
+      {"id": 18, "name": "Другое",
        "imageUrl": "/images/products/other.jpg",
        "description": "Мягкая текстура любимых маффинов и любой вкус на выбор"
       },
-      {"id": 25, "name": "Сладкий стол",
+      {"id": 19, "name": "Сладкий стол",
        "imageUrl": "/images/products/sweet-table.jpg",
        "description": "Мягкая текстура любимых маффинов и любой вкус на выбор"
       }

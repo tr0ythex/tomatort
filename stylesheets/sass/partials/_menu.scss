@@ -25,6 +25,12 @@
       @extend .merel-light;
       font-size: $fs-xxlarge;
       top: 115px;
+      &.menu-item-price-9 {
+        top: 100px;
+      }
+      &.menu-item-price-12 {
+        top: 140px;
+      }
     }
   }
   .btn {
