@@ -70,14 +70,19 @@
         </thead>
         <tbody>";
     foreach ($cartData as $item) {
-      $set = $item->set ? $item->set . ' шт' : 'кг';
-      $row = "
-          <tr>
-            <td>{$item->name}</td>
+      $row = "<tr>";
+        if ($item->price == 0) {
+          $row .= 
+            "<td>{$item->name}</td>
+            <td colspan='3'>{$item->set}</td>";
+        } else {
+          $row .= 
+            "<td>{$item->name}</td>
             <td>{$item->price}</td>
             <td>{$item->count}</td>
-            <td>{$set}</td>
-          </tr>";
+            <td>{$item->set}</td>";
+        }
+        $row .= "</tr>";
       $table .= $row;
     }
     $table .= "
