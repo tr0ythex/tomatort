@@ -32,7 +32,7 @@ angular.module("tomaTort")
 .controller("productCtrl", function ($scope, $location) {
   // if page is refreshed
   var pId = $location.path().split("/")[2];
-  $scope.selectedProduct = $scope.getProduct(pId);
+  $scope.sp = $scope.getProduct(pId);
 })
 .controller("tomaTortCtrl", function ($scope, $http, $location, 
   menuActiveClass, cart, instagramLink, toppingPlaceholder) {
@@ -145,13 +145,6 @@ angular.module("tomaTort")
       }
     }
   };
-  $scope.setOrdered = function (product_id) {
-    for (var i = 0; i < $scope.data.products.length; i++) {
-      if ($scope.data.products[i].id === product_id) {
-        $scope.data.products[i].ordered = true;
-      }
-    }
-  };
   $scope.sendShip = function (deliveryForm) {
     if (deliveryForm.$valid) {
       
@@ -180,30 +173,25 @@ angular.module("tomaTort")
     }
   };
   $scope.addToCart = function (product) {
-    if (product.price) {
-      cart.addProduct(
-        product.id, 
-        product.name, 
-        product.price,
-        product.imageUrl);
-    } else if (product.price9) {
-      cart.addProduct(
-        product.id, 
-        product.name, 
-        product.price9,
-        product.imageUrl);
-    } else {
-      cart.addProduct(
-        product.id, 
-        product.name, 
-        product.price12,
-        product.imageUrl);
-    }
+    // if chosen product is 9-set use price for 9-set 
+    // else if chosen product is 12-set use price for 12-set
+    // else (chosen product is kilo cake) use price for kilo cake (price field)
+    var pPrice = (product.set == '9 шт')  ? product.price9 :
+                 (product.set == '12 шт') ? product.price12 :
+                                            product.price;
+    cart.addProduct(
+      product.id, 
+      product.name, 
+      pPrice,
+      product.set,
+      product.imageUrl);
   };
   $scope.openProductItemPage = function (product) {
-    $scope.selectedProduct = product;
-    if (product.price9 || product.price12) {
-      $scope.selectedProduct.set = '9 шт'; // 9 set default
+    $scope.sp = product; // selected product
+    if (product.price9 && product.price12) {
+      $scope.sp.set = '9 шт'; // for pieces cakes set 9 default
+    } else {
+      $scope.sp.set = 'кг'; // for kilo cakes
     }
     $location.path("/menu/" + product.id);
   };
