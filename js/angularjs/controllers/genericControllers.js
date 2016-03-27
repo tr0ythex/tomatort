@@ -121,12 +121,15 @@ angular.module("tomaTort")
        "description": "Мягкая текстура любимых маффинов и любой вкус на выбор"
       },
       {"id": 18, "name": "Другое",
-       "imageUrl": "/images/products/other.jpg",
-       "description": "Мягкая текстура любимых маффинов и любой вкус на выбор"
+       "imageUrl": "/images/products/others.jpg",
+       "description": "Тарталетки, конфеты, круассаны и любая другая выпечка " +
+                      "на ваш выбор!"
       },
       {"id": 19, "name": "Сладкий стол",
        "imageUrl": "/images/products/sweet-table.jpg",
-       "description": "Мягкая текстура любимых маффинов и любой вкус на выбор"
+       "description": "Если вы хотите оформить праздник в одном стиле и " +
+                      "порадовать гостей красивыми и вкусными младостями, " +
+                      "то этот раздел для вас!"
       }
     ],
     shipping: {
@@ -175,10 +178,12 @@ angular.module("tomaTort")
   $scope.addToCart = function (product) {
     // if chosen product is 9-set use price for 9-set 
     // else if chosen product is 12-set use price for 12-set
-    // else (chosen product is kilo cake) use price for kilo cake (price field)
+    // else if chosen product is kilo cake use price for kilo cake (price field)
+    // else for individual order set price to 0 for right working of function
+    // total
     var pPrice = (product.set == '9 шт')  ? product.price9 :
                  (product.set == '12 шт') ? product.price12 :
-                                            product.price;
+                 (product.set == 'кг')    ? product.price : 0;
     cart.addProduct(
       product.id, 
       product.name, 
@@ -190,8 +195,10 @@ angular.module("tomaTort")
     $scope.sp = product; // selected product
     if (product.price9 && product.price12) {
       $scope.sp.set = '9 шт'; // for pieces cakes set 9 default
-    } else {
+    } else if (product.price) {
       $scope.sp.set = 'кг'; // for kilo cakes
+    } else {
+      $scope.sp.set = 'индивидуально'; // for items without price
     }
     $location.path("/menu/" + product.id);
   };

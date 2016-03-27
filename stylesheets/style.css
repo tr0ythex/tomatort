@@ -284,7 +284,7 @@ form.validate .ng-invalid + label {
   position: absolute;
   bottom: 0;
   width: 891px;
-  height: 64px;
+  height: 74px;
   line-height: 24px;
   background: rgba(0, 0, 0, 0.5);
   color: white;

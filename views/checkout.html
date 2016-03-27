@@ -12,16 +12,17 @@
       <tr ng-repeat="item in cartData">
         <td class="td-img"><img ng-src="{{item.imageUrl}}" class="img-cover"></td>
         <td colspan="2" class="td-name">{{item.name}}</td>
-        <td class="td-price">{{item.price}} 
-          <span ng-hide="item.set">руб / кг</span>
-				  <span ng-show="item.set == 9"><br>руб / 9 шт</span>
-				  <span ng-show="item.set == 12"><br>руб / 12 шт</span>
+        <td class="td-price" ng-hide="item.set=='индивидуально'">
+          {{item.price}} руб
         </td>
-        <td class="td-count">
+        <td class="td-count" ng-hide="item.set=='индивидуально'">
           <input type="number" name="count" ng-model="cartData[$index].count" 
             ng-value="{{item.count}}">
         </td>
-        <td class="td-subtotal">{{(item.price * item.count)}} руб</td>
+        <td class="td-subtotal" ng-hide="item.set=='индивидуально'">
+          {{(item.price * item.count)}} руб
+        </td>
+        <td ng-show="item.set=='индивидуально'" colspan="3">Индивидуально</td>
       </tr>
     </tbody>
     <tfoot>

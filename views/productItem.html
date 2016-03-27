@@ -2,6 +2,9 @@
   <h2>{{sp.name}}</h2>
   <img ng-src="{{sp.imageUrl}}" class="product-img img-cover">
   <div class="product-info">
+    <div class="price" ng-hide="sp.price || sp.price9 || sp.price12">
+      Индивидуально
+    </div>
     <div class="price" ng-show="sp.price">
       {{sp.price}} руб / кг
     </div>
