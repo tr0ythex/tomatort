@@ -215,6 +215,7 @@ angular.module("tomaTort")
   $scope.remove = function (id) {
     cart.removeProduct(id);
   };
+  $scope.deliveryCost = 0;
 })
 .controller("dreamDessertCtrl", function ($scope, $http) {
   

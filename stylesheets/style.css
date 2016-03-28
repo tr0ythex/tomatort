@@ -629,6 +629,13 @@ form .btn {
   margin-top: 50px;
 }
 
+#extra-info li {
+  list-style: circle;
+  font-size: 15px;
+  line-height: 29px;
+  text-align: left;
+}
+
 .product-img {
   width: 500px;
   height: 450px;

@@ -33,13 +33,13 @@
         <td colspan="2" class="td-del-type">
           <input type="radio" name="deliveryType" value="Самовывоз" 
             ng-model="data.shipping.deliveryType" id="selfPickup">
-          <label for="selfPickup">Самовывоз</label>
+          <label for="selfPickup" ng-click="deliveryCost = 0">Самовывоз</label>
           <input type="radio" name="deliveryType" value="Доставка" 
             ng-model="data.shipping.deliveryType" id="delivery">
-          <label for="delivery">Доставка</label>
+          <label for="delivery" ng-click="deliveryCost = 400">Доставка</label>
         </td>
         <td class="td-total-txt" colspan="3">Итого:</td>
-        <td class="td-total">{{total()}} руб</td>
+        <td class="td-total">{{total() + deliveryCost}} руб</td>
       </tr>
     </tfoot>
   </table>

@@ -22,3 +22,12 @@
     margin-top: 50px;
   }
 }
+
+#extra-info {
+  li {
+    list-style: circle;
+    font-size: $fs-small;
+    line-height: 29px;
+    text-align: left;
+  }
+}
