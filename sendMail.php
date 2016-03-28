@@ -13,8 +13,7 @@
   $dreamDessert = $request->dreamDessert;
   
   // set email params
-  $admin_email = "scytherclaw@gmail.com";
-  // $admin_email = "tomatort@yandex.ru";
+  $admin_email = "tomatort@yandex.ru";
   $customer_email = $email;
   $subject = "Новый заказ";
   // Для отправки HTML-письма должен быть установлен заголовок Content-type
